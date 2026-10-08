@@ -1,6 +1,6 @@
 Id,Label,community,frequency,degree_weighted,betweenness,pagerank
-entrevista,entrevista,1,68,225.0000,0.002680,0.009541
 dataset,dataset,1,67,257.0000,0.000000,0.011005
+entrevista,entrevista,1,67,225.0000,0.002680,0.009541
 hospitais,hospitais,3,39,120.0000,0.000000,0.005941
 cientifico,cientifico,1,78,276.0000,0.000000,0.011240
 controles,controles,4,41,126.0000,0.000000,0.006176

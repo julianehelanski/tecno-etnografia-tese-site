@@ -1,8 +1,8 @@
 {
-  "tokens": 30961,
+  "tokens": 30954,
   "graph_full": {
-    "nodes": 6638,
-    "edges": 75168
+    "nodes": 6636,
+    "edges": 75148
   },
   "graph_pruned": {
     "nodes": 180,
@@ -430,207 +430,157 @@
     {
       "a": "imutavel",
       "b": "movel",
-      "npmi": 0.8435503439459122,
+      "npmi": 0.8435444826619896,
       "cooccurrence_weight": 75
     },
     {
       "a": "respiratoria",
       "b": "insuficiencia",
-      "npmi": 0.8409553744284296,
+      "npmi": 0.8409476847656369,
       "cooccurrence_weight": 288
     },
     {
       "a": "grupo",
       "b": "controle",
-      "npmi": 0.6671497536763856,
+      "npmi": 0.6671382330163232,
       "cooccurrence_weight": 46
     },
     {
       "a": "escuta",
       "b": "clinica",
-      "npmi": 0.6202473128508266,
+      "npmi": 0.6202344505158782,
       "cooccurrence_weight": 39
     },
     {
       "a": "neural",
       "b": "rede",
-      "npmi": 0.5779125997227332,
+      "npmi": 0.5778954097628433,
       "cooccurrence_weight": 126
     },
     {
       "a": "linguagem",
       "b": "processamento",
-      "npmi": 0.5704712581602347,
+      "npmi": 0.5749534441537849,
       "cooccurrence_weight": 33
     },
     {
       "a": "acao",
       "b": "programa",
-      "npmi": 0.5674576272543564,
+      "npmi": 0.5674435308508726,
       "cooccurrence_weight": 30
     },
     {
       "a": "diante",
       "b": "microfone",
-      "npmi": 0.5614093339591814,
+      "npmi": 0.5613950404439507,
       "cooccurrence_weight": 30
     },
     {
       "a": "sinal",
       "b": "acustico",
-      "npmi": 0.5274982492884613,
+      "npmi": 0.5274816790132084,
       "cooccurrence_weight": 49
     },
     {
       "a": "tornou",
       "b": "possivel",
-      "npmi": 0.5237726798172884,
+      "npmi": 0.523757014031037,
       "cooccurrence_weight": 32
     },
     {
       "a": "entrevista",
       "b": "marcelo",
-      "npmi": 0.4967099334621575,
+      "npmi": 0.49924609809022324,
       "cooccurrence_weight": 92
     },
     {
       "a": "acesso",
       "b": "disponivel",
-      "npmi": 0.4870174495997424,
+      "npmi": 0.4870011596971116,
       "cooccurrence_weight": 25
     },
     {
       "a": "enfermaria",
       "b": "ruido",
-      "npmi": 0.4835497057353036,
+      "npmi": 0.48353090825698747,
       "cooccurrence_weight": 62
     },
     {
       "a": "publico",
       "b": "repositorio",
-      "npmi": 0.4827487752288399,
+      "npmi": 0.4827324433937529,
       "cooccurrence_weight": 24
     },
     {
       "a": "fonoaudiologos",
       "b": "medicos",
-      "npmi": 0.47809927430989424,
+      "npmi": 0.4780829934637572,
       "cooccurrence_weight": 22
     },
     {
       "a": "torna",
       "b": "visivel",
-      "npmi": 0.4741610235352213,
+      "npmi": 0.4741433525472202,
       "cooccurrence_weight": 37
     },
     {
       "a": "covideiro",
       "b": "pandemico",
-      "npmi": 0.4667670236266187,
+      "npmi": 0.46674678500248395,
       "cooccurrence_weight": 85
     },
     {
       "a": "pessoas",
       "b": "voz",
-      "npmi": 0.4592936391231243,
+      "npmi": 0.45927656670899847,
       "cooccurrence_weight": 26
     },
     {
       "a": "controles",
       "b": "pacientes",
-      "npmi": 0.4442203939485579,
+      "npmi": 0.4442017167960657,
       "cooccurrence_weight": 40
     },
     {
       "a": "textual",
       "b": "analise",
-      "npmi": 0.4436337321938341,
+      "npmi": 0.44361606462926967,
       "cooccurrence_weight": 27
     },
     {
       "a": "publico",
       "b": "saude",
-      "npmi": 0.43598437687270475,
+      "npmi": 0.43596725617654114,
       "cooccurrence_weight": 18
     },
     {
       "a": "tornou",
       "b": "visivel",
-      "npmi": 0.43173676698878394,
+      "npmi": 0.431719517356408,
       "cooccurrence_weight": 18
     },
     {
       "a": "saude",
       "b": "pesquisa",
-      "npmi": 0.430749198424131,
+      "npmi": 0.4307319188141078,
       "cooccurrence_weight": 20
     },
     {
       "a": "cadeia",
       "b": "translacao",
-      "npmi": 0.42801559625037944,
+      "npmi": 0.42799472371878833,
       "cooccurrence_weight": 65
     },
     {
       "a": "condicoes",
       "b": "producao",
-      "npmi": 0.41834139236067935,
+      "npmi": 0.41832192480067804,
       "cooccurrence_weight": 36
     }
   ],
   "communities": [
     {
       "id": 0,
-      "size": 34,
-      "label": [
-        "espectrograma",
-        "actante",
-        "partir",
-        "sinal",
-        "torna",
-        "paciente",
-        "audio",
-        "arquivo"
-      ],
-      "members": [
-        "actante",
-        "acustico",
-        "algoritmo",
-        "ambiente",
-        "aparece",
-        "arquivo",
-        "audio",
-        "ausencia",
-        "carrega",
-        "celular",
-        "corpo",
-        "diante",
-        "espectrograma",
-        "fala",
-        "frequencias",
-        "grade",
-        "humano",
-        "imagem",
-        "informacao",
-        "maio",
-        "microfone",
-        "onda",
-        "paciente",
-        "padrao",
-        "painel",
-        "partir",
-        "pessoa",
-        "presenca",
-        "sars",
-        "sequencia",
-        "sinal",
-        "torna",
-        "virus",
-        "visivel"
-      ]
-    },
-    {
-      "id": 1,
       "size": 32,
       "label": [
         "inscricao",
@@ -675,6 +625,54 @@
         "termos",
         "translacao",
         "vocabulario"
+      ]
+    },
+    {
+      "id": 1,
+      "size": 32,
+      "label": [
+        "espectrograma",
+        "partir",
+        "sinal",
+        "torna",
+        "paciente",
+        "audio",
+        "arquivo",
+        "celular"
+      ],
+      "members": [
+        "acustico",
+        "algoritmo",
+        "ambiente",
+        "aparece",
+        "arquivo",
+        "audio",
+        "ausencia",
+        "carrega",
+        "celular",
+        "corpo",
+        "diante",
+        "espectrograma",
+        "fala",
+        "frequencias",
+        "grade",
+        "imagem",
+        "informacao",
+        "maio",
+        "microfone",
+        "onda",
+        "paciente",
+        "padrao",
+        "painel",
+        "partir",
+        "pessoa",
+        "presenca",
+        "sars",
+        "sequencia",
+        "sinal",
+        "torna",
+        "virus",
+        "visivel"
       ]
     },
     {
@@ -725,19 +723,20 @@
     },
     {
       "id": 3,
-      "size": 28,
+      "size": 30,
       "label": [
         "covideiro",
         "artigo",
         "coleta",
+        "actante",
         "condicoes",
         "cientifico",
         "laboratorio",
-        "pandemico",
-        "possivel"
+        "pandemico"
       ],
       "members": [
         "acao",
+        "actante",
         "antiprograma",
         "artigo",
         "chega",
@@ -749,6 +748,7 @@
         "configuracao",
         "contexto",
         "covideiro",
+        "humano",
         "inscrito",
         "laboratorio",
         "leitor",
@@ -874,44 +874,44 @@
   ],
   "structural_gaps": [
     {
-      "topic_a": 0,
+      "topic_a": 1,
       "topic_b": 2,
-      "edge_density": 0.7598039215686274
+      "edge_density": 0.74375
     },
     {
       "topic_a": 0,
       "topic_b": 1,
-      "edge_density": 0.8060661764705882
+      "edge_density": 0.7509765625
     },
     {
-      "topic_a": 0,
+      "topic_a": 1,
       "topic_b": 4,
-      "edge_density": 0.8235294117647058
+      "edge_density": 0.7796875
     },
     {
-      "topic_a": 0,
+      "topic_a": 1,
       "topic_b": 3,
-      "edge_density": 0.8350840336134454
+      "edge_density": 0.8270833333333333
     },
     {
       "topic_a": 3,
       "topic_b": 4,
-      "edge_density": 0.9535714285714286
+      "edge_density": 0.9916666666666667
     },
     {
-      "topic_a": 1,
+      "topic_a": 0,
       "topic_b": 2,
       "edge_density": 1.0333333333333334
     },
     {
-      "topic_a": 1,
+      "topic_a": 0,
       "topic_b": 3,
-      "edge_density": 1.0368303571428572
+      "edge_density": 1.0802083333333334
     },
     {
       "topic_a": 2,
       "topic_b": 3,
-      "edge_density": 1.1654761904761906
+      "edge_density": 1.1555555555555554
     },
     {
       "topic_a": 2,
@@ -919,7 +919,7 @@
       "edge_density": 1.1833333333333333
     },
     {
-      "topic_a": 1,
+      "topic_a": 0,
       "topic_b": 4,
       "edge_density": 1.1875
     }

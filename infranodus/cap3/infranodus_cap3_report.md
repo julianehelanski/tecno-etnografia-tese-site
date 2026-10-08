@@ -10,9 +10,9 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **19,064**
-- Grafo bruto: **5709** nós · **49556** arestas
-- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **2626** arestas
+- Tokens significativos: **19,074**
+- Grafo bruto: **5713** nós · **49584** arestas
+- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **2627** arestas
 - Tópicos detectados (Louvain): **7**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
@@ -20,7 +20,7 @@
 |---|-------|----------------|
 | 1 | `claudio` | 887 |
 | 2 | `pesquisa` | 736 |
-| 3 | `rede` | 565 |
+| 3 | `rede` | 568 |
 | 4 | `fabio` | 528 |
 | 5 | `centro` | 514 |
 | 6 | `seguir` | 363 |
@@ -58,7 +58,7 @@ termos frequentes mas perifericamente conectados descem.
 |---|-------|----------|
 | 1 | `claudio` | 0.0300 |
 | 2 | `pesquisa` | 0.0265 |
-| 3 | `rede` | 0.0206 |
+| 3 | `rede` | 0.0207 |
 | 4 | `centro` | 0.0185 |
 | 5 | `fabio` | 0.0177 |
 | 6 | `seguir` | 0.0134 |
@@ -93,44 +93,44 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 
 | # | termo | degree-rank | pagerank-rank | salto |
 |---|-------|-------------|----------------|-------|
-| 1 | `conta` | 141 | 126 | +15 |
+| 1 | `conta` | 141 | 127 | +14 |
 | 2 | `vida` | 164 | 151 | +13 |
-| 3 | `mostra` | 137 | 125 | +12 |
-| 4 | `linguas` | 109 | 98 | +11 |
+| 3 | `linguas` | 109 | 98 | +11 |
+| 4 | `mostra` | 137 | 126 | +11 |
 | 5 | `cadeia` | 99 | 89 | +10 |
 | 6 | `censo` | 140 | 130 | +10 |
 | 7 | `indigenas` | 102 | 93 | +9 |
 | 8 | `estados` | 64 | 56 | +8 |
 | 9 | `estatistica` | 114 | 106 | +8 |
-| 10 | `tecnociencia` | 110 | 103 | +7 |
-| 11 | `tecnica` | 66 | 60 | +6 |
+| 10 | `tecnica` | 71 | 64 | +7 |
+| 11 | `tecnociencia` | 110 | 103 | +7 |
 | 12 | `objeto` | 150 | 144 | +6 |
-| 13 | `pessoas` | 166 | 160 | +6 |
-| 14 | `descreve` | 55 | 50 | +5 |
-| 15 | `escala` | 68 | 63 | +5 |
+| 13 | `descreve` | 55 | 50 | +5 |
+| 14 | `escala` | 67 | 62 | +5 |
+| 15 | `pratica` | 78 | 73 | +5 |
 
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `pesquisa` | 0.3164 |
-| 2 | `centro` | 0.2678 |
-| 3 | `claudio` | 0.2164 |
-| 4 | `rede` | 0.1676 |
-| 5 | `fabio` | 0.1291 |
+| 1 | `pesquisa` | 0.3150 |
+| 2 | `centro` | 0.2669 |
+| 3 | `claudio` | 0.2163 |
+| 4 | `rede` | 0.1683 |
+| 5 | `fabio` | 0.1292 |
 | 6 | `tecnologia` | 0.0758 |
 | 7 | `dado` | 0.0700 |
-| 8 | `seguir` | 0.0682 |
+| 8 | `seguir` | 0.0688 |
 | 9 | `fapesp` | 0.0678 |
 | 10 | `inteligencia` | 0.0667 |
-| 11 | `hollerith` | 0.0639 |
-| 12 | `ator` | 0.0610 |
+| 11 | `hollerith` | 0.0651 |
+| 12 | `ator` | 0.0614 |
 | 13 | `ecossistema` | 0.0558 |
 | 14 | `brasil` | 0.0503 |
-| 15 | `empresa` | 0.0427 |
-| 16 | `corporacao` | 0.0423 |
+| 15 | `empresa` | 0.0426 |
+| 16 | `corporacao` | 0.0424 |
 | 17 | `artificial` | 0.0421 |
-| 18 | `maquina` | 0.0404 |
-| 19 | `trajetoria` | 0.0395 |
+| 18 | `maquina` | 0.0416 |
+| 19 | `trajetoria` | 0.0402 |
 | 20 | `arranjo` | 0.0346 |
 
 ## 6. Pares de termos com associação mais surpreendente (NPMI)
@@ -156,8 +156,8 @@ vezes.
 | 13 | `research` | `brasil` | 0.574 | 51 |
 | 14 | `inovacao` | `ecossistema` | 0.551 | 58 |
 | 15 | `laboratorio` | `fechamento` | 0.517 | 34 |
-| 16 | `hollerith` | `tabulacao` | 0.512 | 39 |
-| 17 | `comercial` | `tecnica` | 0.503 | 19 |
+| 16 | `hollerith` | `tabulacao` | 0.513 | 39 |
+| 17 | `comercial` | `tecnica` | 0.508 | 19 |
 | 18 | `claudio` | `informacao` | 0.491 | 72 |
 | 19 | `sistema` | `tabulacao` | 0.488 | 24 |
 | 20 | `gente` | `dinheiro` | 0.488 | 15 |

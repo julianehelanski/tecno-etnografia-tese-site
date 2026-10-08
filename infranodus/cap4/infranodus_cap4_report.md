@@ -10,8 +10,8 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **30,961**
-- Grafo bruto: **6638** nós · **75168** arestas
+- Tokens significativos: **30,954**
+- Grafo bruto: **6636** nós · **75148** arestas
 - Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3851** arestas
 - Tópicos detectados (Louvain): **7**
 
@@ -146,12 +146,12 @@ vezes.
 | 3 | `grupo` | `controle` | 0.667 | 46 |
 | 4 | `escuta` | `clinica` | 0.620 | 39 |
 | 5 | `neural` | `rede` | 0.578 | 126 |
-| 6 | `linguagem` | `processamento` | 0.570 | 33 |
+| 6 | `linguagem` | `processamento` | 0.575 | 33 |
 | 7 | `acao` | `programa` | 0.567 | 30 |
 | 8 | `diante` | `microfone` | 0.561 | 30 |
 | 9 | `sinal` | `acustico` | 0.527 | 49 |
 | 10 | `tornou` | `possivel` | 0.524 | 32 |
-| 11 | `entrevista` | `marcelo` | 0.497 | 92 |
+| 11 | `entrevista` | `marcelo` | 0.499 | 92 |
 | 12 | `acesso` | `disponivel` | 0.487 | 25 |
 | 13 | `enfermaria` | `ruido` | 0.484 | 62 |
 | 14 | `publico` | `repositorio` | 0.483 | 24 |
@@ -168,10 +168,10 @@ vezes.
 | 25 | `condicoes` | `producao` | 0.418 | 36 |
 
 ## 7. Tópicos latentes (comunidades Louvain)
-- **Tópico 1** (34 termos): espectrograma, actante, partir, sinal, torna, paciente
-- **Tópico 2** (32 termos): inscricao, cadeia, ponto, secao, dispositivo, latour
+- **Tópico 1** (32 termos): inscricao, cadeia, ponto, secao, dispositivo, latour
+- **Tópico 2** (32 termos): espectrograma, partir, sinal, torna, paciente, audio
 - **Tópico 3** (30 termos): spira, projeto, marcelo, artigos, dataset, entrevista
-- **Tópico 4** (28 termos): covideiro, artigo, coleta, condicoes, cientifico, laboratorio
+- **Tópico 4** (30 termos): covideiro, artigo, coleta, actante, condicoes, cientifico
 - **Tópico 5** (20 termos): rede, objeto, pratica, analise, condicao, neural
 - **Tópico 6** (20 termos): respiratoria, insuficiencia, covid, ruido, pacientes, enfermaria
 - **Tópico 7** (16 termos): dado, modelo, repositorio, computacional, treinamento, coeficientes
@@ -180,12 +180,12 @@ vezes.
 Lacunas estruturais sinalizam *espaços de ideia* pouco articulados no
 texto — candidatos a aprofundamento argumentativo.
 
-- Lacuna entre **Tópico 1** [espectrograma, actante, partir] e **Tópico 3** [spira, projeto, marcelo] — densidade ponderada de ligação = 0.7598
-- Lacuna entre **Tópico 1** [espectrograma, actante, partir] e **Tópico 2** [inscricao, cadeia, ponto] — densidade ponderada de ligação = 0.8061
-- Lacuna entre **Tópico 1** [espectrograma, actante, partir] e **Tópico 5** [rede, objeto, pratica] — densidade ponderada de ligação = 0.8235
-- Lacuna entre **Tópico 1** [espectrograma, actante, partir] e **Tópico 4** [covideiro, artigo, coleta] — densidade ponderada de ligação = 0.8351
-- Lacuna entre **Tópico 4** [covideiro, artigo, coleta] e **Tópico 5** [rede, objeto, pratica] — densidade ponderada de ligação = 0.9536
-- Lacuna entre **Tópico 2** [inscricao, cadeia, ponto] e **Tópico 3** [spira, projeto, marcelo] — densidade ponderada de ligação = 1.0333
+- Lacuna entre **Tópico 2** [espectrograma, partir, sinal] e **Tópico 3** [spira, projeto, marcelo] — densidade ponderada de ligação = 0.7438
+- Lacuna entre **Tópico 1** [inscricao, cadeia, ponto] e **Tópico 2** [espectrograma, partir, sinal] — densidade ponderada de ligação = 0.7510
+- Lacuna entre **Tópico 2** [espectrograma, partir, sinal] e **Tópico 5** [rede, objeto, pratica] — densidade ponderada de ligação = 0.7797
+- Lacuna entre **Tópico 2** [espectrograma, partir, sinal] e **Tópico 4** [covideiro, artigo, coleta] — densidade ponderada de ligação = 0.8271
+- Lacuna entre **Tópico 4** [covideiro, artigo, coleta] e **Tópico 5** [rede, objeto, pratica] — densidade ponderada de ligação = 0.9917
+- Lacuna entre **Tópico 1** [inscricao, cadeia, ponto] e **Tópico 3** [spira, projeto, marcelo] — densidade ponderada de ligação = 1.0333
 
 ## 9. Leitura interpretativa
 **O que a rede mostra.** O capítulo organiza-se em torno do projeto SPIRA (a
