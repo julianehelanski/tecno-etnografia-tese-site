@@ -13,4 +13,4 @@ Utilitários para manter o site (`index.html`) sincronizado com a tese.
 
 > O resto do site (nós, links entre capítulos, textos dos nós, seções, e os
 > arrays de figuras por capítulo) é editorial e não é gerado por script —
-> peça ao Claude para atualizar quando a estrutura da tese mudar.
+> atualizo-o com o Claude quando a estrutura da tese muda.
