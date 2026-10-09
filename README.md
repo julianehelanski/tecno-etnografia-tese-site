@@ -160,3 +160,13 @@ se reflitam aqui sem cache obsoleto. Detalhes em
   Veja [`docs/COMO-RODAR.md`](docs/COMO-RODAR.md) para rodar as análises e atualizar o site manualmente.
   Para regenerar **todas** as análises (site + bibliometrias + figurações), veja [`docs/ATUALIZAR-TUDO.md`](docs/ATUALIZAR-TUDO.md).
 - `scripts/` — utilitários (cache-busting das figuras).
+
+## Uso de inteligência artificial generativa
+
+Desenvolvi o site e o *pipeline* da rede textual da tese (`infranodus/`) com o Claude Code. O Claude Code é a interface de linha de comando da Anthropic que dá ao modelo de linguagem acesso aos arquivos do projeto, para ler, escrever e executar *scripts*. Com ele escrevi os *scripts* de co-ocorrência, NPMI, Louvain, PageRank e trajetória lexical, a página `index.html` e a sincronização das figuras com o repositório da tese. Os *commits* de autor `github-actions[bot]` são regenerações automáticas da rede disparadas por atualizações do texto da tese. São minhas a escolha das métricas, a leitura das redes e a interpretação que delas faço nos capítulos.
+
+**Modelos registrados no histórico de versões:** Claude Opus 4.8 (junho e julho de 2026), Claude Opus 5.5 e Claude Sonnet 5.5 (outubro de 2026). Parte do *pipeline* foi escrita no repositório da tese antes de vir para este.
+
+**Sobre o autor `Claude` e a linha `Co-Authored-By: Claude …` nos *commits*.** Os *commits* com autor `Claude`, ou com essa linha no fim da mensagem, foram feitos em sessões do Claude Code. A marcação é gerada pela própria ferramenta e funciona como registro técnico de rastreabilidade: indica em que pontos do histórico o modelo de linguagem participou do trabalho. A autoria e a responsabilidade pelo conteúdo deste repositório são minhas. Conforme a Deliberação CONSU-A-005/2026 da Unicamp, as ferramentas de IA generativa não figuram como coautoras.
+
+A declaração formal de uso de IA generativa da tese, no modelo da Pró-Reitoria de Pós-Graduação da Unicamp, está no [Anexo 1 da tese](https://github.com/julianehelanski/tecno-etnografia-centro-ia/blob/main/ex_ane1.tex). Este texto também serve à descrição do depósito no Repositório de Dados de Pesquisa da Unicamp (REDU).
