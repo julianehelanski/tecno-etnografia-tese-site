@@ -1,5 +1,8 @@
 # {tecnografia} — Rede textual da tese
 
+> **Uso na tese.** Quais figuras e tabelas da tese (capítulos 1 a 5) vêm deste repositório, com o script e os dados de origem de cada uma, estão em [`docs/USO_NA_TESE.md`](docs/USO_NA_TESE.md) (versão tabular em [`docs/uso_na_tese.csv`](docs/uso_na_tese.csv)).
+
+
 Site interativo que acompanha a tese de doutorado **"{tecnografia} de um
 centro de inteligência artificial: seguindo cientistas e engenheiros —
 universidade afora"** (Juliane Helanski · PPGCS/IFCH · Unicamp · 2026).
