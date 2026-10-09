@@ -1,17 +1,17 @@
 {
-  "tokens": 23188,
+  "tokens": 23209,
   "graph_full": {
-    "nodes": 6593,
-    "edges": 58612
+    "nodes": 6595,
+    "edges": 58672
   },
   "graph_pruned": {
     "nodes": 180,
-    "edges": 3292
+    "edges": 3291
   },
   "top_terms_degree": [
     {
       "term": "rede",
-      "degree": 1289
+      "degree": 1295
     },
     {
       "term": "pesquisa",
@@ -35,11 +35,11 @@
     },
     {
       "term": "latour",
-      "degree": 611
+      "degree": 609
     },
     {
       "term": "campo",
-      "degree": 586
+      "degree": 587
     },
     {
       "term": "metodo",
@@ -87,7 +87,7 @@
     },
     {
       "term": "analise",
-      "degree": 343
+      "degree": 341
     },
     {
       "term": "gesto",
@@ -133,129 +133,129 @@
   "top_terms_pagerank": [
     {
       "term": "rede",
-      "pagerank": 0.03292919851735911
+      "pagerank": 0.03307586261591019
     },
     {
       "term": "pesquisa",
-      "pagerank": 0.02564619227797882
+      "pagerank": 0.025646138026542697
     },
     {
       "term": "etnografia",
-      "pagerank": 0.02195365025841369
+      "pagerank": 0.021953826880744667
     },
     {
       "term": "artificial",
-      "pagerank": 0.016561996094729657
+      "pagerank": 0.01656196994896525
     },
     {
       "term": "inteligencia",
-      "pagerank": 0.016335803082957526
+      "pagerank": 0.016335760606110382
     },
     {
       "term": "latour",
-      "pagerank": 0.01630270142539902
+      "pagerank": 0.016254948247099922
     },
     {
       "term": "ciencia",
-      "pagerank": 0.01603295757644014
+      "pagerank": 0.016032885202491673
     },
     {
       "term": "campo",
-      "pagerank": 0.015740084518408085
+      "pagerank": 0.015763383630740244
     },
     {
       "term": "metodo",
-      "pagerank": 0.014633857229985408
+      "pagerank": 0.014634014593479681
     },
     {
       "term": "objeto",
-      "pagerank": 0.013169406813719739
+      "pagerank": 0.01316968223477207
     },
     {
       "term": "corte",
-      "pagerank": 0.012732801858864858
+      "pagerank": 0.01273294783075547
     },
     {
       "term": "humano",
-      "pagerank": 0.012341798904647375
+      "pagerank": 0.012341819420231034
     },
     {
       "term": "descricao",
-      "pagerank": 0.011254639829598906
+      "pagerank": 0.01125459767800916
     },
     {
       "term": "inscricao",
-      "pagerank": 0.010817809079503412
+      "pagerank": 0.010817816690151326
     },
     {
       "term": "pratica",
-      "pagerank": 0.010812944047290402
+      "pagerank": 0.010812965362163578
     },
     {
       "term": "strathern",
-      "pagerank": 0.010769612351159578
+      "pagerank": 0.010769726248722999
     },
     {
       "term": "modelo",
-      "pagerank": 0.010414588067923834
+      "pagerank": 0.010414710351102346
     },
     {
       "term": "relacao",
-      "pagerank": 0.009894610437536762
+      "pagerank": 0.009894622955512064
     },
     {
       "term": "gesto",
-      "pagerank": 0.009249534802292493
+      "pagerank": 0.009249910816148255
     },
     {
       "term": "analise",
-      "pagerank": 0.00924450913428433
+      "pagerank": 0.009193328039877593
     },
     {
       "term": "maquina",
-      "pagerank": 0.009014129869978557
+      "pagerank": 0.009014291777365646
     },
     {
       "term": "parte",
-      "pagerank": 0.008981272738810272
+      "pagerank": 0.008981255579219121
     },
     {
       "term": "dado",
-      "pagerank": 0.008858480453442953
+      "pagerank": 0.008858457339660055
     },
     {
       "term": "haraway",
-      "pagerank": 0.00885587583190627
+      "pagerank": 0.008855939512181525
     },
     {
       "term": "ator",
-      "pagerank": 0.008838455613991643
+      "pagerank": 0.00883780279052106
     },
     {
       "term": "conceito",
-      "pagerank": 0.008660043003964715
+      "pagerank": 0.008660075253959782
     },
     {
       "term": "escrita",
-      "pagerank": 0.008065193569644254
+      "pagerank": 0.008065219837885941
     },
     {
       "term": "teoria",
-      "pagerank": 0.007760524129190807
+      "pagerank": 0.007760066137559282
     },
     {
       "term": "descreve",
-      "pagerank": 0.007752725641314874
+      "pagerank": 0.007752702421308689
     },
     {
-      "term": "sociais",
-      "pagerank": 0.007401867000963725
+      "term": "claude",
+      "pagerank": 0.0074019045456935545
     }
   ],
   "top_terms_betweenness": [
     {
       "term": "rede",
-      "betweenness": 0.37982549745778665
+      "betweenness": 0.3797627267591488
     },
     {
       "term": "pesquisa",
@@ -267,15 +267,15 @@
     },
     {
       "term": "latour",
-      "betweenness": 0.1618228610884439
+      "betweenness": 0.16176009038980602
     },
     {
       "term": "campo",
-      "betweenness": 0.11773167618688928
+      "betweenness": 0.1176689054882514
     },
     {
       "term": "corte",
-      "betweenness": 0.1148076078086749
+      "betweenness": 0.11487037850731277
     },
     {
       "term": "ciencia",
@@ -331,7 +331,7 @@
     },
     {
       "term": "hinterland",
-      "betweenness": 0.019521687276379384
+      "betweenness": 0.01958445797501726
     }
   ],
   "underrated_by_frequency": [
@@ -420,9 +420,9 @@
       "shift": 4
     },
     {
-      "term": "conceitos",
-      "degree_rank": 92,
-      "pagerank_rank": 88,
+      "term": "associacao",
+      "degree_rank": 78,
+      "pagerank_rank": 74,
       "shift": 4
     }
   ],
@@ -430,151 +430,151 @@
     {
       "a": "ausencia",
       "b": "manifesta",
-      "npmi": 0.8641024031058233,
+      "npmi": 0.8641234437532328,
       "cooccurrence_weight": 67
     },
     {
       "a": "inteligencia",
       "b": "artificial",
-      "npmi": 0.8570895058466128,
+      "npmi": 0.8571195756962166,
       "cooccurrence_weight": 316
     },
     {
       "a": "existencias",
       "b": "parciais",
-      "npmi": 0.8263990971718178,
+      "npmi": 0.8264270565165803,
       "cooccurrence_weight": 84
     },
     {
       "a": "parcial",
       "b": "existencia",
-      "npmi": 0.7451798719714184,
+      "npmi": 0.7452180369489598,
       "cooccurrence_weight": 59
     },
     {
       "a": "teoria",
       "b": "ator",
-      "npmi": 0.7280853540411584,
+      "npmi": 0.7281307957133085,
       "cooccurrence_weight": 104
     },
     {
       "a": "distribuida",
       "b": "agencia",
-      "npmi": 0.7264598513874302,
+      "npmi": 0.7265004434539362,
       "cooccurrence_weight": 52
     },
     {
       "a": "presenca",
       "b": "ausencia",
-      "npmi": 0.7071789421068285,
+      "npmi": 0.7072210826909424,
       "cooccurrence_weight": 43
     },
     {
       "a": "otherness",
       "b": "manifesta",
-      "npmi": 0.6838347136200691,
+      "npmi": 0.6838796966059859,
       "cooccurrence_weight": 40
     },
     {
       "a": "tecnico",
       "b": "letramento",
-      "npmi": 0.6548899027148178,
+      "npmi": 0.654940106542594,
       "cooccurrence_weight": 46
     },
     {
       "a": "parcial",
       "b": "conexao",
-      "npmi": 0.6339053557827946,
+      "npmi": 0.6339561453869036,
       "cooccurrence_weight": 43
     },
     {
       "a": "infraestrutura",
       "b": "computacional",
-      "npmi": 0.6310335357886157,
+      "npmi": 0.6310856113853721,
       "cooccurrence_weight": 38
     },
     {
       "a": "presenca",
       "b": "manifesta",
-      "npmi": 0.6220435317875762,
+      "npmi": 0.6220944520430998,
       "cooccurrence_weight": 28
     },
     {
       "a": "otherness",
       "b": "ausencia",
-      "npmi": 0.6173206448867321,
+      "npmi": 0.6173737353464093,
       "cooccurrence_weight": 34
     },
     {
       "a": "modelo",
       "b": "linguagem",
-      "npmi": 0.6162833880244094,
+      "npmi": 0.6163449238257296,
       "cooccurrence_weight": 87
     },
     {
       "a": "heterogeneos",
       "b": "materiais",
-      "npmi": 0.5995098100438342,
+      "npmi": 0.5995658624167238,
       "cooccurrence_weight": 36
     },
     {
       "a": "figuracao",
       "b": "textil",
-      "npmi": 0.5967013030659346,
+      "npmi": 0.5967615232103722,
       "cooccurrence_weight": 54
     },
     {
       "a": "ciencia",
       "b": "sociais",
-      "npmi": 0.5781530388208554,
+      "npmi": 0.5782214062924933,
       "cooccurrence_weight": 94
-    },
-    {
-      "a": "textual",
-      "b": "analise",
-      "npmi": 0.5649332100768103,
-      "cooccurrence_weight": 56
     },
     {
       "a": "generativa",
       "b": "artificial",
-      "npmi": 0.5591514120302739,
+      "npmi": 0.5592193154733988,
       "cooccurrence_weight": 65
+    },
+    {
+      "a": "textual",
+      "b": "analise",
+      "npmi": 0.5551308147448492,
+      "cooccurrence_weight": 50
     },
     {
       "a": "otherness",
       "b": "hinterland",
-      "npmi": 0.54611120342563,
+      "npmi": 0.5461732941238548,
       "cooccurrence_weight": 36
     },
     {
       "a": "otherness",
       "b": "presenca",
-      "npmi": 0.5445347355841557,
+      "npmi": 0.5445950805401302,
       "cooccurrence_weight": 25
     },
     {
       "a": "antropologia",
       "b": "tecnica",
-      "npmi": 0.5441813260848879,
+      "npmi": 0.5442402152892168,
       "cooccurrence_weight": 21
     },
     {
       "a": "condicoes",
       "b": "materiais",
-      "npmi": 0.5400702010057611,
+      "npmi": 0.5401331180959591,
       "cooccurrence_weight": 31
     },
     {
       "a": "cientista",
       "b": "computacao",
-      "npmi": 0.5376434002078948,
+      "npmi": 0.5377031340754087,
       "cooccurrence_weight": 22
     },
     {
       "a": "haraway",
       "b": "barad",
-      "npmi": 0.5166145694191794,
+      "npmi": 0.5166800354718913,
       "cooccurrence_weight": 29
     }
   ],
@@ -906,7 +906,7 @@
     {
       "topic_a": 0,
       "topic_b": 2,
-      "edge_density": 0.5697278911564626
+      "edge_density": 0.5688775510204082
     },
     {
       "topic_a": 1,

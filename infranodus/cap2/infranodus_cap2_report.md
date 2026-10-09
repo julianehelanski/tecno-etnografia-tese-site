@@ -10,9 +10,9 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **28,378**
-- Grafo bruto: **7056** nós · **66548** arestas
-- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3617** arestas
+- Tokens significativos: **28,399**
+- Grafo bruto: **7061** nós · **66607** arestas
+- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3616** arestas
 - Tópicos detectados (Louvain): **8**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
@@ -20,7 +20,7 @@
 |---|-------|----------------|
 | 1 | `artificial` | 1861 |
 | 2 | `inteligencia` | 1844 |
-| 3 | `latour` | 1156 |
+| 3 | `latour` | 1155 |
 | 4 | `militar` | 1089 |
 | 5 | `ciencia` | 1016 |
 | 6 | `rotulo` | 861 |
@@ -34,7 +34,7 @@
 | 14 | `aime` | 564 |
 | 15 | `teoria` | 535 |
 | 16 | `catalogo` | 517 |
-| 17 | `ocorrencias` | 501 |
+| 17 | `ocorrencias` | 503 |
 | 18 | `tecnologia` | 501 |
 | 19 | `science` | 491 |
 | 20 | `tecnociencia` | 475 |
@@ -43,8 +43,8 @@
 | 23 | `descreve` | 456 |
 | 24 | `objeto` | 455 |
 | 25 | `leitura` | 443 |
-| 26 | `obras` | 436 |
-| 27 | `partir` | 436 |
+| 26 | `partir` | 438 |
+| 27 | `obras` | 434 |
 | 28 | `figuracoes` | 428 |
 | 29 | `dado` | 417 |
 | 30 | `capes` | 410 |
@@ -100,10 +100,10 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | 5 | `crawford` | 176 | 155 | +21 |
 | 6 | `quadro` | 85 | 71 | +14 |
 | 7 | `brasileira` | 84 | 72 | +12 |
-| 8 | `cadeia` | 88 | 78 | +10 |
+| 8 | `cadeia` | 88 | 79 | +9 |
 | 9 | `brasil` | 119 | 110 | +9 |
-| 10 | `modelo` | 59 | 51 | +8 |
-| 11 | `producao` | 57 | 50 | +7 |
+| 10 | `producao` | 57 | 50 | +7 |
+| 11 | `modelo` | 59 | 52 | +7 |
 | 12 | `forsythe` | 130 | 123 | +7 |
 | 13 | `conhecimento` | 37 | 31 | +6 |
 | 14 | `pesquisa` | 39 | 34 | +5 |
@@ -112,26 +112,26 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `latour` | 0.3180 |
+| 1 | `latour` | 0.3189 |
 | 2 | `inteligencia` | 0.1988 |
 | 3 | `artificial` | 0.1957 |
-| 4 | `militar` | 0.1468 |
+| 4 | `militar` | 0.1462 |
 | 5 | `vocabulario` | 0.1400 |
-| 6 | `ciencia` | 0.1279 |
-| 7 | `rotulo` | 0.0956 |
-| 8 | `analise` | 0.0923 |
+| 6 | `ciencia` | 0.1257 |
+| 7 | `rotulo` | 0.0950 |
+| 8 | `analise` | 0.0921 |
 | 9 | `capes` | 0.0736 |
-| 10 | `rede` | 0.0714 |
+| 10 | `rede` | 0.0712 |
 | 11 | `figuracoes` | 0.0642 |
-| 12 | `conceito` | 0.0621 |
-| 13 | `catalogo` | 0.0609 |
-| 14 | `campo` | 0.0582 |
+| 12 | `catalogo` | 0.0631 |
+| 13 | `conceito` | 0.0621 |
+| 14 | `campo` | 0.0581 |
 | 15 | `teoria` | 0.0499 |
 | 16 | `aime` | 0.0493 |
-| 17 | `descreve` | 0.0475 |
-| 18 | `figuracao` | 0.0464 |
+| 17 | `descreve` | 0.0476 |
+| 18 | `figuracao` | 0.0461 |
 | 19 | `tecnociencia` | 0.0456 |
-| 20 | `humano` | 0.0402 |
+| 20 | `humano` | 0.0381 |
 
 ## 6. Pares de termos com associação mais surpreendente (NPMI)
 NPMI mede *quão surpreendente* é a co-ocorrência de duas palavras dadas
@@ -184,8 +184,8 @@ texto — candidatos a aprofundamento argumentativo.
 - Lacuna entre **Tópico 2** [latour, militar, rotulo] e **Tópico 4** [artificial, inteligencia, objeto] — densidade ponderada de ligação = 0.4644
 - Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 5** [rede, teoria, tecnociencia] — densidade ponderada de ligação = 0.4646
 - Lacuna entre **Tópico 2** [latour, militar, rotulo] e **Tópico 3** [ciencia, campo, humano] — densidade ponderada de ligação = 0.4972
-- Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 2** [latour, militar, rotulo] — densidade ponderada de ligação = 0.8244
-- Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 3** [ciencia, campo, humano] — densidade ponderada de ligação = 0.8906
+- Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 2** [latour, militar, rotulo] — densidade ponderada de ligação = 0.8233
+- Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 3** [ciencia, campo, humano] — densidade ponderada de ligação = 0.8923
 - Lacuna entre **Tópico 1** [leitura, obras, dado] e **Tópico 4** [artificial, inteligencia, objeto] — densidade ponderada de ligação = 0.9250
 
 ## 9. Leitura interpretativa
