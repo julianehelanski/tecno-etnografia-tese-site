@@ -1,5 +1,5 @@
 """
-InfraNodus-style text network analysis of a thesis chapter.
+Análise de rede textual de um capítulo da tese.
 
 Methodology (following Paranyushkin 2019 / InfraNodus):
 - Tokenize text (Portuguese), lowercase, strip accents/punctuation.
@@ -13,10 +13,10 @@ Methodology (following Paranyushkin 2019 / InfraNodus):
 - Render two PNGs (full network, community-colored) and a Markdown report.
 
 CLI:
-    python infranodus_cap1.py --chapter _tex/ex_cap1.tex --slug cap1
-    python infranodus_cap1.py --chapter _tex/ex_cap2.tex --slug cap2 --title "Capítulo 2"
+    python rede_textual_capitulo.py --chapter _tex/ex_cap1.tex --slug cap1
+    python rede_textual_capitulo.py --chapter _tex/ex_cap2.tex --slug cap2 --title "Capítulo 2"
 
-Outputs go to infranodus/<slug>/.
+Outputs go to rede_textual/<slug>/.
 """
 
 from __future__ import annotations
@@ -1000,10 +1000,10 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--title", default="Capítulo 1",
                    help="Human-readable label for figure titles (default: 'Capítulo 1').")
     p.add_argument("--out", type=Path, default=None,
-                   help="Output directory. Default: infranodus/<slug>/.")
+                   help="Output directory. Default: rede_textual/<slug>/.")
     p.add_argument("--interpretation", type=Path, default=None,
                    help="Optional Markdown file to embed as the interpretive section. "
-                        "If omitted, looks for infranodus/interpretation_<slug>.md.")
+                        "If omitted, looks for rede_textual/interpretation_<slug>.md.")
     return p.parse_args()
 
 

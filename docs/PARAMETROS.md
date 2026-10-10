@@ -1,14 +1,14 @@
 # Parâmetros da análise textual (rede de termos)
 
 Valores exatos do pipeline que gera as redes de co-ocorrência do site.
-Atenção: a **rede do mapa** (`infranodus/tese_network.py`) e a **rede por
-capítulo** (`infranodus/infranodus_cap1.py`) usam valores diferentes.
+Atenção: a **rede do mapa** (`rede_textual/tese_network.py`) e a **rede por
+capítulo** (`rede_textual/rede_textual_capitulo.py`) usam valores diferentes.
 
 Método em cadeia: **co-ocorrência → NPMI → poda → PageRank → Louvain**.
 
 ---
 
-## Rede do MAPA do site — `infranodus/tese_network.py`
+## Rede do MAPA do site — `rede_textual/tese_network.py`
 
 Ajustáveis por flag (padrão entre parênteses):
 
@@ -28,13 +28,13 @@ Exemplo sobrescrevendo:
 
 ```bash
 export PYTHONHASHSEED=0
-python infranodus/tese_network.py --source-root _tex \
+python rede_textual/tese_network.py --source-root _tex \
   --top-n 260 --min-edge 3 --edges-per-node 16 --core 80 --inject index.html
 ```
 
 ---
 
-## Rede por CAPÍTULO — `infranodus/infranodus_cap1.py`
+## Rede por CAPÍTULO — `rede_textual/rede_textual_capitulo.py`
 
 Valores usados na rotina principal (chamada por `run_all.py`):
 
@@ -51,15 +51,15 @@ Valores usados na rotina principal (chamada por `run_all.py`):
 ## Onde mexer no código
 
 - **Parâmetros do mapa:** defaults no `_parse_args()` de
-  `infranodus/tese_network.py` (≈ linhas 237–244) — ou apenas passe as flags.
+  `rede_textual/tese_network.py` (≈ linhas 237–244) — ou apenas passe as flags.
 - **Janela, NPMI, PageRank, Louvain:** funções `build_graph`,
   `compute_npmi`, `prune_graph`, `compute_metrics` em
-  `infranodus/infranodus_cap1.py` (a janela `window=4` é passada nas
+  `rede_textual/rede_textual_capitulo.py` (a janela `window=4` é passada nas
   chamadas; α e resolution estão fixos em `compute_metrics`).
 - **Stopwords (palavras ignoradas):** conjunto `PT_STOPWORDS` no topo de
-  `infranodus/infranodus_cap1.py`.
+  `rede_textual/rede_textual_capitulo.py`.
 - **Curadoria da rede da tese:** `CHAPTERS`, `TERRITORY_RULES`, `PALETTE` e
-  `carve_bibliometric_territory` no topo de `infranodus/tese_network.py`.
+  `carve_bibliometric_territory` no topo de `rede_textual/tese_network.py`.
 
 ---
 

@@ -4,7 +4,7 @@
 tese_network.py
 ===============
 Gera a rede textual da TESE INTEIRA (Apresentação + capítulos 1–4 +
-Considerações Finais) reaproveitando o pipeline de `infranodus_cap1.py`
+Considerações Finais) reaproveitando o pipeline de `rede_textual_capitulo.py`
 (co-ocorrência · NPMI · Louvain · PageRank). Exporta um JSON compacto
 para o site renderizar como grafo principal.
 
@@ -13,9 +13,9 @@ Cada capítulo é tokenizado separadamente e os fluxos são unidos com um
 capítulos. Registra ainda em quais capítulos cada termo aparece.
 
 Uso:
-    python3 infranodus/tese_network.py --source-root /tmp/tese
+    python3 rede_textual/tese_network.py --source-root /tmp/tese
 Saída:
-    infranodus/tese_network.json
+    rede_textual/tese_network.json
 """
 import argparse
 import html as _html
@@ -23,7 +23,7 @@ import json
 import re
 from pathlib import Path
 
-from infranodus_cap1 import (extract_tokens, build_graph, compute_npmi,
+from rede_textual_capitulo import (extract_tokens, build_graph, compute_npmi,
                              annotate_npmi, prune_graph, compute_metrics,
                              detect_topics, label_topic,
                              strip_latex, normalize_token, lemma,

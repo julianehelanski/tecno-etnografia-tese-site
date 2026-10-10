@@ -13,11 +13,11 @@ por capítulo (comunidades específicas de cada um), em vez de uma única vez
 sobre a tese concatenada.
 
 Saídas:
-  - infranodus/<slug>/netdata_<slug>.json   (um por capítulo, para inspeção)
+  - rede_textual/<slug>/netdata_<slug>.json   (um por capítulo, para inspeção)
   - injeta um <script id="netdata-chapters"> em index.html com {slug: payload}
 
 Uso:
-    python3 infranodus/tese_network_chapters.py --source-root /caminho/tese --inject index.html
+    python3 rede_textual/tese_network_chapters.py --source-root /caminho/tese --inject index.html
 """
 from __future__ import annotations
 
@@ -26,7 +26,7 @@ import json
 from pathlib import Path
 
 import tese_network as TN
-from infranodus_cap1 import (extract_tokens, build_graph, compute_npmi,
+from rede_textual_capitulo import (extract_tokens, build_graph, compute_npmi,
                              annotate_npmi, prune_graph, compute_metrics,
                              detect_topics, label_topic, collect_surface_forms)
 

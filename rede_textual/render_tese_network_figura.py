@@ -16,7 +16,7 @@ Saída:
     figuras/rede_tese_inteira.png
 
 Uso:
-    python3 infranodus/render_tese_network_figura.py
+    python3 rede_textual/render_tese_network_figura.py
 """
 from __future__ import annotations
 
@@ -25,7 +25,7 @@ from pathlib import Path
 
 import networkx as nx
 
-from infranodus_cap1 import render_network
+from rede_textual_capitulo import render_network
 
 THIS_DIR = Path(__file__).resolve().parent
 REPO_ROOT = THIS_DIR.parent

@@ -51,19 +51,19 @@ export PYTHONHASHSEED=0
 ### Pipeline (na mesma ordem do CI)
 
 ```bash
-# (A) LEXICOMETRIA por capítulo: infranodus (co-ocorrência · NPMI · Louvain
-#     · PageRank) + trajetória narrativa. Saídas em infranodus/<cap>/
-python infranodus/run_all.py --source-root _tex            # ou: --only cap1,cap2
+# (A) LEXICOMETRIA por capítulo: análise de rede textual (co-ocorrência · NPMI · Louvain
+#     · PageRank) + trajetória narrativa. Saídas em rede_textual/<cap>/
+python rede_textual/run_all.py --source-root _tex            # ou: --only cap1,cap2
 
 # (B) REDE TEXTUAL principal e injeção no mapa (index.html)
-python infranodus/tese_network.py --source-root _tex --inject index.html
+python rede_textual/tese_network.py --source-root _tex --inject index.html
 
 # (B2) REDES POR CAPÍTULO (Louvain próprio de cada capítulo) -> seletor da capa
 #      injeta <script id="netdata-chapters"> em index.html
-python infranodus/tese_network_chapters.py --source-root _tex --inject index.html
+python rede_textual/tese_network_chapters.py --source-root _tex --inject index.html
 
 # (C) Imagens da análise -> figuras/
-python infranodus/sync_site_figuras.py
+python rede_textual/sync_site_figuras.py
 
 # (D) Figuras de conteúdo da tese -> figuras/
 python scripts/sync_tese_figuras.py --source-root _tex
@@ -75,18 +75,18 @@ SITE_INDEX=index.html python scripts/cache_busting_figuras.py
 python scripts/relatorio_divergencia_tese.py --source-root _tex
 
 # (G) Documento da tese (resumo · sumário · ilustrações · tabelas) -> index.html
-python infranodus/tese_documento.py --source-root _tex --inject index.html
+python rede_textual/tese_documento.py --source-root _tex --inject index.html
 
 # (H) Referências (bibliografia citada) -> index.html
 #     lê tese.tex + tese.bib, extrai só as obras com \textcite/\parencite e
 #     reinjeta o <script id="refsdata"> (seção "Referências" da aba "A tese").
-python infranodus/tese_referencias.py --source-root _tex --inject index.html
+python rede_textual/tese_referencias.py --source-root _tex --inject index.html
 ```
 
 ### Publicar (atualizar o site)
 
 ```bash
-git add infranodus/ figuras/ index.html \
+git add rede_textual/ figuras/ index.html \
         docs/divergencia-tese.md scripts/tex_structure_snapshot.json
 git commit -m "Regenera redes + figuras/keywords a partir da tese"
 git push        # o push na main dispara o pages.yml e republica o site
@@ -98,9 +98,9 @@ git push        # o push na main dispara o pages.yml e republica o site
 
 | Análise | Script | Observação |
 |---|---|---|
-| **Lexicométrica** (rede de termos) | `infranodus/tese_network.py` (mapa) e `infranodus/run_all.py` → `infranodus_cap*.py` (por capítulo) | núcleo do site |
+| **Lexicométrica** (rede de termos) | `rede_textual/tese_network.py` (mapa) e `rede_textual/run_all.py` → `rede_textual_capitulo.py` (por capítulo) | núcleo do site |
 | **Bibliométrica** (CAPES/SciELO) | as figuras (`figuras/cap2/cap2-bib-*`) são geradas no **repositório da tese** e só **sincronizadas** aqui por `scripts/sync_tese_figuras.py`; o agrupamento "Bibliometria · panorama do campo" é curado em `tese_network.py` (`carve_bibliometric_territory`) | a geração dos gráficos bibliométricos está no repo `.tex`, não aqui |
-| **Trajetória narrativa** | `infranodus/narrative_trajectory.py` (via `run_all.py`) | alluvial / gantt / semântico |
+| **Trajetória narrativa** | `rede_textual/narrative_trajectory.py` (via `run_all.py`) | alluvial / gantt / semântico |
 | **Atualização do site** | injeção via `--inject` + `git push` → `pages.yml` | deploy automático |
 
 > Parâmetros exatos do pipeline (janela, poda, PageRank, Louvain) em [`PARAMETROS.md`](PARAMETROS.md). Visão geral didática em [`VISAO-GERAL.md`](VISAO-GERAL.md).
@@ -134,7 +134,7 @@ conda activate tese      # reativar para a variável valer
 ### A) Anaconda Prompt (recomendado)
 
 Com o env `tese` ativo e dentro da pasta do repositório, use os mesmos
-comandos da seção "Pipeline" acima (`python infranodus/run_all.py
+comandos da seção "Pipeline" acima (`python rede_textual/run_all.py
 --source-root _tex`, etc.). Publicar = `git push` no final.
 
 ### B) Spyder
@@ -146,11 +146,11 @@ comandos da seção "Pipeline" acima (`python infranodus/run_all.py
    direito), para `_tex`, `index.html` etc. resolverem certo.
 3. **Passar argumentos** — pelo console IPython com `%run`:
    ```python
-   %run infranodus/run_all.py --source-root _tex
-   %run infranodus/tese_network.py --source-root _tex --inject index.html
-   %run infranodus/sync_site_figuras.py
+   %run rede_textual/run_all.py --source-root _tex
+   %run rede_textual/tese_network.py --source-root _tex --inject index.html
+   %run rede_textual/sync_site_figuras.py
    %run scripts/sync_tese_figuras.py --source-root _tex
-   %run infranodus/tese_documento.py --source-root _tex --inject index.html
+   %run rede_textual/tese_documento.py --source-root _tex --inject index.html
    ```
    Cache-busting das figuras (usa a variável `SITE_INDEX`):
    ```python
@@ -174,9 +174,9 @@ Cada passo numa célula, com `!` (subprocesso), prefixando a variável:
 
 ```python
 # Windows:
-!set PYTHONHASHSEED=0 && python infranodus/run_all.py --source-root _tex
+!set PYTHONHASHSEED=0 && python rede_textual/run_all.py --source-root _tex
 # macOS/Linux:
-!PYTHONHASHSEED=0 python infranodus/run_all.py --source-root _tex
+!PYTHONHASHSEED=0 python rede_textual/run_all.py --source-root _tex
 ```
 
 ### Resumo das diferenças
@@ -200,5 +200,5 @@ Cada passo numa célula, com `!` (subprocesso), prefixando a variável:
   **dados e figuras**, preservando o restante.
 
 > Veja também [`scripts/README.md`](../scripts/README.md) e
-> [`infranodus/README.md`](../infranodus/README.md) para detalhes de cada
+> [`rede_textual/README.md`](../rede_textual/README.md) para detalhes de cada
 > utilitário.

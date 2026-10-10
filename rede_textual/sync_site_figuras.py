@@ -3,7 +3,7 @@
 """
 sync_site_figuras.py
 ====================
-Copia as imagens regeneradas pela análise (infranodus/<slug>/...) para a
+Copia as imagens regeneradas pela análise (rede_textual/<slug>/...) para a
 pasta que o SITE exibe (figuras/<slug>/...), já com os nomes que o
 index.html usa.
 
@@ -14,7 +14,7 @@ capítulo, basta criar os arquivos em figuras/<slug>/ uma vez — depois
 eles se atualizam sozinhos.
 
 Uso:
-    python infranodus/sync_site_figuras.py [--dry-run]
+    python rede_textual/sync_site_figuras.py [--dry-run]
 """
 import sys
 import shutil
@@ -26,7 +26,7 @@ FIGURAS = REPO_ROOT / "figuras"
 
 SLUGS = ["cap1", "cap2", "cap3", "cap4"]
 
-# mapeamento: nome gerado em infranodus/<slug>/  ->  nome usado em figuras/<slug>/
+# mapeamento: nome gerado em rede_textual/<slug>/  ->  nome usado em figuras/<slug>/
 # {slug} é substituído pelo capítulo. As legendas do site associam o "pmi"
 # ao NÚCLEO da rede (focus_pmi), não à rede completa.
 NAME_MAP = {

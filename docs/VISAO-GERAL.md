@@ -23,7 +23,7 @@ Fluxo: **escrever (Overleaf) → analisar (GitHub) → publicar (site)**.
 | Estação | Automático hoje | Equivalente manual |
 |---|---|---|
 | **Ter o texto** | Overleaf | Qualquer editor LaTeX (TeXstudio, VS Code, Kile) — ou só os arquivos `.tex` como texto puro. *A análise só lê o texto; não precisa compilar o PDF.* |
-| **Rodar a análise** | GitHub Actions | **Python** no seu computador: Anaconda Prompt, **Spyder**, Jupyter ou terminal (scripts em `infranodus/` e `scripts/`). |
+| **Rodar a análise** | GitHub Actions | **Python** no seu computador: Anaconda Prompt, **Spyder**, Jupyter ou terminal (scripts em `rede_textual/` e `scripts/`). |
 | **Ver / publicar** | GitHub Pages | Abrir o `index.html` no navegador (duplo-clique) para ver; `git push` (ou GitHub Desktop) para publicar. |
 
 ## O mínimo a fazer à mão
@@ -33,8 +33,8 @@ Fluxo: **escrever (Overleaf) → analisar (GitHub) → publicar (site)**.
 2. **Instalar o Python uma vez** (Anaconda) + bibliotecas
    (`pip install -r requirements.txt`).
 3. **Rodar os dois comandos principais:**
-   - `python infranodus/run_all.py --source-root _tex` → análise por capítulo;
-   - `python infranodus/tese_network.py --source-root _tex --inject index.html`
+   - `python rede_textual/run_all.py --source-root _tex` → análise por capítulo;
+   - `python rede_textual/tese_network.py --source-root _tex --inject index.html`
      → a rede do mapa, já colocada no site.
 4. **Ver:** abrir o `index.html` no navegador.
 5. **(Opcional) Publicar:** `git push`.

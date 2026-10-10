@@ -21,7 +21,7 @@ O que faz:
   4. Exporta JSON e, com `--inject`, reinjeta o `<script id="refsdata">`.
 
 Uso:
-    python3 infranodus/tese_referencias.py --source-root /tmp/tese --inject index.html
+    python3 rede_textual/tese_referencias.py --source-root /tmp/tese --inject index.html
 
 Obs.: aproximação fiel do estilo authoryear feita a partir dos campos do
 `.bib` (não há toolchain LaTeX/biber aqui). Pode haver pequenas diferenças

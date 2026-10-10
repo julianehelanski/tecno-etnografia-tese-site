@@ -4,7 +4,7 @@
 sync_tese_figuras.py
 ====================
 Sincroniza figuras de CONTEÚDO da tese para o site, conforme o mapa
-``infranodus/figuras_tese_map.tsv``.
+``rede_textual/figuras_tese_map.tsv``.
 
 Cada linha do mapa liga um destino no site a uma origem na tese (um glob,
 para tolerar nomes com timestamp que mudam a cada re-exportação). Para cada
@@ -49,8 +49,8 @@ except Exception:  # pragma: no cover
 
 THIS_DIR = Path(__file__).resolve().parent
 REPO_ROOT = THIS_DIR.parent
-DEFAULT_MANIFEST = REPO_ROOT / "infranodus" / "figuras_tese_map.tsv"
-STATE_FILE = REPO_ROOT / "infranodus" / "figuras_tese_sync_state.json"
+DEFAULT_MANIFEST = REPO_ROOT / "rede_textual" / "figuras_tese_map.tsv"
+STATE_FILE = REPO_ROOT / "rede_textual" / "figuras_tese_sync_state.json"
 RASTER = (".png", ".jpg", ".jpeg", ".gif", ".webp")
 
 

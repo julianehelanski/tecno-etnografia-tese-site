@@ -1,8 +1,8 @@
 # Manifesto de capítulos a serem analisados.
 #
-# Cada entrada gera um conjunto de outputs em infranodus/<slug>/.
+# Cada entrada gera um conjunto de outputs em rede_textual/<slug>/.
 # A análise do capítulo 1 (slug=cap1) tem caminho legado: seus arquivos
-# ficam em infranodus/ direto, sem subpasta, para preservar a história.
+# ficam em rede_textual/ direto, sem subpasta, para preservar a história.
 #
 # Campos:
 #   source: caminho do .tex relativo ao repositório do texto (etnografia).

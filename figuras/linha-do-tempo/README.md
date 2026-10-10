@@ -14,7 +14,7 @@ todos os capítulos. Editáveis no [MermaidChart](https://www.mermaidchart.com/)
 - `linha-do-tempo-capitulo{N}.svg` — exportação vetorial (backup offline + PDF).
 - Versão interativa (pan/zoom, para a defesa): publicada no MermaidChart. O link
   **vive na própria tese** — basta pôr um `\href{https://mermaid.ai/d/...}{...}`
-  na legenda (`\caption`) da figura. O gerador `infranodus/tese_documento.py`
+  na legenda (`\caption`) da figura. O gerador `rede_textual/tese_documento.py`
   extrai esse link para `DOC.figuras[].link` e o site acende sozinho o selinho
   "ver diagrama ↗" na lista de ilustrações (sem manter URL à mão no site).
 

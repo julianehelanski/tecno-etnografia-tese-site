@@ -10,7 +10,7 @@ ilustrações e lista de tabelas. Exporta JSON e, opcionalmente, reinjeta
 num HTML (<script id="docdata">).
 
 Uso:
-    python3 infranodus/tese_documento.py --source-root /tmp/tese --inject index.html
+    python3 rede_textual/tese_documento.py --source-root /tmp/tese --inject index.html
 """
 import argparse
 import json
@@ -440,7 +440,7 @@ SITE_FIGURAS = THIS_DIR.parent / "figuras"
 def _site_image(texpath: str | None) -> str | None:
     r"""Mapeia o \includegraphics da tese para a figura que o site exibe.
 
-    Hoje só as inscrições de rede textual (InfraNodus) e as trajetórias
+    Hoje só as inscrições da análise de rede textual e as trajetórias
     narrativas têm cópia em figuras/<slug>/ com o nome do site. Retorna o
     caminho relativo ao repositório do site se o arquivo existir; senão None
     — mesmo princípio de sync_site_figuras.py: só mostra o que o site tem.
