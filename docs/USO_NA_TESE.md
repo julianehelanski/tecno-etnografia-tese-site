@@ -1,6 +1,6 @@
 # Relação deste repositório com a tese
 
-Documento gerado em 09/10/2026 a partir da leitura dos arquivos `ex_cap*.tex` do repositório da tese (`julianehelanski/tecno-etnografia-centro-ia`, commit 3f0f671 (2026-10-08)). Repositório descrito: `julianehelanski/tecno-etnografia-tese-site`. A versão tabular está em `docs/uso_na_tese.csv`.
+Documento gerado em 09/10/2026 a partir da leitura dos arquivos `ex_cap*.tex` da tese (versão de 08/10/2026). Repositório descrito: `julianehelanski/tecno-etnografia-tese-site`. A versão tabular está em `docs/uso_na_tese.csv`.
 
 ## Papel do repositório
 

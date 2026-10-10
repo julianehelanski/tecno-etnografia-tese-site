@@ -1,6 +1,6 @@
 # Rede textual da tese
 
-Este repositório reúne o *pipeline* de análise de rede textual e o site que acompanham a minha tese de doutorado, *Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora* (Programa de Pós-Graduação em Ciências Sociais, IFCH, Unicamp, 2026). O *pipeline* lê o código-fonte LaTeX da tese (repositório [`tecno-etnografia-centro-ia`](https://github.com/julianehelanski/tecno-etnografia-centro-ia)) e transforma o próprio texto em inscrições: redes de co-ocorrência de termos e trajetórias dos conceitos ao longo da leitura. O site publica essas redes junto com o resumo, o sumário comentado e as galerias de figuras de cada capítulo.
+Este repositório reúne o *pipeline* de análise de rede textual e o site que acompanham a minha tese de doutorado, *Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora* (Programa de Pós-Graduação em Ciências Sociais, IFCH, Unicamp, 2026). O *pipeline* lê o código-fonte LaTeX da tese (mantido em repositório privado) e transforma o próprio texto em inscrições: redes de co-ocorrência de termos e trajetórias dos conceitos ao longo da leitura. O site publica essas redes junto com o resumo, o sumário comentado e as galerias de figuras de cada capítulo.
 
 ## O que fiz
 
@@ -23,7 +23,7 @@ A correspondência figura a figura está em [`docs/USO_NA_TESE.md`](docs/USO_NA_
 ```bash
 git clone https://github.com/julianehelanski/tecno-etnografia-tese-site.git
 cd tecno-etnografia-tese-site
-git clone https://github.com/julianehelanski/tecno-etnografia-centro-ia.git _tex
+# _tex/ deve conter os arquivos .tex da tese (o repositório da tese é privado)
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 export PYTHONHASHSEED=0                         # saída determinística
@@ -33,7 +33,7 @@ python rede_textual/tese_network.py --source-root _tex --inject index.html      
 python rede_textual/tese_network_chapters.py --source-root _tex --inject index.html
 ```
 
-O roteiro completo, com a sincronização das figuras e a publicação do site, está em [`docs/COMO-RODAR.md`](docs/COMO-RODAR.md). O mesmo fluxo roda no GitHub Actions (`.github/workflows/analyze.yml`) quando o texto da tese é atualizado, e o site é publicado pelo GitHub Pages (`pages.yml`); os *commits* de autor `github-actions[bot]` são essas regenerações automáticas.
+O roteiro completo, com a sincronização das figuras e a publicação do site, está em [`docs/COMO-RODAR.md`](docs/COMO-RODAR.md). O mesmo fluxo rodou no GitHub Actions (`.github/workflows/analyze.yml`) a cada atualização do texto até a entrega da tese; desde então, o fluxo só roda manualmente e precisa de um token com acesso de leitura ao repositório privado da tese. Os *commits* de autor `github-actions[bot]` são as regenerações automáticas desse período. O site é publicado pelo GitHub Pages (`pages.yml`).
 
 ## Estrutura
 
@@ -52,7 +52,7 @@ Fiz o site e o *pipeline* da rede textual com o Claude Code. O Claude Code é a 
 
 **Modelos registrados no histórico de versões:** Claude Opus 4.8, Claude Opus 5.5 e Claude Sonnet 5.5 (junho a outubro de 2026). Parte do *pipeline* foi escrita no repositório da tese antes de vir para este.
 
-Os *commits* com autor `Claude`, ou com a linha `Co-Authored-By: Claude …`, foram feitos em sessões do Claude Code; a marcação é gerada pela ferramenta e registra em que pontos do histórico o modelo participou do trabalho. A autoria e a responsabilidade pelo conteúdo são minhas e, conforme a Deliberação CONSU-A-005/2026 da Unicamp, as ferramentas de IA generativa não figuram como coautoras. A declaração formal de uso de IA generativa da tese está no [Anexo 1](https://github.com/julianehelanski/tecno-etnografia-centro-ia/blob/main/ex_ane1.tex).
+Os *commits* com autor `Claude`, ou com a linha `Co-Authored-By: Claude …`, foram feitos em sessões do Claude Code; a marcação é gerada pela ferramenta e registra em que pontos do histórico o modelo participou do trabalho. A autoria e a responsabilidade pelo conteúdo são minhas e, conforme a Deliberação CONSU-A-005/2026 da Unicamp, as ferramentas de IA generativa não figuram como coautoras. A declaração formal de uso de IA generativa da tese está no Anexo 1.
 
 ## Licença
 

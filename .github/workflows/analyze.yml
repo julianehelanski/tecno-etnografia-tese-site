@@ -1,38 +1,16 @@
 name: Analisa capítulos da tese
 
-# Dispara em três situações:
-#  1. repository_dispatch (event_type = thesis-updated) — vindo do repo
-#     tecno-etnografia-centro-ia toda vez que um capítulo é alterado lá. Veja
-#     docs/dispatch-from-tex.yml.example para o workflow que dispara este.
-#  2. workflow_dispatch — botão "Run workflow" no GitHub Actions, para
-#     reanálise manual.
-#  3. push em qualquer arquivo da análise (script, manifesto, interpretação),
-#     para que mudanças metodológicas regenerem os outputs automaticamente.
 on:
-  repository_dispatch:
-    types: [thesis-updated]
-  # Rede de segurança: roda diariamente e regenera o site SE a tese mudou.
-  # A regeneração é determinística (PYTHONHASHSEED=0), então sem mudança não há commit.
-  schedule:
-    - cron: "17 6 * * *"
+  # Só execução manual. O repositório da tese ficou privado depois da entrega,
+  # e a regeneração automática (dispatch, agendamento e push) foi desligada;
+  # para rodar de novo, é preciso dar a este workflow um token com acesso de
+  # leitura à tese (ver docs/SETUP.md).
   workflow_dispatch:
     inputs:
       only:
         description: "Slugs separados por vírgula (vazio = todos os habilitados)"
         required: false
         default: ""
-  push:
-    branches: [main]
-    paths:
-      - "rede_textual/rede_textual_capitulo.py"
-      - "rede_textual/tese_network.py"
-      - "rede_textual/tese_network_chapters.py"
-      - "rede_textual/tese_documento.py"
-      - "rede_textual/run_all.py"
-      - "rede_textual/narrative_trajectory.py"
-      - "rede_textual/chapters.yml"
-      - "rede_textual/interpretation_*.md"
-      - ".github/workflows/analyze.yml"
 
 permissions:
   contents: write
