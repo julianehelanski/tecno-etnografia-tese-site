@@ -391,7 +391,7 @@ CHAPTERS = [
      "respiratória específica ao covideiro pandêmico, e sua falha de "
      "generalização é evidência empírica da tensão ontológica (Mol). Proponho a "
      "inscrição tecnográfica."),
-    ("ex_cap5.tex", "", "Considerações finais: arrematando os fios",
+    ("ex_cap5.tex", "", "Considerações finais",
      "Retomo os três movimentos do método (o corte, os atores e actantes, a "
      "compostagem) e releio o C4AI e o SPIRA como a mesma rede sob cortes "
      "distintos: um a partir do arranjo institucional que torna a pesquisa "
