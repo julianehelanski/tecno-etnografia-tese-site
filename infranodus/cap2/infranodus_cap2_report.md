@@ -10,8 +10,8 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **28,399**
-- Grafo bruto: **7061** nós · **66607** arestas
+- Tokens significativos: **28,401**
+- Grafo bruto: **7061** nós · **66608** arestas
 - Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3616** arestas
 - Tópicos detectados (Louvain): **8**
 
@@ -44,7 +44,7 @@
 | 24 | `objeto` | 455 |
 | 25 | `leitura` | 443 |
 | 26 | `partir` | 438 |
-| 27 | `obras` | 434 |
+| 27 | `obras` | 433 |
 | 28 | `figuracoes` | 428 |
 | 29 | `dado` | 417 |
 | 30 | `capes` | 410 |
@@ -57,7 +57,7 @@ termos frequentes mas perifericamente conectados descem.
 | # | termo | PageRank |
 |---|-------|----------|
 | 1 | `artificial` | 0.0319 |
-| 2 | `inteligencia` | 0.0317 |
+| 2 | `inteligencia` | 0.0316 |
 | 3 | `latour` | 0.0211 |
 | 4 | `militar` | 0.0186 |
 | 5 | `ciencia` | 0.0183 |
@@ -82,7 +82,7 @@ termos frequentes mas perifericamente conectados descem.
 | 24 | `partir` | 0.0088 |
 | 25 | `dado` | 0.0088 |
 | 26 | `ator` | 0.0087 |
-| 27 | `obras` | 0.0086 |
+| 27 | `obras` | 0.0085 |
 | 28 | `figuracoes` | 0.0084 |
 | 29 | `action` | 0.0084 |
 | 30 | `capes` | 0.0082 |
@@ -94,44 +94,44 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | # | termo | degree-rank | pagerank-rank | salto |
 |---|-------|-------------|----------------|-------|
 | 1 | `press` | 154 | 96 | +58 |
-| 2 | `university` | 168 | 121 | +47 |
+| 2 | `university` | 168 | 122 | +46 |
 | 3 | `traducao` | 135 | 111 | +24 |
 | 4 | `joler` | 161 | 140 | +21 |
 | 5 | `crawford` | 176 | 155 | +21 |
 | 6 | `quadro` | 85 | 71 | +14 |
 | 7 | `brasileira` | 84 | 72 | +12 |
-| 8 | `cadeia` | 88 | 79 | +9 |
-| 9 | `brasil` | 119 | 110 | +9 |
+| 8 | `brasil` | 120 | 110 | +10 |
+| 9 | `cadeia` | 88 | 80 | +8 |
 | 10 | `producao` | 57 | 50 | +7 |
 | 11 | `modelo` | 59 | 52 | +7 |
-| 12 | `forsythe` | 130 | 123 | +7 |
-| 13 | `conhecimento` | 37 | 31 | +6 |
+| 12 | `conhecimento` | 37 | 31 | +6 |
+| 13 | `forsythe` | 130 | 124 | +6 |
 | 14 | `pesquisa` | 39 | 34 | +5 |
 | 15 | `scielo` | 50 | 45 | +5 |
 
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `latour` | 0.3189 |
-| 2 | `inteligencia` | 0.1988 |
-| 3 | `artificial` | 0.1957 |
-| 4 | `militar` | 0.1462 |
-| 5 | `vocabulario` | 0.1400 |
+| 1 | `latour` | 0.3180 |
+| 2 | `inteligencia` | 0.1995 |
+| 3 | `artificial` | 0.1958 |
+| 4 | `militar` | 0.1461 |
+| 5 | `vocabulario` | 0.1399 |
 | 6 | `ciencia` | 0.1257 |
-| 7 | `rotulo` | 0.0950 |
-| 8 | `analise` | 0.0921 |
+| 7 | `rotulo` | 0.0949 |
+| 8 | `analise` | 0.0920 |
 | 9 | `capes` | 0.0736 |
 | 10 | `rede` | 0.0712 |
-| 11 | `figuracoes` | 0.0642 |
+| 11 | `figuracoes` | 0.0641 |
 | 12 | `catalogo` | 0.0631 |
 | 13 | `conceito` | 0.0621 |
 | 14 | `campo` | 0.0581 |
-| 15 | `teoria` | 0.0499 |
+| 15 | `teoria` | 0.0495 |
 | 16 | `aime` | 0.0493 |
 | 17 | `descreve` | 0.0476 |
 | 18 | `figuracao` | 0.0461 |
-| 19 | `tecnociencia` | 0.0456 |
-| 20 | `humano` | 0.0381 |
+| 19 | `tecnociencia` | 0.0455 |
+| 20 | `humano` | 0.0382 |
 
 ## 6. Pares de termos com associação mais surpreendente (NPMI)
 NPMI mede *quão surpreendente* é a co-ocorrência de duas palavras dadas
@@ -154,7 +154,7 @@ vezes.
 | 11 | `teoria` | `ator` | 0.705 | 152 |
 | 12 | `textil` | `topologico` | 0.644 | 46 |
 | 13 | `lexicometrica` | `analise` | 0.618 | 95 |
-| 14 | `modelo` | `linguagem` | 0.597 | 63 |
+| 14 | `modelo` | `linguagem` | 0.598 | 63 |
 | 15 | `ator` | `rede` | 0.592 | 154 |
 | 16 | `recalling` | `clarifications` | 0.572 | 27 |
 | 17 | `traducao` | `brasileira` | 0.563 | 27 |
