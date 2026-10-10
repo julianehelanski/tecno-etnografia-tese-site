@@ -10,7 +10,7 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **23,209**
+- Tokens significativos: **23,207**
 - Grafo bruto: **6595** nós · **58672** arestas
 - Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3291** arestas
 - Tópicos detectados (Louvain): **8**
@@ -37,7 +37,7 @@
 | 17 | `modelo` | 372 |
 | 18 | `relacao` | 354 |
 | 19 | `ator` | 350 |
-| 20 | `analise` | 341 |
+| 20 | `analise` | 342 |
 | 21 | `gesto` | 339 |
 | 22 | `dado` | 325 |
 | 23 | `parte` | 320 |
@@ -74,7 +74,7 @@ termos frequentes mas perifericamente conectados descem.
 | 16 | `strathern` | 0.0108 |
 | 17 | `modelo` | 0.0104 |
 | 18 | `relacao` | 0.0099 |
-| 19 | `gesto` | 0.0092 |
+| 19 | `gesto` | 0.0093 |
 | 20 | `analise` | 0.0092 |
 | 21 | `maquina` | 0.0090 |
 | 22 | `parte` | 0.0090 |
@@ -146,7 +146,7 @@ vezes.
 | 3 | `existencias` | `parciais` | 0.826 | 84 |
 | 4 | `parcial` | `existencia` | 0.745 | 59 |
 | 5 | `teoria` | `ator` | 0.728 | 104 |
-| 6 | `distribuida` | `agencia` | 0.727 | 52 |
+| 6 | `distribuida` | `agencia` | 0.726 | 52 |
 | 7 | `presenca` | `ausencia` | 0.707 | 43 |
 | 8 | `otherness` | `manifesta` | 0.684 | 40 |
 | 9 | `tecnico` | `letramento` | 0.655 | 46 |
@@ -159,7 +159,7 @@ vezes.
 | 16 | `figuracao` | `textil` | 0.597 | 54 |
 | 17 | `ciencia` | `sociais` | 0.578 | 94 |
 | 18 | `generativa` | `artificial` | 0.559 | 65 |
-| 19 | `textual` | `analise` | 0.555 | 50 |
+| 19 | `textual` | `analise` | 0.554 | 49 |
 | 20 | `otherness` | `hinterland` | 0.546 | 36 |
 | 21 | `otherness` | `presenca` | 0.545 | 25 |
 | 22 | `antropologia` | `tecnica` | 0.544 | 21 |
