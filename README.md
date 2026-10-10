@@ -56,7 +56,7 @@ Os *commits* com autor `Claude`, ou com a linha `Co-Authored-By: Claude …`, fo
 
 ## Licença
 
-Código sob licença [MIT](LICENSE); textos, redes, tabelas e figuras que produzi sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br), conforme [`LICENSE-DADOS.md`](LICENSE-DADOS.md), que lista as exceções (gravações do SPIRA, imagens de terceiros, fontes e bibliotecas).
+Código sob licença [MIT](LICENSE); redes, tabelas e figuras que produzi sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br), conforme [`LICENSE-DADOS.md`](LICENSE-DADOS.md), que lista as exceções (texto da tese reproduzido no site, gravações do SPIRA, imagens de terceiros, fontes e bibliotecas).
 
 ## Citação
 
