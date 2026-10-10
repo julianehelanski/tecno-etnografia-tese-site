@@ -10,15 +10,15 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **23,207**
-- Grafo bruto: **6595** nós · **58672** arestas
+- Tokens significativos: **23,205**
+- Grafo bruto: **6595** nós · **58663** arestas
 - Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3291** arestas
 - Tópicos detectados (Louvain): **8**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
 | # | termo | grau ponderado |
 |---|-------|----------------|
-| 1 | `rede` | 1295 |
+| 1 | `rede` | 1296 |
 | 2 | `pesquisa` | 985 |
 | 3 | `etnografia` | 838 |
 | 4 | `artificial` | 708 |
@@ -37,7 +37,7 @@
 | 17 | `modelo` | 372 |
 | 18 | `relacao` | 354 |
 | 19 | `ator` | 350 |
-| 20 | `analise` | 342 |
+| 20 | `analise` | 344 |
 | 21 | `gesto` | 339 |
 | 22 | `dado` | 325 |
 | 23 | `parte` | 320 |
@@ -74,8 +74,8 @@ termos frequentes mas perifericamente conectados descem.
 | 16 | `strathern` | 0.0108 |
 | 17 | `modelo` | 0.0104 |
 | 18 | `relacao` | 0.0099 |
-| 19 | `gesto` | 0.0093 |
-| 20 | `analise` | 0.0092 |
+| 19 | `analise` | 0.0093 |
+| 20 | `gesto` | 0.0092 |
 | 21 | `maquina` | 0.0090 |
 | 22 | `parte` | 0.0090 |
 | 23 | `dado` | 0.0089 |
@@ -93,8 +93,8 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 
 | # | termo | degree-rank | pagerank-rank | salto |
 |---|-------|-------------|----------------|-------|
-| 1 | `computacional` | 114 | 100 | +14 |
-| 2 | `cientifico` | 139 | 125 | +14 |
+| 1 | `cientifico` | 140 | 125 | +15 |
+| 2 | `computacional` | 114 | 100 | +14 |
 | 3 | `tecnica` | 105 | 93 | +12 |
 | 4 | `instituicao` | 96 | 86 | +10 |
 | 5 | `infraestrutura` | 74 | 66 | +8 |
@@ -112,26 +112,26 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `rede` | 0.3798 |
-| 2 | `pesquisa` | 0.2749 |
-| 3 | `etnografia` | 0.1783 |
-| 4 | `latour` | 0.1618 |
-| 5 | `campo` | 0.1177 |
-| 6 | `corte` | 0.1149 |
+| 1 | `rede` | 0.3822 |
+| 2 | `pesquisa` | 0.2727 |
+| 3 | `etnografia` | 0.1779 |
+| 4 | `latour` | 0.1619 |
+| 5 | `campo` | 0.1175 |
+| 6 | `corte` | 0.1152 |
 | 7 | `ciencia` | 0.0731 |
-| 8 | `metodo` | 0.0678 |
+| 8 | `metodo` | 0.0676 |
 | 9 | `descricao` | 0.0548 |
 | 10 | `humano` | 0.0531 |
-| 11 | `inscricao` | 0.0459 |
+| 11 | `inscricao` | 0.0460 |
 | 12 | `objeto` | 0.0425 |
-| 13 | `strathern` | 0.0418 |
+| 13 | `strathern` | 0.0419 |
 | 14 | `maquina` | 0.0356 |
 | 15 | `claude` | 0.0260 |
-| 16 | `modos` | 0.0255 |
+| 16 | `modos` | 0.0254 |
 | 17 | `dado` | 0.0244 |
 | 18 | `parcial` | 0.0227 |
 | 19 | `pratica` | 0.0203 |
-| 20 | `hinterland` | 0.0196 |
+| 20 | `hinterland` | 0.0198 |
 
 ## 6. Pares de termos com associação mais surpreendente (NPMI)
 NPMI mede *quão surpreendente* é a co-ocorrência de duas palavras dadas
