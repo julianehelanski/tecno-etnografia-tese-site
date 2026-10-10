@@ -54,6 +54,10 @@ Fiz o site e o *pipeline* da rede textual com o Claude Code. O Claude Code é a 
 
 Os *commits* com autor `Claude`, ou com a linha `Co-Authored-By: Claude …`, foram feitos em sessões do Claude Code; a marcação é gerada pela ferramenta e registra em que pontos do histórico o modelo participou do trabalho. A autoria e a responsabilidade pelo conteúdo são minhas e, conforme a Deliberação CONSU-A-005/2026 da Unicamp, as ferramentas de IA generativa não figuram como coautoras. A declaração formal de uso de IA generativa da tese está no [Anexo 1](https://github.com/julianehelanski/tecno-etnografia-centro-ia/blob/main/ex_ane1.tex).
 
+## Licença
+
+Código sob licença [MIT](LICENSE); textos, redes, tabelas e figuras que produzi sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt-br), conforme [`LICENSE-DADOS.md`](LICENSE-DADOS.md), que lista as exceções (gravações do SPIRA, imagens de terceiros, fontes e bibliotecas).
+
 ## Citação
 
 > CARDOSO, Juliane Cristina Helanski. *Rede textual da tese*: *pipeline* e site. Campinas: Unicamp, 2026. Disponível em: https://github.com/julianehelanski/tecno-etnografia-tese-site.
