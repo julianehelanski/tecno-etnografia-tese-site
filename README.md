@@ -1,6 +1,6 @@
 # Rede textual da tese
 
-Este repositório reúne o *pipeline* de análise de rede textual e o site que acompanham a minha tese de doutorado, *{tecnografia} de um centro de inteligência artificial: seguindo cientistas e engenheiros, universidade afora* (Programa de Pós-Graduação em Ciências Sociais, IFCH, Unicamp, 2026). O *pipeline* lê o código-fonte LaTeX da tese (repositório [`tecno-etnografia-centro-ia`](https://github.com/julianehelanski/tecno-etnografia-centro-ia)) e transforma o próprio texto em inscrições: redes de co-ocorrência de termos e trajetórias dos conceitos ao longo da leitura. O site publica essas redes junto com o resumo, o sumário comentado e as galerias de figuras de cada capítulo.
+Este repositório reúne o *pipeline* de análise de rede textual e o site que acompanham a minha tese de doutorado, *Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora* (Programa de Pós-Graduação em Ciências Sociais, IFCH, Unicamp, 2026). O *pipeline* lê o código-fonte LaTeX da tese (repositório [`tecno-etnografia-centro-ia`](https://github.com/julianehelanski/tecno-etnografia-centro-ia)) e transforma o próprio texto em inscrições: redes de co-ocorrência de termos e trajetórias dos conceitos ao longo da leitura. O site publica essas redes junto com o resumo, o sumário comentado e as galerias de figuras de cada capítulo.
 
 ## O que fiz
 
@@ -56,8 +56,10 @@ Os *commits* com autor `Claude`, ou com a linha `Co-Authored-By: Claude …`, fo
 
 ## Citação
 
-> HELANSKI, Juliane. *Rede textual da tese*: *pipeline* e site. Campinas: Unicamp, 2026. Disponível em: https://github.com/julianehelanski/tecno-etnografia-tese-site.
+> CARDOSO, Juliane Cristina Helanski. *Rede textual da tese*: *pipeline* e site. Campinas: Unicamp, 2026. Disponível em: https://github.com/julianehelanski/tecno-etnografia-tese-site.
 
-> HELANSKI, Juliane. *{tecnografia} de um centro de inteligência artificial*: seguindo cientistas e engenheiros, universidade afora. 2026. Tese (Doutorado em Ciências Sociais) – Instituto de Filosofia e Ciências Humanas, Universidade Estadual de Campinas, Campinas, 2026.
+> CARDOSO, Juliane Cristina Helanski. *Tecnografias de um centro de inteligência artificial*: seguindo cientistas e engenheiros universidade afora. Orientadora: Maria Suely Kofes. 2026. Tese (Doutorado em Ciências Sociais) – Instituto de Filosofia e Ciências Humanas, Universidade Estadual de Campinas, Campinas, 2026.
+
+ORCID da autora: https://orcid.org/0000-0001-8649-8986.
 
 Metadados de citação em [`CITATION.cff`](CITATION.cff).
