@@ -19,7 +19,7 @@ Three complementary views, all answering questions about *order* and
      projects to 2D with PCA, draws the path through that space colored
      by reading order — answers "what arc does the chapter trace?".
 
-Reuses tokenization / lemmatization from `infranodus_cap1.py`.
+Reuses tokenization / lemmatization from `rede_textual_capitulo.py`.
 
 CLI:
     python narrative_trajectory.py                           # cap1 default
@@ -41,7 +41,7 @@ import numpy as np
 THIS_DIR = Path(__file__).resolve().parent
 sys.path.insert(0, str(THIS_DIR))
 
-from infranodus_cap1 import (  # noqa: E402
+from rede_textual_capitulo import (  # noqa: E402
     LATEX_CMD_TOKENS,
     PT_STOPWORDS,
     DEFAULT_SRC,
@@ -587,7 +587,7 @@ def _parse_args() -> argparse.Namespace:
     p.add_argument("--title", default="Capítulo 1",
                    help="Human-readable label used in figure titles.")
     p.add_argument("--out", type=Path, default=None,
-                   help="Output directory. Default: infranodus/<slug>/.")
+                   help="Output directory. Default: rede_textual/<slug>/.")
     return p.parse_args()
 
 

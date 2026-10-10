@@ -37,7 +37,7 @@ chaves interpretativas conectadas ao argumento da tese.
 ### Scripts (Python, reproduzíveis)
 | arquivo | função |
 |---|---|
-| `infranodus_cap1.py` | pré-processa o `.tex`, constrói o grafo de co-ocorrência, calcula métricas (degree, betweenness, PageRank, NPMI), detecta comunidades (Louvain), e exporta tudo |
+| `rede_textual_capitulo.py` | pré-processa o `.tex`, constrói o grafo de co-ocorrência, calcula métricas (degree, betweenness, PageRank, NPMI), detecta comunidades (Louvain), e exporta tudo |
 | `narrative_trajectory.py` | extrai parágrafos preservando a ordem e gera as três visões sequenciais (Gantt, alluvial, trajetória semântica) |
 
 ### Visualizações de rede (estáticas, conceituais)
@@ -66,7 +66,7 @@ chaves interpretativas conectadas ao argumento da tese.
 ### Texto para a tese
 | arquivo | conteúdo |
 |---|---|
-| `esboco_secao_infranodus.tex` | esboço de seção/interlúdio em LaTeX já com `\textcite{}`, figura, nota de rodapé metodológica e sugestões de BibTeX |
+| `esboco_secao_rede_textual.tex` | esboço de seção/interlúdio em LaTeX já com `\textcite{}`, figura, nota de rodapé metodológica e sugestões de BibTeX |
 
 ---
 
@@ -392,15 +392,15 @@ pip install networkx matplotlib numpy unidecode scipy scikit-learn
 pip install sentence-transformers
 
 # Rodar a análise de rede:
-python3 infranodus/infranodus_cap1.py
+python3 rede_textual/rede_textual_capitulo.py
 
 # Rodar a análise de trajetória:
-python3 infranodus/narrative_trajectory.py
+python3 rede_textual/narrative_trajectory.py
 ```
 
 Cada script reescreve seus próprios PNGs / GEXF / CSV / JSON. As
 duas análises são independentes; a de trajetória apenas reaproveita
-funções de limpeza do módulo `infranodus_cap1.py`.
+funções de limpeza do módulo `rede_textual_capitulo.py`.
 
 **Reprodutibilidade**: as comunidades Louvain dependem de uma semente
 aleatória; a semente está fixada em 7. Pequenas variações entre
@@ -436,7 +436,7 @@ modularidade.
 
 ## 9. Integração na tese (LaTeX)
 
-O arquivo `esboco_secao_infranodus.tex` traz um **interlúdio
+O arquivo `esboco_secao_rede_textual.tex` traz um **interlúdio
 reflexivo curto** pronto para ser inserido no Capítulo 1 logo após
 a passagem em que você diz que “esta tese tornou-se também uma
 inscrição tecnocientífica”. O esboço:
@@ -460,9 +460,9 @@ inscrição tecnocientífica”. O esboço:
 
 **Antes de compilar**:
 ```bash
-cp infranodus/infranodus_cap1_focus.png figuras/cap.1/infranodus_cap1_focus.png
+cp rede_textual/infranodus_cap1_focus.png figuras/cap.1/infranodus_cap1_focus.png
 ```
-e cole o conteúdo do `.tex` no seu capítulo, ou use `\input{infranodus/esboco_secao_infranodus}`.
+e cole o conteúdo do `.tex` no seu capítulo, ou use `\input{rede_textual/esboco_secao_rede_textual}`.
 
 ---
 
@@ -488,4 +488,4 @@ e cole o conteúdo do `.tex` no seu capítulo, ou use `\input{infranodus/esboco_
 ---
 
 *Branch: `claude/infranodus-thesis-chapter-1-VV43B` ·
-gerado pela combinação de `infranodus_cap1.py` e `narrative_trajectory.py`.*
+gerado pela combinação de `rede_textual_capitulo.py` e `narrative_trajectory.py`.*

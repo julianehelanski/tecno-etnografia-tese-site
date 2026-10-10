@@ -7,17 +7,17 @@ automaticamente. Fluxo:
 1. **Gatilho** — o workflow `notify-c4ai.yml` na tese avisa o site a cada push
    que toque `figuras/**` ou `ex_cap*.tex` (veja `docs/dispatch-from-tex.yml.example`).
 2. **Sync** — o site roda `scripts/sync_tese_figuras.py`, que lê o mapa
-   `infranodus/figuras_tese_map.tsv` e, para cada destino, pega a versão **mais
+   `rede_textual/figuras_tese_map.tsv` e, para cada destino, pega a versão **mais
    recente** da origem na tese, **otimiza para web** (máx. 1600 px no maior
    lado + recompressão) e grava no site.
-3. **Sem churn** — `infranodus/figuras_tese_sync_state.json` guarda o hash da
+3. **Sem churn** — `rede_textual/figuras_tese_sync_state.json` guarda o hash da
    origem já sincronizada; uma figura só é reescrita quando a origem **muda de
    fato** na tese.
 4. **Cache-busting** — `scripts/cache_busting_figuras.py` atualiza o `?v=` para
    o navegador baixar a nova versão.
 5. O GitHub Pages republica.
 
-## O mapa (`infranodus/figuras_tese_map.tsv`)
+## O mapa (`rede_textual/figuras_tese_map.tsv`)
 
 Cada linha liga `destino-no-site` ⟶ `origem-na-tese` (um *glob*; `*` cobre os
 timestamps de data que mudam a cada re-exportação). **56 figuras mapeadas e
@@ -69,6 +69,6 @@ correspondente na tese e adicione a linha no mapa.
 
 ## As figuras de análise (rede textual / trajetórias)
 
-Não passam por este mapa: são **geradas** aqui pelo `infranodus/run_all.py` e
-sincronizadas por `infranodus/sync_site_figuras.py`. Continuam atualizando como
+Não passam por este mapa: são **geradas** aqui pelo `rede_textual/run_all.py` e
+sincronizadas por `rede_textual/sync_site_figuras.py`. Continuam atualizando como
 antes, a cada mudança de capítulo.

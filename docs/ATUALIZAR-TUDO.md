@@ -18,10 +18,10 @@ cd C:\Users\julia\Desktop\tecno-etnografia-tese-site
 $env:PYTHONHASHSEED = "0"
 $tese = "..\tecno-etnografia-centro-ia"
 
-python infranodus\run_all.py --source-root $tese            # PNGs por capítulo
-python infranodus\tese_network.py --source-root $tese --inject index.html  # mapa
-python infranodus\tese_documento.py --source-root $tese --inject index.html # resumo·sumário
-python infranodus\tese_referencias.py --source-root $tese --inject index.html # referências citadas
+python rede_textual\run_all.py --source-root $tese            # PNGs por capítulo
+python rede_textual\tese_network.py --source-root $tese --inject index.html  # mapa
+python rede_textual\tese_documento.py --source-root $tese --inject index.html # resumo·sumário
+python rede_textual\tese_referencias.py --source-root $tese --inject index.html # referências citadas
 
 git add -A ; git commit -m "Atualiza análise textual" ; git push   # publica o site
 ```

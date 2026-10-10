@@ -6,7 +6,7 @@ Este repositório reúne o *pipeline* de análise de rede textual e o site que a
 
 Escrevi um *pipeline* que aplica ao texto da tese o tipo de operação que a tese descreve no campo, a passagem de um material a uma inscrição que circula:
 
-- **Rede textual.** Depois de retirar os comandos LaTeX e lematizar o texto (com as notas de rodapé reincorporadas), ligo os termos que coocorrem numa janela deslizante de quatro *tokens*, com pesos decrescentes pela distância (3, 2, 1). A rede mantém os termos mais frequentes no maior componente conexo; as comunidades de termos são detectadas por Louvain ponderado e a força das associações é medida pelo NPMI (*normalized pointwise mutual information*). No site, o tamanho dos nós é dado pelo PageRank; nas figuras da tese, pelo grau ponderado ou pelo PageRank, conforme a vista. Faço isso para a tese inteira e para cada capítulo, com comunidades recalculadas dentro de cada um. O agrupamento do vocabulário bibliométrico numa comunidade própria é uma curadoria minha, documentada em `infranodus/tese_network.py`.
+- **Rede textual.** Depois de retirar os comandos LaTeX e lematizar o texto (com as notas de rodapé reincorporadas), ligo os termos que coocorrem numa janela deslizante de quatro *tokens*, com pesos decrescentes pela distância (3, 2, 1). A rede mantém os termos mais frequentes no maior componente conexo; as comunidades de termos são detectadas por Louvain ponderado e a força das associações é medida pelo NPMI (*normalized pointwise mutual information*). No site, o tamanho dos nós é dado pelo PageRank; nas figuras da tese, pelo grau ponderado ou pelo PageRank, conforme a vista. Faço isso para a tese inteira e para cada capítulo, com comunidades recalculadas dentro de cada um. O agrupamento do vocabulário bibliométrico numa comunidade própria é uma curadoria minha, documentada em `rede_textual/tese_network.py`.
 - **Trajetória narrativa.** Divido cada capítulo pela ordem dos parágrafos e produzo três vistas diacrônicas: o Gantt lexical (entrada, permanência e saída dos conceitos), o fluxo aluvial (termos dominantes em cada trecho) e a trajetória semântica (os momentos do capítulo projetados num plano por TF-IDF, LSA e PCA).
 - **Site.** `index.html` apresenta a rede da tese e de cada capítulo, com painel por termo (métricas, associações e trechos da tese), e uma aba com o resumo, o sumário, as figuras e as referências citadas, tudo extraído do `.tex`.
 
@@ -14,7 +14,7 @@ Os parâmetros exatos estão em [`docs/PARAMETROS.md`](docs/PARAMETROS.md) e uma
 
 ## O que entra na tese
 
-As inscrições do próprio texto entram nos capítulos 1 a 4, cada um com a sua rede textual completa, o núcleo da rede, o núcleo ponderado por PageRank e NPMI, e as três vistas de trajetória; no capítulo 1 elas abrem a discussão sobre tecnografia. As considerações finais trazem a rede da tese inteira (`figuras/rede_tese_inteira.png`, gerada por `infranodus/render_tese_network_figura.py`). As interpretações que escrevi das redes de cada capítulo estão em `infranodus/interpretation_cap*.md`.
+As inscrições do próprio texto entram nos capítulos 1 a 4, cada um com a sua rede textual completa, o núcleo da rede, o núcleo ponderado por PageRank e NPMI, e as três vistas de trajetória; no capítulo 1 elas abrem a discussão sobre tecnografia. As considerações finais trazem a rede da tese inteira (`figuras/rede_tese_inteira.png`, gerada por `rede_textual/render_tese_network_figura.py`). As interpretações que escrevi das redes de cada capítulo estão em `rede_textual/interpretation_cap*.md`.
 
 A correspondência figura a figura está em [`docs/USO_NA_TESE.md`](docs/USO_NA_TESE.md) (versão tabular em [`docs/uso_na_tese.csv`](docs/uso_na_tese.csv)). As demais imagens de `figuras/` espelham as figuras da tese para as galerias do site.
 
@@ -28,9 +28,9 @@ python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 export PYTHONHASHSEED=0                         # saída determinística
 
-python infranodus/run_all.py --source-root _tex                                # redes e trajetórias por capítulo
-python infranodus/tese_network.py --source-root _tex --inject index.html       # rede da tese
-python infranodus/tese_network_chapters.py --source-root _tex --inject index.html
+python rede_textual/run_all.py --source-root _tex                                # redes e trajetórias por capítulo
+python rede_textual/tese_network.py --source-root _tex --inject index.html       # rede da tese
+python rede_textual/tese_network_chapters.py --source-root _tex --inject index.html
 ```
 
 O roteiro completo, com a sincronização das figuras e a publicação do site, está em [`docs/COMO-RODAR.md`](docs/COMO-RODAR.md). O mesmo fluxo roda no GitHub Actions (`.github/workflows/analyze.yml`) quando o texto da tese é atualizado, e o site é publicado pelo GitHub Pages (`pages.yml`); os *commits* de autor `github-actions[bot]` são essas regenerações automáticas.
@@ -39,7 +39,7 @@ O roteiro completo, com a sincronização das figuras e a publicação do site, 
 
 ```
 index.html      o site (rede textual e aba da tese)
-infranodus/     pipeline de rede textual e de trajetória, resultados por capítulo (cap1 a cap4)
+rede_textual/     pipeline de rede textual e de trajetória, resultados por capítulo (cap1 a cap4)
 figuras/        figuras da tese exibidas nas galerias
 audio/          gravações do dataset SPIRA tocadas na galeria do capítulo 4
 scripts/        sincronização de figuras com a tese e cache-busting

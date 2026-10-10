@@ -1,13 +1,13 @@
 """
-Driver que lê infranodus/chapters.yml e dispara a análise textual em cada
+Driver que lê rede_textual/chapters.yml e dispara a análise textual em cada
 capítulo habilitado.
 
 Uso típico:
-    python infranodus/run_all.py --source-root _tex
-    python infranodus/run_all.py --source-root /caminho/local/etnografia
-    python infranodus/run_all.py --only cap1,cap2
+    python rede_textual/run_all.py --source-root _tex
+    python rede_textual/run_all.py --source-root /caminho/local/etnografia
+    python rede_textual/run_all.py --only cap1,cap2
 
-Cada capítulo grava seus PNG/GEXF/CSV/relatório em infranodus/<slug>/.
+Cada capítulo grava seus PNG/GEXF/CSV/relatório em rede_textual/<slug>/.
 """
 
 from __future__ import annotations
@@ -16,7 +16,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from infranodus_cap1 import run as run_analysis
+from rede_textual_capitulo import run as run_analysis
 from narrative_trajectory import run as run_trajectory
 
 THIS_DIR = Path(__file__).resolve().parent
@@ -76,7 +76,7 @@ def _resolve_source(spec: dict, source_root: Path) -> Path | None:
 def _parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST,
-                   help="Path to chapters.yml (default: infranodus/chapters.yml).")
+                   help="Path to chapters.yml (default: rede_textual/chapters.yml).")
     p.add_argument("--source-root", type=Path, default=REPO_ROOT / "_tex",
                    help="Directory where the .tex sister repo is checked out "
                         "(default: ./_tex).")

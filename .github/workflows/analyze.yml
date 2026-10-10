@@ -24,14 +24,14 @@ on:
   push:
     branches: [main]
     paths:
-      - "infranodus/infranodus_cap1.py"
-      - "infranodus/tese_network.py"
-      - "infranodus/tese_network_chapters.py"
-      - "infranodus/tese_documento.py"
-      - "infranodus/run_all.py"
-      - "infranodus/narrative_trajectory.py"
-      - "infranodus/chapters.yml"
-      - "infranodus/interpretation_*.md"
+      - "rede_textual/rede_textual_capitulo.py"
+      - "rede_textual/tese_network.py"
+      - "rede_textual/tese_network_chapters.py"
+      - "rede_textual/tese_documento.py"
+      - "rede_textual/run_all.py"
+      - "rede_textual/narrative_trajectory.py"
+      - "rede_textual/chapters.yml"
+      - "rede_textual/interpretation_*.md"
       - ".github/workflows/analyze.yml"
 
 permissions:
@@ -81,22 +81,22 @@ jobs:
         run: |
           ONLY="${{ github.event.inputs.only }}"
           if [ -n "$ONLY" ]; then
-            python infranodus/run_all.py --source-root _tex --only "$ONLY"
+            python rede_textual/run_all.py --source-root _tex --only "$ONLY"
           else
-            python infranodus/run_all.py --source-root _tex
+            python rede_textual/run_all.py --source-root _tex
           fi
 
       - name: Regenera a rede textual da tese e reinjeta no index.html (mapa principal)
         working-directory: c4ai
-        run: python infranodus/tese_network.py --source-root _tex --inject index.html
+        run: python rede_textual/tese_network.py --source-root _tex --inject index.html
 
       - name: Regenera as redes por capítulo (Louvain próprio de cada um) e reinjeta no index.html
         working-directory: c4ai
-        run: python infranodus/tese_network_chapters.py --source-root _tex --inject index.html
+        run: python rede_textual/tese_network_chapters.py --source-root _tex --inject index.html
 
       - name: Sincroniza imagens da análise para o site (figuras/)
         working-directory: c4ai
-        run: python infranodus/sync_site_figuras.py
+        run: python rede_textual/sync_site_figuras.py
 
       - name: Sincroniza figuras de conteúdo da tese para o site (mapa)
         working-directory: c4ai
@@ -108,7 +108,7 @@ jobs:
 
       - name: Regenera o documento da tese (resumo · sumário · figuras · tabelas) e reinjeta no index.html
         working-directory: c4ai
-        run: python infranodus/tese_documento.py --source-root _tex --inject index.html
+        run: python rede_textual/tese_documento.py --source-root _tex --inject index.html
 
       # Otimização WebP: depois de toda sincronização/injeção de figuras e
       # ANTES do cache-busting. Gera um .webp otimizado ao lado de cada PNG/JPG
@@ -132,7 +132,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add infranodus/ figuras/ index.html docs/divergencia-tese.md scripts/tex_structure_snapshot.json
+          git add rede_textual/ figuras/ index.html docs/divergencia-tese.md scripts/tex_structure_snapshot.json
           if git diff --cached --quiet; then
             echo "Sem mudanças nos outputs da análise."
             exit 0

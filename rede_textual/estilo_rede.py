@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """Identidade visual compartilhada das figuras de rede e trajetória da tese.
 
-Alinha as redes InfraNodus e os diagramas de trajetória à paleta-mestra
+Alinha as redes da análise de rede textual e os diagramas de trajetória à paleta-mestra
 adotada nas figuras do capítulo 2 (Okabe-Ito categórico, viridis sequencial,
 marcador "bolinha" com borda branca, notação numérica pt-BR). Mantido
 autônomo para os scripts continuarem reproduzíveis sem dependência externa.

@@ -10,7 +10,7 @@ quatro capítulos. Editáveis no [MermaidChart](https://www.mermaidchart.com/).
 - `mapa-capitulo{1..4}.svg` — exportação vetorial (backup offline + versão impressa/PDF).
 - Versão interativa (pan/zoom, para a defesa): publicada no MermaidChart. O link
   **vive na própria tese** — um `\href{https://mermaid.ai/d/...}{...}` na legenda
-  (`\caption`) da figura. O gerador `infranodus/tese_documento.py` o extrai para
+  (`\caption`) da figura. O gerador `rede_textual/tese_documento.py` o extrai para
   `DOC.figuras[].link`; o site acende o selinho "ver diagrama ↗" na lista de
   ilustrações e o botão "abrir o mapa do capítulo" no card do capítulo
   (sumário da aba "tese"). O card identifica o mapa do capítulo pelo título
