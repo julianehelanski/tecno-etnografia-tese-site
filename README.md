@@ -16,6 +16,8 @@ Os parâmetros exatos estão em [`docs/PARAMETROS.md`](docs/PARAMETROS.md) e uma
 
 As inscrições do próprio texto entram nos capítulos 1 a 4, cada um com a sua rede textual completa, o núcleo da rede, o núcleo ponderado por PageRank e NPMI, e as três vistas de trajetória; no capítulo 1 elas abrem a discussão sobre tecnografia. As considerações finais trazem a rede da tese inteira (`figuras/rede_tese_inteira.png`, gerada por `rede_textual/render_tese_network_figura.py`). As interpretações que escrevi das redes de cada capítulo estão em `rede_textual/interpretation_cap*.md`.
 
+As figuras dos capítulos 1 a 4 na tese são as versões de 9 de julho de 2026, sobre as quais escrevi a interpretação, e ficam assim na versão final. O site e as saídas de `rede_textual/` foram regenerados em outubro de 2026 a partir do texto final, por isso podem divergir das figuras da tese nas frequências, nos termos e nas comunidades. A figura da rede da tese inteira, nas considerações finais, é idêntica nos dois; a rede interativa do site, recalculada sobre o texto final, pode divergir dela.
+
 A correspondência figura a figura está em [`docs/USO_NA_TESE.md`](docs/USO_NA_TESE.md) (versão tabular em [`docs/uso_na_tese.csv`](docs/uso_na_tese.csv)). As demais imagens de `figuras/` espelham as figuras da tese para as galerias do site.
 
 ## Como reproduzir

@@ -8,6 +8,8 @@ Este repositório é derivado do repositório da tese: o pipeline em `rede_textu
 
 ## Figuras da tese geradas aqui ou cuja cópia consta aqui
 
+As figuras de rede e de trajetória dos capítulos 1 a 4 que estão na tese são as versões geradas em 9 de julho de 2026, sobre as quais escrevi a interpretação de cada capítulo, e eu as mantenho na versão final. Em outubro de 2026 o site e as saídas de `rede_textual/` foram regenerados a partir do texto final da tese, que mudou depois de julho; por isso as frequências, os termos exibidos e as comunidades podem diferir das figuras impressas na tese, e a coluna de estado registra essa divergência. Para a leitura da tese, a referência são as figuras da tese.
+
 | Capítulo | Seção da tese | Rótulo | Arquivo no repositório | Script | Estado da cópia na tese |
 |---|---|---|---|---|---|
 | capítulo 1 | Tecnografias | `fig:infranodus-cap1-network` | `rede_textual/cap1/infranodus_cap1_network.png` | `rede_textual/rede_textual_capitulo.py` | cópia na tese diverge da do repositório |
