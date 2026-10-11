@@ -10,15 +10,15 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **31,018**
-- Grafo bruto: **6648** nós · **75303** arestas
+- Tokens significativos: **31,021**
+- Grafo bruto: **6647** nós · **75307** arestas
 - Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3835** arestas
 - Tópicos detectados (Louvain): **6**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
 | # | termo | grau ponderado |
 |---|-------|----------------|
-| 1 | `spira` | 1702 |
+| 1 | `spira` | 1707 |
 | 2 | `covideiro` | 1077 |
 | 3 | `rede` | 1042 |
 | 4 | `inscricao` | 983 |
@@ -44,7 +44,7 @@
 | 24 | `condicoes` | 355 |
 | 25 | `pacientes` | 352 |
 | 26 | `torna` | 344 |
-| 27 | `dataset` | 331 |
+| 27 | `dataset` | 336 |
 | 28 | `cientifico` | 331 |
 | 29 | `ponto` | 326 |
 | 30 | `paciente` | 324 |
@@ -56,12 +56,12 @@ termos frequentes mas perifericamente conectados descem.
 
 | # | termo | PageRank |
 |---|-------|----------|
-| 1 | `spira` | 0.0364 |
+| 1 | `spira` | 0.0365 |
 | 2 | `covideiro` | 0.0233 |
 | 3 | `rede` | 0.0226 |
 | 4 | `inscricao` | 0.0217 |
 | 5 | `cadeia` | 0.0188 |
-| 6 | `artigo` | 0.0175 |
+| 6 | `artigo` | 0.0174 |
 | 7 | `objeto` | 0.0163 |
 | 8 | `dado` | 0.0151 |
 | 9 | `projeto` | 0.0138 |
@@ -75,15 +75,15 @@ termos frequentes mas perifericamente conectados descem.
 | 17 | `actante` | 0.0094 |
 | 18 | `pratica` | 0.0093 |
 | 19 | `ruido` | 0.0087 |
-| 20 | `covid` | 0.0086 |
+| 20 | `covid` | 0.0085 |
 | 21 | `sinal` | 0.0085 |
 | 22 | `partir` | 0.0084 |
 | 23 | `torna` | 0.0083 |
 | 24 | `condicoes` | 0.0081 |
 | 25 | `pacientes` | 0.0081 |
 | 26 | `analise` | 0.0081 |
-| 27 | `ponto` | 0.0077 |
-| 28 | `dataset` | 0.0077 |
+| 27 | `dataset` | 0.0078 |
+| 28 | `ponto` | 0.0077 |
 | 29 | `paciente` | 0.0076 |
 | 30 | `laboratorio` | 0.0075 |
 
@@ -112,17 +112,17 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `spira` | 0.5416 |
-| 2 | `covideiro` | 0.1942 |
-| 3 | `inscricao` | 0.1370 |
+| 1 | `spira` | 0.5425 |
+| 2 | `covideiro` | 0.1944 |
+| 3 | `inscricao` | 0.1365 |
 | 4 | `rede` | 0.1277 |
 | 5 | `cadeia` | 0.1171 |
 | 6 | `artigo` | 0.1002 |
 | 7 | `objeto` | 0.0964 |
 | 8 | `dado` | 0.0746 |
 | 9 | `respiratoria` | 0.0629 |
-| 10 | `modelo` | 0.0618 |
-| 11 | `espectrograma` | 0.0528 |
+| 10 | `modelo` | 0.0616 |
+| 11 | `espectrograma` | 0.0527 |
 | 12 | `projeto` | 0.0508 |
 | 13 | `sinal` | 0.0419 |
 | 14 | `pratica` | 0.0353 |
@@ -130,8 +130,8 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | 16 | `ruido` | 0.0305 |
 | 17 | `covid` | 0.0250 |
 | 18 | `marcelo` | 0.0241 |
-| 19 | `actante` | 0.0185 |
-| 20 | `celular` | 0.0175 |
+| 19 | `actante` | 0.0186 |
+| 20 | `publico` | 0.0176 |
 
 ## 6. Pares de termos com associação mais surpreendente (NPMI)
 NPMI mede *quão surpreendente* é a co-ocorrência de duas palavras dadas
@@ -153,7 +153,7 @@ vezes.
 | 10 | `tornou` | `possivel` | 0.524 | 32 |
 | 11 | `entrevista` | `marcelo` | 0.499 | 92 |
 | 12 | `acesso` | `disponivel` | 0.491 | 25 |
-| 13 | `publico` | `repositorio` | 0.487 | 24 |
+| 13 | `publico` | `repositorio` | 0.484 | 24 |
 | 14 | `enfermaria` | `ruido` | 0.481 | 62 |
 | 15 | `fonoaudiologos` | `medicos` | 0.478 | 22 |
 | 16 | `torna` | `visivel` | 0.474 | 37 |
@@ -161,11 +161,11 @@ vezes.
 | 18 | `pessoas` | `voz` | 0.459 | 26 |
 | 19 | `controles` | `pacientes` | 0.444 | 40 |
 | 20 | `textual` | `analise` | 0.444 | 27 |
-| 21 | `publico` | `saude` | 0.436 | 18 |
+| 21 | `publico` | `saude` | 0.433 | 18 |
 | 22 | `tornou` | `visivel` | 0.432 | 18 |
 | 23 | `saude` | `pesquisa` | 0.431 | 20 |
 | 24 | `cadeia` | `translacao` | 0.428 | 65 |
-| 25 | `condicoes` | `producao` | 0.418 | 36 |
+| 25 | `condicoes` | `producao` | 0.419 | 36 |
 
 ## 7. Tópicos latentes (comunidades Louvain)
 - **Tópico 1** (52 termos): dado, modelo, espectrograma, sinal, torna, paciente
