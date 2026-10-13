@@ -19,6 +19,6 @@ Uso as duas gravações na tese e no site para dar a ouvir a voz que, nos artigo
 
 Ao reutilizar estas gravações, cite o *dataset* SPIRA:
 
-> CASANOVA, Edresson *et al.* Deep learning against COVID-19: respiratory insufficiency detection in Brazilian Portuguese speech. In: *Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021*. [S. l.]: ACL, 2021. p. 625–633. Disponível em: https://aclanthology.org/2021.findings-acl.55.
+> CASANOVA, Edresson; GRIS, Lucas; CAMARGO, Augusto; SILVA, Daniel da; GAZZOLA, Murilo; SABINO, Ester; LEVIN, Anna S.; CANDIDO JUNIOR, Arnaldo; ALUISIO, Sandra; FINGER, Marcelo. Deep learning against COVID-19: respiratory insufficiency detection in Brazilian Portuguese speech. In: *Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021*. [S. l.]: Association for Computational Linguistics, 2021. p. 625–633. DOI: https://doi.org/10.18653/v1/2021.findings-acl.55.
 
 Ao reutilizar a seleção que fiz das gravações ou a leitura que faço delas, cite também a tese, sempre com a referência bibliográfica completa indicada acima (autora, título, orientadora, ano, tipo de trabalho, programa, instituição e local).
