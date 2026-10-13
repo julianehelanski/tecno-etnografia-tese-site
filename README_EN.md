@@ -17,7 +17,7 @@ Not included in the REDU deposit, and where to obtain it:
 
 ## Licenses
 
-Code: MIT (LICENSE). Networks, tables and figures I produced: CC BY 4.0. Recordings in audio/ (SPIRA dataset): CC BY-SA 4.0. Thesis text reproduced on the website: all rights reserved (LICENSE-DADOS.md).
+Code: MIT (LICENSE). Networks, tables and figures I produced: CC BY-SA 4.0. Recordings in audio/ (SPIRA dataset): CC BY-SA 4.0. Thesis text reproduced on the website: all rights reserved (LICENSE-DADOS.md).
 
 ## How to cite
 
