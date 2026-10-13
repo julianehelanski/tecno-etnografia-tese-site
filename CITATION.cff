@@ -12,6 +12,12 @@ license:
   - MIT
   - CC-BY-SA-4.0
 repository-code: "https://github.com/julianehelanski/tecno-etnografia-tese-site"
+keywords:
+  - análise de rede textual
+  - tecnografia
+  - etnografia
+  - inteligência artificial
+  - estudos de ciência e tecnologia
 references:
   - type: thesis
     title: "Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora"

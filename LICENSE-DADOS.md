@@ -8,3 +8,5 @@ O código deste repositório está sob a licença MIT (arquivo [`LICENSE`](LICEN
 - As gravações de `audio/` pertencem ao *dataset* do projeto SPIRA, sob CC BY-SA 4.0 (convertidas para MP3 para o site; procedência em `audio/README.md`); as figuras derivadas delas seguem a mesma licença.
 - As imagens de terceiros exibidas nas galerias (artigos científicos, NIAID/NIH, IOC/Fiocruz) pertencem aos seus autores e são reproduzidas com indicação da fonte, para fins de estudo e crítica (Lei 9.610/98, art. 46, III).
 - As fontes e bibliotecas de `fonts/` e `vendor/` seguem as licenças que as acompanham.
+
+Texto legal da licença CC BY-SA 4.0: https://creativecommons.org/licenses/by-sa/4.0/legalcode.pt
