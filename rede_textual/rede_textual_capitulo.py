@@ -858,7 +858,9 @@ def run(src: Path, slug: str, title: str, out: Path,
 
     report = f"""# Análise de rede textual — {title}
 
-> Análise de rede textual (*text network analysis*, Paranyushkin 2019)
+> Análise de rede textual (*text network analysis*; PARANYUSHKIN, Dmitry. InfraNodus: generating insight
+> using text network analysis. In: *The World Wide Web Conference (WWW '19)*. New York: ACM, 2019.
+> p. 3584–3589. DOI: https://doi.org/10.1145/3308558.3314123)
 > aplicada ao arquivo `{src.name}`. O texto foi limpo de comandos LaTeX,
 > citações e notas de rodapé foram reincorporadas; janela deslizante de
 > 4 *tokens* com pesos decrescentes pela distância (3-2-1). Comunidades

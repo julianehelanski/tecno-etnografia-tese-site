@@ -485,6 +485,18 @@ e cole o conteúdo do `.tex` no seu capítulo, ou use `\input{rede_textual/esboc
   Text Network Analysis. In *The World Wide Web Conference (WWW '19)*
   (pp. 3584–3589). ACM.
 
+
+## Referências citadas
+
+- BLONDEL, Vincent D.; GUILLAUME, Jean-Loup; LAMBIOTTE, Renaud; LEFEBVRE, Etienne. Fast unfolding of communities in large networks. *Journal of Statistical Mechanics: Theory and Experiment*, v. 2008, n. 10, P10008, 2008. DOI: https://doi.org/10.1088/1742-5468/2008/10/P10008.
+- DIESNER, Jana; CARLEY, Kathleen M. Revealing social structure from texts: meta-matrix text analysis as a novel method for network text analysis. In: NARAYANAN, V. K.; ARMSTRONG, D. J. (ed.). *Causal mapping for information systems and technology research*: approaches, advances, and illustrations. Hershey: Idea Group Publishing, 2005. p. 81–108.
+- FERRER I CANCHO, Ramon; SOLÉ, Ricard V. The small world of human language. *Proceedings of the Royal Society B: Biological Sciences*, v. 268, n. 1482, p. 2261–2265, 2001. DOI: https://doi.org/10.1098/rspb.2001.1800.
+- LATOUR, Bruno. Visualisation and cognition: drawing things together. In: KUKLICK, Henrika (ed.). *Knowledge and society*: studies in the sociology of culture past and present. Greenwich, CT: Jai Press, 1986. v. 6, p. 1–40.
+- LATOUR, Bruno. *Reassembling the social*: an introduction to actor-network-theory. Oxford: Oxford University Press, 2005.
+- PARANYUSHKIN, Dmitry. InfraNodus: generating insight using text network analysis. In: *The World Wide Web Conference (WWW '19)*. New York: Association for Computing Machinery, 2019. p. 3584–3589. DOI: https://doi.org/10.1145/3308558.3314123.
+
+As referências da tese estão em: CARDOSO, Juliane Cristina Helanski. *Tecnografias de um centro de inteligência artificial*: seguindo cientistas e engenheiros universidade afora. Orientadora: Maria Suely Kofes. 2026. Tese (Doutorado em Ciências Sociais) – Instituto de Filosofia e Ciências Humanas, Universidade Estadual de Campinas, Campinas, 2026.
+
 ---
 
 *Branch: `claude/infranodus-thesis-chapter-1-VV43B` ·
