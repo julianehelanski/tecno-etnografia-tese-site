@@ -12,16 +12,16 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **23,205**
-- Grafo bruto: **6595** nós · **58663** arestas
-- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3291** arestas
+- Tokens significativos: **23,231**
+- Grafo bruto: **6602** nós · **58729** arestas
+- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3292** arestas
 - Tópicos detectados (Louvain): **8**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
 | # | termo | grau ponderado |
 |---|-------|----------------|
 | 1 | `rede` | 1296 |
-| 2 | `pesquisa` | 985 |
+| 2 | `pesquisa` | 988 |
 | 3 | `etnografia` | 838 |
 | 4 | `artificial` | 708 |
 | 5 | `inteligencia` | 697 |
@@ -41,7 +41,7 @@
 | 19 | `ator` | 350 |
 | 20 | `analise` | 344 |
 | 21 | `gesto` | 339 |
-| 22 | `dado` | 325 |
+| 22 | `dado` | 330 |
 | 23 | `parte` | 320 |
 | 24 | `maquina` | 319 |
 | 25 | `haraway` | 308 |
@@ -59,11 +59,11 @@ termos frequentes mas perifericamente conectados descem.
 | # | termo | PageRank |
 |---|-------|----------|
 | 1 | `rede` | 0.0331 |
-| 2 | `pesquisa` | 0.0256 |
-| 3 | `etnografia` | 0.0220 |
+| 2 | `pesquisa` | 0.0257 |
+| 3 | `etnografia` | 0.0219 |
 | 4 | `artificial` | 0.0166 |
 | 5 | `inteligencia` | 0.0163 |
-| 6 | `latour` | 0.0163 |
+| 6 | `latour` | 0.0162 |
 | 7 | `ciencia` | 0.0160 |
 | 8 | `campo` | 0.0158 |
 | 9 | `metodo` | 0.0146 |
@@ -80,13 +80,13 @@ termos frequentes mas perifericamente conectados descem.
 | 20 | `gesto` | 0.0092 |
 | 21 | `maquina` | 0.0090 |
 | 22 | `parte` | 0.0090 |
-| 23 | `dado` | 0.0089 |
+| 23 | `dado` | 0.0090 |
 | 24 | `haraway` | 0.0089 |
 | 25 | `ator` | 0.0088 |
 | 26 | `conceito` | 0.0087 |
 | 27 | `escrita` | 0.0081 |
 | 28 | `teoria` | 0.0078 |
-| 29 | `descreve` | 0.0078 |
+| 29 | `descreve` | 0.0077 |
 | 30 | `claude` | 0.0074 |
 
 ## 4. Termos mais subvalorizados pela frequência (degree → PageRank)
@@ -98,18 +98,18 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | 1 | `cientifico` | 140 | 125 | +15 |
 | 2 | `computacional` | 114 | 100 | +14 |
 | 3 | `tecnica` | 105 | 93 | +12 |
-| 4 | `instituicao` | 96 | 86 | +10 |
-| 5 | `infraestrutura` | 74 | 66 | +8 |
-| 6 | `cortes` | 106 | 99 | +7 |
-| 7 | `condicoes` | 103 | 97 | +6 |
-| 8 | `termos` | 46 | 41 | +5 |
-| 9 | `actante` | 52 | 47 | +5 |
-| 10 | `subsecao` | 97 | 92 | +5 |
-| 11 | `funcionam` | 115 | 110 | +5 |
-| 12 | `ausencia` | 56 | 52 | +4 |
-| 13 | `spira` | 62 | 58 | +4 |
-| 14 | `modos` | 67 | 63 | +4 |
-| 15 | `associacao` | 78 | 74 | +4 |
+| 4 | `infraestrutura` | 74 | 66 | +8 |
+| 5 | `cortes` | 106 | 99 | +7 |
+| 6 | `condicoes` | 103 | 97 | +6 |
+| 7 | `termos` | 46 | 41 | +5 |
+| 8 | `actante` | 52 | 47 | +5 |
+| 9 | `instituicao` | 89 | 84 | +5 |
+| 10 | `conceitos` | 93 | 88 | +5 |
+| 11 | `subsecao` | 97 | 92 | +5 |
+| 12 | `funcionam` | 115 | 110 | +5 |
+| 13 | `ausencia` | 56 | 52 | +4 |
+| 14 | `spira` | 62 | 58 | +4 |
+| 15 | `modos` | 67 | 63 | +4 |
 
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
@@ -148,7 +148,7 @@ vezes.
 | 3 | `existencias` | `parciais` | 0.826 | 84 |
 | 4 | `parcial` | `existencia` | 0.745 | 59 |
 | 5 | `teoria` | `ator` | 0.728 | 104 |
-| 6 | `distribuida` | `agencia` | 0.726 | 52 |
+| 6 | `distribuida` | `agencia` | 0.727 | 52 |
 | 7 | `presenca` | `ausencia` | 0.707 | 43 |
 | 8 | `otherness` | `manifesta` | 0.684 | 40 |
 | 9 | `tecnico` | `letramento` | 0.655 | 46 |

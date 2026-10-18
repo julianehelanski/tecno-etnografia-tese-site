@@ -12,16 +12,16 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **19,074**
-- Grafo bruto: **5713** nós · **49584** arestas
-- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **2627** arestas
+- Tokens significativos: **19,076**
+- Grafo bruto: **5711** nós · **49590** arestas
+- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **2626** arestas
 - Tópicos detectados (Louvain): **7**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
 | # | termo | grau ponderado |
 |---|-------|----------------|
 | 1 | `claudio` | 887 |
-| 2 | `pesquisa` | 736 |
+| 2 | `pesquisa` | 735 |
 | 3 | `rede` | 568 |
 | 4 | `fabio` | 528 |
 | 5 | `centro` | 514 |
@@ -30,8 +30,8 @@
 | 8 | `artificial` | 345 |
 | 9 | `arranjo` | 340 |
 | 10 | `publico` | 336 |
-| 11 | `brasil` | 333 |
-| 12 | `corporacao` | 333 |
+| 11 | `corporacao` | 333 |
+| 12 | `brasil` | 332 |
 | 13 | `tecnologia` | 319 |
 | 14 | `fapesp` | 309 |
 | 15 | `maquina` | 303 |
@@ -67,7 +67,7 @@ termos frequentes mas perifericamente conectados descem.
 | 7 | `arranjo` | 0.0128 |
 | 8 | `corporacao` | 0.0127 |
 | 9 | `tecnologia` | 0.0125 |
-| 10 | `brasil` | 0.0125 |
+| 10 | `brasil` | 0.0124 |
 | 11 | `publico` | 0.0124 |
 | 12 | `inteligencia` | 0.0120 |
 | 13 | `artificial` | 0.0120 |
@@ -95,11 +95,11 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 
 | # | termo | degree-rank | pagerank-rank | salto |
 |---|-------|-------------|----------------|-------|
-| 1 | `conta` | 141 | 127 | +14 |
+| 1 | `conta` | 141 | 126 | +15 |
 | 2 | `vida` | 164 | 151 | +13 |
-| 3 | `linguas` | 109 | 98 | +11 |
-| 4 | `mostra` | 137 | 126 | +11 |
-| 5 | `cadeia` | 99 | 89 | +10 |
+| 3 | `mostra` | 137 | 125 | +12 |
+| 4 | `cadeia` | 99 | 89 | +10 |
+| 5 | `linguas` | 109 | 99 | +10 |
 | 6 | `censo` | 140 | 130 | +10 |
 | 7 | `indigenas` | 102 | 93 | +9 |
 | 8 | `estados` | 64 | 56 | +8 |
@@ -108,17 +108,17 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | 11 | `tecnociencia` | 110 | 103 | +7 |
 | 12 | `objeto` | 150 | 144 | +6 |
 | 13 | `descreve` | 55 | 50 | +5 |
-| 14 | `escala` | 67 | 62 | +5 |
-| 15 | `pratica` | 78 | 73 | +5 |
+| 14 | `pratica` | 78 | 73 | +5 |
+| 15 | `material` | 83 | 78 | +5 |
 
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `pesquisa` | 0.3150 |
-| 2 | `centro` | 0.2669 |
+| 1 | `pesquisa` | 0.3148 |
+| 2 | `centro` | 0.2688 |
 | 3 | `claudio` | 0.2163 |
-| 4 | `rede` | 0.1683 |
-| 5 | `fabio` | 0.1292 |
+| 4 | `rede` | 0.1685 |
+| 5 | `fabio` | 0.1293 |
 | 6 | `tecnologia` | 0.0758 |
 | 7 | `dado` | 0.0700 |
 | 8 | `seguir` | 0.0688 |
