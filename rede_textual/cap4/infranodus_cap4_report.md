@@ -12,15 +12,15 @@
 > mantidas em paralelo, para comparação.
 
 ## 1. Resumo quantitativo
-- Tokens significativos: **31,021**
-- Grafo bruto: **6647** nós · **75307** arestas
-- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3835** arestas
+- Tokens significativos: **31,022**
+- Grafo bruto: **6644** nós · **75302** arestas
+- Grafo analítico (top 180 nós, peso ≥ 2, maior componente): **180** nós · **3836** arestas
 - Tópicos detectados (Louvain): **6**
 
 ## 2. Conceitos mais influentes (degree ponderado · *baseline* frequentista)
 | # | termo | grau ponderado |
 |---|-------|----------------|
-| 1 | `spira` | 1707 |
+| 1 | `spira` | 1709 |
 | 2 | `covideiro` | 1077 |
 | 3 | `rede` | 1042 |
 | 4 | `inscricao` | 983 |
@@ -38,12 +38,12 @@
 | 16 | `espectrograma` | 500 |
 | 17 | `actante` | 403 |
 | 18 | `pratica` | 397 |
-| 19 | `covid` | 380 |
+| 19 | `covid` | 383 |
 | 20 | `partir` | 364 |
 | 21 | `ruido` | 364 |
 | 22 | `sinal` | 360 |
-| 23 | `analise` | 357 |
-| 24 | `condicoes` | 355 |
+| 23 | `condicoes` | 357 |
+| 24 | `analise` | 357 |
 | 25 | `pacientes` | 352 |
 | 26 | `torna` | 344 |
 | 27 | `dataset` | 336 |
@@ -62,14 +62,14 @@ termos frequentes mas perifericamente conectados descem.
 | 2 | `covideiro` | 0.0233 |
 | 3 | `rede` | 0.0226 |
 | 4 | `inscricao` | 0.0217 |
-| 5 | `cadeia` | 0.0188 |
+| 5 | `cadeia` | 0.0187 |
 | 6 | `artigo` | 0.0174 |
 | 7 | `objeto` | 0.0163 |
 | 8 | `dado` | 0.0151 |
 | 9 | `projeto` | 0.0138 |
 | 10 | `marcelo` | 0.0136 |
 | 11 | `respiratoria` | 0.0133 |
-| 12 | `modelo` | 0.0132 |
+| 12 | `modelo` | 0.0131 |
 | 13 | `insuficiencia` | 0.0128 |
 | 14 | `coleta` | 0.0115 |
 | 15 | `artigos` | 0.0113 |
@@ -77,11 +77,11 @@ termos frequentes mas perifericamente conectados descem.
 | 17 | `actante` | 0.0094 |
 | 18 | `pratica` | 0.0093 |
 | 19 | `ruido` | 0.0087 |
-| 20 | `covid` | 0.0085 |
+| 20 | `covid` | 0.0086 |
 | 21 | `sinal` | 0.0085 |
 | 22 | `partir` | 0.0084 |
 | 23 | `torna` | 0.0083 |
-| 24 | `condicoes` | 0.0081 |
+| 24 | `condicoes` | 0.0082 |
 | 25 | `pacientes` | 0.0081 |
 | 26 | `analise` | 0.0081 |
 | 27 | `dataset` | 0.0078 |
@@ -96,16 +96,16 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 | # | termo | degree-rank | pagerank-rank | salto |
 |---|-------|-------------|----------------|-------|
 | 1 | `microfone` | 82 | 67 | +15 |
-| 2 | `escala` | 105 | 93 | +12 |
-| 3 | `grade` | 121 | 109 | +12 |
+| 2 | `grade` | 121 | 109 | +12 |
+| 3 | `escala` | 105 | 94 | +11 |
 | 4 | `fapesp` | 132 | 122 | +10 |
-| 5 | `resultado` | 99 | 91 | +8 |
-| 6 | `diante` | 106 | 98 | +8 |
-| 7 | `processamento` | 77 | 70 | +7 |
-| 8 | `parametros` | 120 | 114 | +6 |
+| 5 | `diante` | 106 | 98 | +8 |
+| 6 | `processamento` | 77 | 70 | +7 |
+| 7 | `resultado` | 99 | 92 | +7 |
+| 8 | `visivel` | 78 | 72 | +6 |
 | 9 | `padrao` | 153 | 147 | +6 |
-| 10 | `visivel` | 78 | 73 | +5 |
-| 11 | `coeficientes` | 85 | 80 | +5 |
+| 10 | `coeficientes` | 85 | 80 | +5 |
+| 11 | `parametros` | 120 | 115 | +5 |
 | 12 | `tecnica` | 139 | 134 | +5 |
 | 13 | `frequencia` | 140 | 135 | +5 |
 | 14 | `linguagem` | 149 | 144 | +5 |
@@ -114,23 +114,23 @@ positivo = o termo é *mais central na rede* do que sugere sua frequência.
 ## 5. Pontes conceituais (betweenness — termos que costuram tópicos)
 | # | termo | betweenness |
 |---|-------|-------------|
-| 1 | `spira` | 0.5425 |
-| 2 | `covideiro` | 0.1944 |
+| 1 | `spira` | 0.5421 |
+| 2 | `covideiro` | 0.1927 |
 | 3 | `inscricao` | 0.1365 |
 | 4 | `rede` | 0.1277 |
 | 5 | `cadeia` | 0.1171 |
 | 6 | `artigo` | 0.1002 |
 | 7 | `objeto` | 0.0964 |
-| 8 | `dado` | 0.0746 |
-| 9 | `respiratoria` | 0.0629 |
+| 8 | `dado` | 0.0745 |
+| 9 | `respiratoria` | 0.0633 |
 | 10 | `modelo` | 0.0616 |
 | 11 | `espectrograma` | 0.0527 |
 | 12 | `projeto` | 0.0508 |
 | 13 | `sinal` | 0.0419 |
 | 14 | `pratica` | 0.0353 |
-| 15 | `coleta` | 0.0343 |
-| 16 | `ruido` | 0.0305 |
-| 17 | `covid` | 0.0250 |
+| 15 | `coleta` | 0.0342 |
+| 16 | `ruido` | 0.0304 |
+| 17 | `covid` | 0.0259 |
 | 18 | `marcelo` | 0.0241 |
 | 19 | `actante` | 0.0186 |
 | 20 | `publico` | 0.0176 |
@@ -158,9 +158,9 @@ vezes.
 | 13 | `publico` | `repositorio` | 0.484 | 24 |
 | 14 | `enfermaria` | `ruido` | 0.481 | 62 |
 | 15 | `fonoaudiologos` | `medicos` | 0.478 | 22 |
-| 16 | `torna` | `visivel` | 0.474 | 37 |
-| 17 | `covideiro` | `pandemico` | 0.467 | 85 |
-| 18 | `pessoas` | `voz` | 0.459 | 26 |
+| 16 | `pessoas` | `voz` | 0.476 | 29 |
+| 17 | `torna` | `visivel` | 0.474 | 37 |
+| 18 | `covideiro` | `pandemico` | 0.467 | 85 |
 | 19 | `controles` | `pacientes` | 0.444 | 40 |
 | 20 | `textual` | `analise` | 0.444 | 27 |
 | 21 | `publico` | `saude` | 0.433 | 18 |
