@@ -1,4 +1,6 @@
-# Text network of the thesis: pipeline, networks and website (chapters 1 to 4 and concluding remarks)
+# Tecnografias de um centro de inteligência artificial: redes textuais e figuras da tese
+
+*Technographies of an artificial intelligence center: text networks and figures of the thesis.* Text network pipeline, networks and website (chapters 1 to 4 and concluding remarks).
 
 Text network analysis pipeline (co-occurrence, NPMI, Louvain, PageRank) and narrative trajectory pipeline (Gantt, alluvial, TF-IDF/LSA/PCA), networks and metrics for each chapter and for the thesis (PNG, GEXF, CSV, JSON), interpretations and the thesis's interactive website.
 

@@ -1,4 +1,4 @@
-# Rede textual da tese
+# Tecnografias de um centro de inteligência artificial: redes textuais e figuras da tese
 
 Este repositório reúne o *pipeline* de análise de rede textual e o site que acompanham a minha tese de doutorado, *Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora* (Programa de Pós-Graduação em Ciências Sociais, IFCH, Unicamp, 2026). O *pipeline* lê o código-fonte LaTeX da tese (mantido em repositório privado) e transforma o próprio texto em inscrições: redes de co-ocorrência de termos e trajetórias dos conceitos ao longo da leitura. O site publica essas redes junto com o resumo, o sumário comentado e as galerias de figuras de cada capítulo.
 
@@ -62,7 +62,7 @@ Código sob licença [MIT](LICENSE); redes, tabelas e figuras que produzi sob [C
 
 ## Citação
 
-> CARDOSO, Juliane Cristina Helanski. *Rede textual da tese*: *pipeline* e site. Campinas: Unicamp, 2026. Disponível em: https://github.com/julianehelanski/tecno-etnografia-tese-site.
+> CARDOSO, Juliane Cristina Helanski. *Tecnografias de um centro de inteligência artificial*: redes textuais e figuras da tese. Campinas: Unicamp, 2026. Disponível em: https://github.com/julianehelanski/tecno-etnografia-tese-site.
 
 > CARDOSO, Juliane Cristina Helanski. *Tecnografias de um centro de inteligência artificial*: seguindo cientistas e engenheiros universidade afora. Orientadora: Maria Suely Kofes. 2026. Tese (Doutorado em Ciências Sociais) – Instituto de Filosofia e Ciências Humanas, Universidade Estadual de Campinas, Campinas, 2026.
 
