@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Rede textual da tese"
+title: "Tecnografias de um centro de inteligência artificial: redes textuais e figuras da tese"
 message: "Se você usar estes scripts ou dados, por favor cite-os."
 type: software
 abstract: "Site interativo e pipeline de rede textual (co-ocorrência, NPMI, Louvain, PageRank) que acompanham a tese."
