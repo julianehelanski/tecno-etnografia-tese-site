@@ -1,0 +1,95 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>EIXO</b><br>título, pergunta<br>e cabeçalhos de seção"]:::eixo
+    L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]:::teoria
+    L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]:::campo
+    L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>bibliometria, gráficos,<br>diagramas"]:::inscricao
+    L5["<b>DOBRA</b><br>argumento-síntese<br>e considerações finais"]:::dobra
+    L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5
+end
+
+ETN["<b>O SEGUIR DOS ATORES</b><br>seguir Fábio e Cláudio onde quer que as associações levem<br>(o percurso e a posição estão detalhados<br>na figura da dobra etnográfica)"]:::eixo
+
+subgraph G1["EIXO DO REPERTÓRIO — teoria ator-rede: translação e mediação"]
+  direction LR
+  LAT["Latour<br>actante, porta-voz, aliados<br>cadeia de translação<br>ponto de passagem obrigatório<br>caixa-preta<br>relação inversa dentro e fora"]:::teoria
+  CAL["Callon, Law<br>problematização, interessamento<br>recrutamento, mobilização<br>centros de tradução<br>rede tecnoeconômica<br>heterogeneidade técnica"]:::teoria
+end
+
+subgraph G2["COMPLEMENTAR — trajetória histórica que a investigação tornou pertinente"]
+  direction LR
+  FOU["Foucault<br>governamentalidade<br>razão de Estado<br>estatística como dispositivo<br>saber e poder, biopolítica"]:::teoria
+  SCT["Bijker, Hughes, Pinch<br>SCOT, Shaping Technology<br>flexibilidade interpretativa<br>grupos sociais relevantes<br>fechamento, momentum tecnológico<br>rede sem costuras"]:::teoria
+end
+
+subgraph G3["COMPLEMENTAR — estudos críticos de IA, lente assentada no cap. 2"]
+  direction LR
+  CRA["Crawford, Joler<br>extração material, laboral<br>e epistêmica, cadeias globais<br>colonialismo computacional<br>poder artificial"]:::teoria
+  PAS["Pasquinelli<br>nooscope<br>imitação da inteligência coletiva<br>divisão social do trabalho cognitivo<br>captura e codificação do saber"]:::teoria
+  JL["Johnson, Lenhard<br>culturas de predição<br>sedimentação histórica de<br>racionalidades computacionais<br>da predição ao controle"]:::teoria
+end
+
+TEC["<b>CONCEITO EMERGENTE DA ANÁLISE</b><br>tecnopoder<br>termo que tomei de Brennan (2025) e desloquei<br>para o meu material; a leitura foucaultiana da<br>estatística e os estudos críticos entram como<br>deixas históricas que a análise convoca<br>poder exercido via arranjos sociotécnicos assimétricos<br>entre corporações globais e instituições periféricas<br>sem propriedade direta: gestão de dependências e<br>de quais caminhos tecnológicos se tornam possíveis"]:::dobra
+
+subgraph ARG["CONTRIBUIÇÕES AO ARGUMENTO — o que cada conjunto de ferramentas tornou visível"]
+  direction TB
+  C1["Com Latour: seguir Fábio e Cláudio<br>como porta-vozes revela como alianças são<br>construídas, interesses traduzidos e actantes<br>heterogêneos (IBM, FAPESP, USP, infraestrutura)<br>recrutados para a rede do C4AI"]:::dobra
+  C2["Com Callon: o modelo IBM percorre as quatro<br>etapas da translação ao longo de 135 anos:<br>problematiza, recruta governos e universidades,<br>mobiliza infraestrutura como PPO<br>C4AI como centro de tradução corporativo"]:::dobra
+  C3["Com Foucault: Hollerith materializa a<br>governamentalidade estatística, populações<br>tornadas inteligíveis por quantificação e<br>classificação mecanizada; a IBM herda e amplifica<br>esse dispositivo, da tabulação eletromecânica à IA"]:::dobra
+  C4["Com Bijker e Hughes: System/360 e C4AI como<br>casos de flexibilidade interpretativa e fechamento,<br>diferentes grupos (IBM, FAPESP, USP, pesquisadores)<br>interpretam o mesmo centro de formas distintas;<br>o momentum acumulado torna custoso desfazer<br>o arranjo, política, institucional e financeiramente"]:::dobra
+  C5["Com Johnson e Lenhard: o vínculo por ecossistema<br>como sedimentação de práticas corporativas,<br>a 'descoberta' IBM nos anos 1990<br>atualizada na era da IA pelo C4AI,<br>as culturas de predição"]:::dobra
+  C6["Com Crawford e Joler: o C4AI como instância<br>brasileira de extração epistêmica global;<br>a copropriedade formalmente simétrica dos resultados<br>convive com a desigualdade material, entre corporação<br>e universidade, na capacidade de exercê-la"]:::dobra
+  C7["Com Pasquinelli: a IBM retira trabalho cognitivo<br>coletivo que alimenta o ecossistema para o qual<br>oferece serviços; retém valor sem propriedade<br>formal, o aberto potencializa a lucratividade"]:::dobra
+end
+
+LEGENDA ~~~ ETN
+ETN -->|"as associações levam<br>ao eixo do repertório"| G1
+G1  -->|"seguir a IBM para trás no tempo<br>exige referenciais históricos"| G2
+G2  -->|"tensão produtiva:<br>descrição versus assimetrias<br>estruturais irredutíveis"| G3
+G3  -->|"as assimetrias nomeadas<br>exigem conceito próprio"| TEC
+LAT --> C1
+CAL --> C2
+FOU --> C3
+SCT --> C4
+JL  --> C5
+CRA --> C6
+PAS --> C7
+C1 -.->|"porta-vozes revelam<br>a rede extensa da IBM"| C2
+C2 -.->|"PPO corporativo tem<br>raiz na governamentalidade<br>estatística de Hollerith"| C3
+C3 -.->|"dispositivo histórico<br>ganha momentum<br>no C4AI contemporâneo"| C4
+C4 -.->|"o desfazer do vínculo<br>expressa sedimentação<br>de culturas de predição"| C5
+C5 -.->|"sedimentação histórica<br>sustenta a extração<br>epistêmica global"| C6
+C6 -.->|"extração sem propriedade:<br>o open source como<br>valor retido e deslocado"| C7
+LAT -.->|"tensão: actantes sem<br>hierarquia prévia versus<br>dispositivos que já<br>estruturam o campo"| FOU
+LAT -.->|"convergência:<br>translação como<br>recrutamento assimétrico"| CAL
+CAL -.->|"tensão: translação<br>como processo aberto<br>versus assimetrias que<br>bloqueiam periféricos"| CRA
+SCT -.->|"convergência:<br>artefatos incorporam<br>relações sociais"| FOU
+CRA -.->|"convergência:<br>crítica à extração<br>epistêmica sistêmica"| PAS
+TEC -.->|"tensão produtiva:<br>nomeia a assimetria<br>versus descrever como ela<br>é produzida actante<br>a actante"| LAT
+
+%% ===== PADRÃO DE ESTILO DA TESE — 5 classes semânticas =====
+classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#22303a;
+classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#14304a;
+classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+
+%% ===== Caixas (subgraphs): borda neutra uniforme =====
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style G1 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style G2 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style G3 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style ARG fill:transparent,stroke:#b8bec7,stroke-width:1px

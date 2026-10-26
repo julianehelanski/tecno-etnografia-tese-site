@@ -1,0 +1,41 @@
+---
+config:
+  layout: dagre
+  theme: default
+---
+flowchart LR
+ subgraph M2["SEGUNDO SIGNIFICADO — Composição"]
+    direction LR
+        G1["Agente 1"]
+        I1(("INTERRUPÇÃO"))
+        SP1["SUBPROGRAMA 1"]
+        G2["Agente 2"]
+        I2(("INTERRUPÇÃO"))
+        SP2["SUBPROGRAMA 2"]
+        G3["Agente 3"]
+        SOMA["COMPOSIÇÃO DA AÇÃO<br>por translação sucessiva"]
+        GOAL["OBJETIVO<br>composto comum"]
+  end
+    G1 --> I1
+    I1 -. desvio .-> SP1
+    G2 --> I2
+    I2 -. desvio .-> SP2
+    G3 --> SP2
+    SP1 --> SOMA
+    SP2 --> SOMA
+    SOMA ==> GOAL
+
+     G1:::cap2
+     I1:::stop
+     SP1:::sub
+     G2:::cap2
+     I2:::stop
+     SP2:::sub
+     G3:::cap2
+     SOMA:::cap2
+     GOAL:::objetivo
+    classDef cap2 fill:#dcfce7,stroke:#98d9b4,color:#374151,rx:10
+    classDef sub  fill:#bbf7d0,stroke:#86c79e,color:#374151,rx:10
+    classDef objetivo fill:#fed7aa,stroke:#c2410c,color:#374151,rx:10,font-weight:bold
+    classDef stop fill:#fecaca,stroke:#dc2626,color:#7f1d1d,rx:20,font-weight:bold
+    style M2 stroke:#ffffff,fill:#ffffff

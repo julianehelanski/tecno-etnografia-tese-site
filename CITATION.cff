@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "Tecnografias de um centro de inteligência artificial: redes textuais e figuras da tese"
 message: "Se você usar estes scripts ou dados, por favor cite-os."
 type: software
-abstract: "Site interativo e pipeline de rede textual (co-ocorrência, NPMI, Louvain, PageRank) que acompanham a tese."
+abstract: "Site interativo, pipeline de rede textual (co-ocorrência, NPMI, Louvain, PageRank) e código-fonte Mermaid (.mmd) dos diagramas da tese, organizado por capítulo em diagramas/, que acompanham a tese."
 authors:
   - family-names: Cardoso
     given-names: Juliane Cristina Helanski
@@ -18,6 +18,8 @@ keywords:
   - etnografia
   - inteligência artificial
   - estudos de ciência e tecnologia
+  - diagramas Mermaid
+  - mapas de capítulo
 references:
   - type: thesis
     title: "Tecnografias de um centro de inteligência artificial: seguindo cientistas e engenheiros universidade afora"

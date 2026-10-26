@@ -1,0 +1,180 @@
+---
+config:
+  layout: elk
+---
+%%{init: {"theme":"base","themeVariables":{"fontFamily":"Open Sans, sans-serif","clusterTextColor":"#374151","titleColor":"#374151","nodeTextColor":"#374151","textColor":"#374151","lineColor":"#64748b","edgeLabelBackground":"#ffffff","tertiaryColor":"#ffffff"}}}%%
+flowchart TB
+ subgraph DIST["DO ALGORITMO À IA GENERATIVA — do que estamos falando"]
+    direction LR
+        ALG["ALGORITMO<br>uma receita de passos<br>escrita por alguém:<br>regras identificáveis;<br>mesma entrada, mesma saída"]
+        ML["IA — APRENDIZADO DE MÁQUINA<br>as regras deixam de ser escritas:<br>são aprendidas dos dados;<br>a mesma entrada ainda<br>devolve a mesma saída"]
+        GEN["IA GENERATIVA<br>acrescenta um sorteio/probabilístico<br>a cada termo gerado:<br>a saída deixa de ser fixa"]
+  end
+ subgraph CLASSICO["MEDIADOR TÉCNICO CLÁSSICO — transforma o que transmite, e é auditável"]
+    direction LR
+        EC["mesma entrada<br>repetida"]
+        MC["mediador<br>transforma o que transmite"]
+        SC1["mesma resposta"]
+        SC2["mesma resposta"]
+        AUDC["pode-se reabrir a caixa<br>e encontrar regras e peças indentificáveis,<br>cada uma com sua contribuição"]
+  end
+ subgraph INSUMOS["insumos que compõem cada modelo"]
+    direction LR
+        D1["dados de<br>treinamento"]
+        D2["trabalho de<br>anotação"]
+        D3["corpus e<br>curadoria"]
+        D4["parâmetros<br>aprendidos"]
+        D5["infraestrutura<br>e GPUs"]
+  end
+ subgraph MODELOS["vários modelos de IA encadeados"]
+    direction LR
+        M1["reconhecimento<br>de fala e visão"]
+        M2["modelos de<br>busca e embedding"]
+        M3["modelo<br>generativo"]
+        M4["classificadores<br>e filtros de moderação"]
+  end
+ subgraph IACAD["MEDIADOR-IA — uma cadeia imensa de mediadores compõe o sistema"]
+    direction TB
+        INSUMOS
+        MODELOS
+        OPACO["NÃO EXPLICABILIDADE<br>os engenheiros conhecem a arquitetura,<br>os dados e cada cálculo do modelo,<br>sem conseguir rastrear<br>por que ESTA resposta saiu:<br>não há regra identificável a reabrir,<br>só bilhões de parâmetros.<br>A opacidade persiste com a caixa aberta"]
+  end
+ subgraph MEC["O INDETERMINISMO E A NÃO LINEARIDADE — propriedades do sistema"]
+    direction LR
+        PERG["a mesma pergunta,<br>repetida sem<br>nenhuma mudança"]
+        SORTEIO(("a cada termo<br>gerado,<br>uma probabilidade é calculada"))
+        R1["1ª vez → uma resposta"]
+        R2X["2ª vez → resposta diferente"]
+        R3["3ª vez → outra ainda"]
+        NAODET["NÃO DETERMINISMO<br>a mesma pergunta recebe<br>respostas diferentes a cada vez:<br>variar faz parte do funcionamento"]
+        NAOLIN["NÃO LINEARIDADE<br>uma pequena mudança na pergunta<br>pode mudar muito a resposta:<br>sistemas imprevisíveis<br>e difíceis de controlar"]
+        ENACT["A RESPOSTA É FEITA NO USO<br>cada uso situado faz existir<br>o que se obtém:<br>a prática produz o objeto"]
+        MULT["MÚLTIPLAS IAs<br>o mesmo sistema em treinamento,<br>em operação, em auditoria e em uso<br>coexiste sem convergir:<br>a IA no singular é ficção"]
+  end
+ subgraph DESD["OS DESDOBRAMENTOS — o que o indeterminismo significa"]
+    direction LR
+        ED["EDUCAÇÃO EM GERAL<br>a detecção pressupõe uma<br>assinatura estável que os<br>modelos dispensam; a proibição<br>regula uma ficção.<br>Regulável é a prática"]
+        SUP["ENSINO SUPERIOR<br>só a prática é avaliável,<br>e ela precisa de rastro:<br>declaração, auditabilidade,<br>reversibilidade.<br>Acesso = equidade epistêmica"]
+        HUM["HUMANIDADES E ANTROPOLOGIA<br>a tarefa: criar e fortalecer um<br>repertório analítico e crítico<br>baseado nos estudos de ciência<br>e tecnologia, adaptado aos<br>currículos de graduação e pós"]
+        ALEM["PARA ALÉM DA REGULAÇÃO<br>políticas ontológicas: construir<br>IAs próprias — infraestrutura<br>pública, usos situados, equipes<br>genuinamente interdisciplinares —<br>e responder pelos usos e<br>práticas situadas"]
+        DESCOL["SOBERANIA E DESCOLONIZAÇÃO<br>fazer LLMs na nossa língua,<br>com base nos nossos princípios,<br>anseios e interesses,<br>com a diversidade brasileira:<br>o que entra no corpus<br>é política ontológica"]
+  end
+ subgraph ATUAL["O CONTEXTO ATUAL — o ônus fica com quem usa"]
+    direction LR
+        EMP["QUEM CONSTRÓI E OPERA<br>conhece a arquitetura e os dados;<br>pode medir e comunicar<br>as limitações — e não o faz"]
+        SIS["O SISTEMA<br>erros, vieses, alucinações<br>e indeterminismo:<br>propriedades do mecanismo"]
+        USU["QUEM USA<br>carrega o ônus:<br>“não soube usar”,<br>“errou a pergunta”,<br>“devia ter verificado”"]
+  end
+ subgraph SIT["A IA SITUADA — responsabilidade distribuída"]
+    direction LR
+        C2["QUEM CONSTRÓI<br>mede e comunica<br>as limitações"]
+        RG2["QUEM REGULA<br>regula práticas,<br>e não a ficção<br>da IA no singular"]
+        U2["QUEM USA<br>com rastro:<br>declara, audita,<br>pode reverter"]
+        RESPC["RESPONSABILIDADE COMPARTILHADA<br>limitações medidas, comunicadas<br>e assumidas em conjunto:<br>quem constrói e quem usa<br>do mesmo lado"]
+        VIS["FEITA POR NÓS E PARA NÓS<br>a nossa própria visão de IA,<br>e não a invenção única<br>que as empresas vendem"]
+  end
+ subgraph RESP["A DISTRIBUIÇÃO DA RESPONSABILIDADE"]
+    direction TB
+        ATUAL
+        SIT
+  end
+    SINT["Ensina-se, avalia-se e regula-se sempre uma prática com IA — e cada prática responde pela IA que faz existir.<br>Se a IA é feita no uso, o objeto da educação se desloca: da ferramenta que se ensina à prática pela qual se responde.<br>Cada prática faz existir uma IA e um modo de conhecer — e educar é formar quem responde pelos dois."]
+    ALG --> ML
+    ML --> GEN
+    EC --> MC
+    MC ==> SC1 & SC2
+    MC -. reabre .-> AUDC
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    D4 --> D5
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+    INSUMOS ==> MODELOS
+    MODELOS -. opaca mesmo aberta .-> OPACO
+    PERG --> SORTEIO
+    SORTEIO -.-> R1 & R2X & R3
+    R1 --> NAODET
+    R2X --> NAODET
+    R3 --> NAODET
+    SORTEIO -. e se a pergunta<br>muda um pouco? .-> NAOLIN
+    NAODET ==> ENACT
+    NAOLIN ==> ENACT
+    ENACT ==> MULT
+    EMP ==>|"vende como<br>produto pronto"| SIS
+    SIS ==>|"o ônus recai<br>sobre quem usa"| USU
+    USU -. assinatura e dados:<br>o valor retorna à empresa .-> EMP
+    C2 ==> RESPC
+    RG2 ==> RESPC
+    U2 ==> RESPC
+    RESPC ==> VIS
+    ATUAL -. o que a IA situada reorganiza .-> SIT
+    DIST -. como media a técnica clássica .-> CLASSICO
+    CLASSICO -. o que a IA acrescenta: a cadeia .-> IACAD
+    IACAD ==> MEC
+    MEC -. desdobramentos .-> DESD
+    DESD -. e a disputa da responsabilidade .-> RESP
+    RESP ==> SINT
+    ED ~~~ SUP
+    SUP ~~~ HUM
+    HUM ~~~ ALEM
+    ALEM ~~~ DESCOL
+    ALG:::neutro
+    EC:::neutro
+    PERG:::neutro
+    SIS:::neutro
+    D1:::material
+    D2:::material
+    D3:::material
+    D4:::material
+    D5:::material
+    M1:::material
+    M2:::material
+    M3:::material
+    M4:::material
+    GEN:::variacao
+    SORTEIO:::variacao
+    R1:::variacao
+    R2X:::variacao
+    R3:::variacao
+    NAODET:::variacao
+    NAOLIN:::variacao
+    OPACO:::falha
+    USU:::falha
+    EMP:::falha
+    MC:::mediacao
+    ENACT:::mediacao
+    MULT:::mediacao
+    SC1:::proposta
+    SC2:::proposta
+    ED:::proposta
+    SUP:::proposta
+    HUM:::proposta
+    ALEM:::proposta
+    DESCOL:::proposta
+    C2:::proposta
+    RG2:::proposta
+    U2:::proposta
+    RESPC:::proposta
+    VIS:::proposta
+    ML:::neutro
+    AUDC:::sintese
+    SINT:::sintese
+    classDef neutro fill:#f1f5f9,stroke:#94a3b8,color:#374151,rx:8
+    classDef material fill:#ede9fe,stroke:#8b5cf6,color:#374151,rx:8
+    classDef variacao fill:#ffedd5,stroke:#ea580c,color:#374151,rx:8
+    classDef falha fill:#fee2e2,stroke:#dc2626,color:#374151,rx:8
+    classDef mediacao fill:#dbeafe,stroke:#2563eb,color:#374151,rx:10
+    classDef proposta fill:#dcfce7,stroke:#16a34a,color:#374151,rx:8
+    classDef sintese fill:#fef9c3,stroke:#ca8a04,color:#374151,rx:12
+    style DIST fill:transparent,stroke:#94a3b8,stroke-width:1px
+    style CLASSICO fill:transparent,stroke:#2563eb,stroke-width:1px
+    style INSUMOS fill:transparent,stroke:#8b5cf6,stroke-width:1px
+    style MODELOS fill:transparent,stroke:#8b5cf6,stroke-width:1px
+    style IACAD fill:transparent,stroke:#2563eb,stroke-width:1px
+    style MEC fill:transparent,stroke:#ea580c,stroke-width:1px
+    style DESD fill:transparent,stroke:#16a34a,stroke-width:1px
+    style ATUAL fill:transparent,stroke:#dc2626,stroke-width:1px
+    style SIT fill:transparent,stroke:#16a34a,stroke-width:1px
+    style RESP fill:transparent,stroke:#94a3b8,stroke-width:1px

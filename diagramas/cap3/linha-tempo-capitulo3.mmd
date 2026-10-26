@@ -1,0 +1,67 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    primaryColor: '#f8fafc'
+    primaryTextColor: '#374151'
+    primaryBorderColor: '#9ca3af'
+    lineColor: '#6b7280'
+    secondaryColor: '#e5e7eb'
+    tertiaryColor: '#f3f4f6'
+    taskBkgColor: '#ffffff'
+    taskBorderColor: '#94a3b8'
+    taskTextColor: '#374151'
+    doneTaskBkgColor: '#ffffff'
+    doneTaskBorderColor: '#7c3aed'
+    activeTaskBkgColor: '#ffffff'
+    activeTaskBorderColor: '#3b82f6'
+    critBkgColor: '#ffffff'
+    critBorderColor: '#dc2626'
+    gridColor: '#e5e7eb'
+    todayLineColor: '#6b7280'
+    sectionBkgColor: '#fafafa'
+    altSectionBkgColor: '#f5f5f5'
+---
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    todayMarker off
+
+    section  
+    Máquina tabuladora de Hollerith no censo dos EUA · 1890        :milestone, h01, 1890-01-01, 0d
+    Tabulating Machine Company · 1896                              :milestone, h02, 1896-01-01, 0d
+    Fusão na CTR de Charles Flint · 1911                           :milestone, h03, 1911-01-01, 0d
+    Primeira filial da CTR fora dos EUA · Rio de Janeiro · 1917    :milestone, h14, 1917-01-01, 0d
+    Empresa renomeada International Business Machines · 1924       :milestone, h04, 1924-01-01, 0d
+    Primeira fábrica da IBM fora dos EUA · Benfica, RJ · 1939      :milestone, h05, 1939-01-01, 0d
+    Lançamento do System/360 · 1964                               :milestone, h06, 1964-01-01, 0d
+    Cobrança separada por software · 1969                         :milestone, h07, 1969-01-01, 0d
+    Lançamento do IBM PC · 1981                                   :milestone, h08, 1981-01-01, 0d
+    IBM Global Services · 1991                                    :milestone, h09, 1991-01-01, 0d
+    Investimento de US$ 1 bilhão em Linux · 2000                  :milestone, h10, 2000-01-01, 0d
+    Abertura do IBM Research Brasil · 2010                        :milestone, h11, 2010-01-01, 0d
+    Watson e a computação cognitiva · 2015                        :milestone, h12, 2015-01-01, 0d
+    Acordo-base FAPESP-IBM · 2016                                 :milestone, i01, 2016-04-01, 0d
+    Aquisição da Red Hat por US$ 34 bilhões · 2019                :milestone, h13, 2019-01-01, 0d
+    Eixo de óleo e gás redirecionado à Amazônia Azul · 2020       :crit,      i03, 2020-08-01, 2020-12-31
+    Lançamento público do C4AI · 18 out. 2020                     :milestone, i02, 2020-10-18, 0d
+    Início do trabalho de campo · 2022                            :milestone, c01, 2022-03-01, 0d
+    Observação participante · cerca de quatro anos                :active,    c02, 2022-03-01, 2025-12-31
+    Saúde perde financiamento direto · 2022                       :crit,      i04, 2022-06-01, 90d
+    Bluetalks · Inovabra Habitat · 9 fev. 2023                    :milestone, c03, 2023-02-09, 0d
+    Lançamento do PBIA · 2024                                     :milestone, i05, 2024-07-30, 0d
+    FAPESP aprova dez novos CPEs · 2024                           :milestone, i06, 2024-10-01, 0d
+    Comunicação interna da não renovação (relato) · c. ago. 2025 :crit,      c04, 2025-08-01, 30d
+    Entrevista com Fábio Cozman · 4 set. 2025                     :milestone, c05, 2025-09-04, 0d
+    Entrevista com Cláudio Pinhanez · 2 out. 2025                 :milestone, c06, 2025-10-02, 0d
+    Fechamento do IBM Research Brasil · nov. 2025                 :crit,      i07, 2025-11-01, 30d
+    Documentação do encerramento · nov.–dez. 2025                 :crit,      c07, 2025-11-01, 2025-12-31
+    Anúncio público da não renovação C4AI-IBM · dez. 2025        :crit,      i08, 2025-12-01, 31d
+
+    %% Marcos opcionais — descomente os que quiser incluir:
+    %% Censo brasileiro com as tabuladoras · 1920                 :milestone, h15, 1920-01-01, 0d
+    %% Suprema Corte dos EUA contra o monopólio dos cartões · 1936 :milestone, h16, 1936-01-01, 0d
+    %% Criação da IBM Research · 1945                              :milestone, h17, 1945-01-01, 0d
+    %% USP admitida na AI Alliance · jul. 2024                     :milestone, i09, 2024-07-01, 0d
+    %% Inauguração conjunta CIAAM e CIAGSaúde · ago. 2025          :milestone, i10, 2025-08-01, 0d

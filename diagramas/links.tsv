@@ -1,0 +1,26 @@
+# Diagrama interativo citado na legenda da tese -> código-fonte em diagramas/.
+# Formato (TAB): <link mermaid.ai/d/...>\t<caminho do .mmd a partir da raiz do repo>
+# Lido por rede_textual/tese_documento.py, que grava o campo `mmd` em DOC.figuras.
+https://mermaid.ai/d/b27ca78c-b037-42fe-a3eb-939a092e1455	diagramas/cap1/linha-tempo-capitulo1.mmd
+https://mermaid.ai/d/6dbd9e0b-a652-428d-99b1-a76d0c068b5b	diagramas/cap1/cap1-urdidura.mmd
+https://mermaid.ai/d/23442efa-7a2f-4a5e-9dae-0e2faeedc3ae	diagramas/cap1/cap1-grade-tres-planos.mmd
+https://mermaid.ai/d/b4a7d089-3a37-4ab6-8e45-fc4ecca9e22f	diagramas/cap2/mapa-capitulo2.mmd
+https://mermaid.ai/d/a7b611c1-a522-41da-9603-0a8be61de483	diagramas/cap2/linha-tempo-capitulo2.mmd
+https://mermaid.ai/d/f1c51456-43c3-424c-8edf-50566fbe40c2	diagramas/cap2/mediacaosignificado_1_traducao.mmd
+https://mermaid.ai/d/050e4650-4240-4681-b65d-825c33579f58	diagramas/cap2/mediacaosignificado_2_composicao.mmd
+https://mermaid.ai/d/4b90c964-c828-4b60-ba05-d9b4ee409c69	diagramas/cap2/mediacaosignificado_3_obscurecimento.mmd
+https://mermaid.ai/d/fb8411e2-65f0-4a16-a767-fad97bf15f8f	diagramas/cap2/mediacaosignificado_4_delegacao.mmd
+https://mermaid.ai/d/9b29f69e-2c76-465a-b25f-033401bf57c5	diagramas/cap2/cap2-mediacao-diferencial.mmd
+https://mermaid.ai/d/0c8eb50f-d995-4bba-b60a-c768ebe5dd51	diagramas/cap3/mapa-capitulo3.mmd
+https://mermaid.ai/d/524aeaa7-bdc0-4a59-86f8-1babbb51b23c	diagramas/cap3/mapa-analitico-capitulo3.mmd
+https://mermaid.ai/d/1e91bd86-5adf-4ac9-8267-5e2c0ef106a2	diagramas/cap3/mapa-metodologico-capitulo3.mmd
+https://mermaid.ai/d/5489d21c-59fe-4af5-88e2-266248114a98	diagramas/cap3/mapa-associacoes-capitulo3.mmd
+https://mermaid.ai/d/0ef94ec0-258e-470f-83b5-cd07c511f760	diagramas/cap3/linha-tempo-capitulo3.mmd
+https://mermaid.ai/d/58220d39-fbdc-41b0-87a6-c23c1e18e36f	diagramas/cap3/mapa-rede-hollerith-capitulo3.mmd
+https://mermaid.ai/d/0c180893-5d01-4821-96e8-155a4e627aa5	diagramas/cap3/cadeia-translacao-ibm-capitulo3.mmd
+https://mermaid.ai/d/cde0a17c-8b5b-4e55-a287-2f2a51f8738d	diagramas/cap4/mapa-capitulo4.mmd
+https://mermaid.ai/d/f2bf88be-28fc-4669-8b14-b9ddda943184	diagramas/cap4/cadeia-translacao-condensada-capitulo4-2026-04-15-202330.mmd
+https://mermaid.ai/d/49007d9e-941f-4172-889a-a3257c8a14ac	diagramas/cap4/mapa-linha-tempo-capitulo4.mmd
+https://mermaid.ai/d/7aec6c39-38e8-4dce-904f-06b74374d4bf	diagramas/cap4/quadro-analitico-capitulo4-2026-04-15-202321.mmd
+https://mermaid.ai/d/dbdaf709-a83d-4c21-bde0-fed7b4f04c12	diagramas/cap4/cap4-argumento.mmd
+https://mermaid.ai/d/47234d6a-8a7b-468f-9559-28ded7c400cf	diagramas/cap5/diagrama_sintese_tese.mmd

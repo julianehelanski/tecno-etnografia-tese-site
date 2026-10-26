@@ -1,0 +1,130 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    LG1["<b>Akrich</b><br>o que acontece dentro<br>da configuração"]:::ant
+    LG2["<b>Latour</b><br>a cadeia que sai<br>do laboratório"]:::praticas
+    LG3["<b>Latour · Law · Callon</b><br>a chegada como<br>texto publicado"]:::mat
+    LG4["<b>Mol</b><br>o que o objeto se torna<br>ao longo da cadeia"]:::onto
+    LG5["<b>Argumento central</b><br>e ponto de retorno"]:::arg
+    LG6["<b>Distinções que proponho</b>"]:::novo
+    LG7["<b>Limitação e agenda pós-defesa</b>"]:::lim
+    LG1 ~~~ LG2 ~~~ LG3 ~~~ LG4 ~~~ LG5 ~~~ LG6 ~~~ LG7
+end
+
+subgraph argumento["<b>ARGUMENTO CENTRAL DO CAPÍTULO 4</b>"]
+    direction LR
+    ARG(["A tentativa de converter o que é fluido<br>em algo que circule como rede estável,<br>com seus ganhos e suas perdas,<br>e os limites que o próprio percurso revela"]):::arg
+end
+
+subgraph espiral["QUATRO MOMENTOS DA ANÁLISE, EM ESPIRAL"]
+    direction TB
+
+    subgraph va["1 · Akrich — o que acontece dentro do sistema"]
+        direction LR
+        A1["O que o dispositivo<br>assume de antemão,<br>sem poder garantir"]:::ant
+        A2a["Recusa declarada:<br>os fonoaudiólogos não aderem,<br>por incompatibilidade de equipamento"]:::ant
+        A2b["Recusa silenciosa:<br>no P2 ninguém recusa o roteiro,<br>e ainda assim o sinal sai distinto<br>(distinção que proponho)"]:::novo
+        A3["Os limites do sistema,<br>produzidos no confronto<br>entre o que se planejou e o que se encontrou"]:::ant
+        A4a["Primeira correção (P1):<br>o ruído da enfermaria passa<br>a ser incorporado ao treinamento"]:::ant
+        A4b["Segunda correção:<br>o SPIRA-BM, em andamento,<br>incorpora a própria falha ao projeto<br>(acompanhado pela documentação textual)"]:::novo
+    end
+
+    subgraph vb["2 · Latour — a saída do laboratório"]
+        direction LR
+        B1["O que se ganha:<br>forma, combinabilidade<br>e mobilidade"]:::praticas
+        B2["O que se perde:<br>localidade, materialidade<br>e o corpo do paciente"]:::praticas
+        B3["Os dados são realizados<br>por decisões situadas,<br>e não encontrados prontos no mundo<br>(<i>sublata</i>, em Latour)"]:::praticas
+    end
+
+    subgraph vc["3 · Latour · Law · Callon — a chegada ao artigo publicado"]
+        direction LR
+        C1["O artigo mostra gráficos e tabelas,<br>e não o percurso que os produziu:<br>a opacidade sustenta a autoridade"]:::mat
+        C2["O improviso da coleta<br>é reescrito como precaução metodológica,<br>e as objeções se fecham"]:::mat
+        C3["Os leitores decidem o destino:<br>a generalização pretendida<br>não é aceita"]:::mat
+    end
+
+    subgraph vd["4 · Mol — o que o objeto se torna"]
+        direction LR
+        D1["A insuficiência no covideiro<br>e a insuficiência no artigo<br>são objetos distintos"]:::onto
+        D2["A circulação constitui<br>o objeto a cada etapa"]:::onto
+        D3["P1 e P2: dois roteiros,<br>dois objetos produzidos<br>por práticas irredutíveis"]:::onto
+    end
+
+    va
+    vb
+    vc
+    vd
+end
+
+subgraph funcoes["O QUE CADA MOMENTO EXAMINA"]
+    direction LR
+    F1["1 · O que acontece<br>DENTRO,<br>antes de circular"]:::ant
+    F2["2 · A cadeia que<br>SAI<br>do laboratório"]:::praticas
+    F3["3 · O momento de<br>CHEGADA,<br>como argumento publicado"]:::mat
+    F4["4 · O que o OBJETO<br>SE TORNA<br>ao longo de toda a cadeia"]:::onto
+end
+
+subgraph limite["LIMITAÇÃO E AGENDA PÓS-DEFESA"]
+    direction LR
+    LIM["O SPIRA-BM, acessado<br>apenas pela cadeia textual.<br>Larissa Berti conduz a continuidade<br>do projeto, e uma entrevista<br>aprofundaria esta análise"]:::lim
+end
+
+A1 --> A2a
+A1 --> A2b
+A2a --> A3
+A2b --> A3
+A3 --> A4a
+A3 --> A4b
+B1 --- B2
+B2 --> B3
+C1 --> C2
+C2 --> C3
+D1 --> D2
+D2 --> D3
+
+A3 -- "o olhar se desloca<br>para fora" --> B1
+B3 -- "o olhar se desloca<br>para o texto" --> C1
+C3 -- "o olhar se desloca<br>para o objeto" --> D1
+D3 -- "retorna ao<br>ponto de partida" --> PIVOT(["O SPIRA não é um objeto só:<br>cada etapa produz uma versão<br>que não se reduz às outras<br>(ponto de retorno da espiral)"])
+PIVOT -- "a espiral se completa<br>em novo nível de resolução" --> ARG
+
+F1 -.-> A1
+F2 -.-> B1
+F3 -.-> C1
+F4 -.-> D1
+
+A3 -. "os limites ficam<br>documentados" .-> ARG
+C3 -. "os leitores<br>fixam limites" .-> ARG
+D3 -. "evidência de que<br>os limites são reais" .-> ARG
+A2b -. "caso limite:<br>o sistema falha<br>sem que ninguém o recuse" .-> D3
+A4b -. "agenda pós-defesa" .-> LIM
+
+classDef ant      fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#1a1a1a;
+classDef praticas fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1a1a1a;
+classDef onto     fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#1a1a1a;
+classDef mat      fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#1a1a1a;
+classDef arg      fill:#FBE9D9,stroke:#C2410C,stroke-width:2px,color:#1a1a1a;
+classDef novo     fill:#FCE4E4,stroke:#C0392B,stroke-width:2px,color:#1a1a1a;
+classDef lim      fill:#ECEFF1,stroke:#607D8B,stroke-width:2px,color:#1a1a1a;
+
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style argumento fill:transparent,stroke:#b8bec7,stroke-width:1px
+style espiral fill:transparent,stroke:#b8bec7,stroke-width:1px
+style va fill:transparent,stroke:#b8bec7,stroke-width:1px
+style vb fill:transparent,stroke:#b8bec7,stroke-width:1px
+style vc fill:transparent,stroke:#b8bec7,stroke-width:1px
+style vd fill:transparent,stroke:#b8bec7,stroke-width:1px
+style funcoes fill:transparent,stroke:#b8bec7,stroke-width:1px
+style limite fill:transparent,stroke:#b8bec7,stroke-width:1px

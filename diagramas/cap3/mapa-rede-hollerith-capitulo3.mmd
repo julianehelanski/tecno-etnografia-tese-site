@@ -1,0 +1,81 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+ subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>CAMPO</b><br>atores e seus<br>interesses"]:::campo
+    L2["<b>INSCRIÇÃO</b><br>artefato técnico<br>e cadeia de mediações"]:::inscricao
+    L3["<b>DOBRA</b><br>efeitos estruturais<br>e síntese analítica"]:::dobra
+ end
+ subgraph ATORES["Atores humanos e seus interesses"]
+        H1["Census Bureau<br>eficiência administrativa"]:::campo
+        H2["Hollerith<br>oportunidade comercial"]:::campo
+        H3["Empresas privadas<br>racionalização de processos"]:::campo
+        H4["Governos europeus<br>prestígio nacional"]:::campo
+        H5["Operadoras de máquina<br>majoritariamente mulheres<br>emprego especializado e sabotagens:<br>extração de mercúrio dos contatos"]:::campo
+  end
+ subgraph ARTEFATO["Artefato técnico: sistema de Hollerith"]
+        A1["Máquina perfuradora<br>pantográfica"]:::inscricao
+        A2["Máquina tabuladora"]:::inscricao
+        A3["Classificadores"]:::inscricao
+        A4["Cartão perfurado<br>288 posições<br>lógica binária<br>furo e não furo"]:::inscricaoDestaque
+  end
+ subgraph MEDIACOES["Mediações e transformações"]
+        M1["Dados censitários<br>qualitativos"]:::inscricao
+        M2["Categorias discretas<br>processáveis"]:::inscricao
+        M3["Estatísticas<br>quantitativas"]:::inscricao
+        M4["Políticas públicas<br>e decisões administrativas"]:::inscricao
+  end
+ subgraph EFEITOS["Efeitos estruturais: três formas de lock-in"]
+        E1["Lock-in técnico<br>apenas a empresa de Hollerith<br>mantinha as máquinas"]:::dobra
+        E2["Lock-in material<br>cartões proprietários<br>e recorrentes (aluguel + suprimentos)"]:::dobra
+        E3["Lock-in epistêmico<br>conhecimento de codificar e<br>interpretar dados concentrado<br>nos funcionários do inventor"]:::dobra
+        E4["Momentum tecnológico<br>condensação dos três lock-ins:<br>inércia e irreversibilidade"]:::dobraDestaque
+  end
+    H1 -- interesses<br>heterogêneos --> A4
+    H2 -- interesses<br>heterogêneos --> A4
+    H3 -- interesses<br>heterogêneos --> A4
+    H4 -- interesses<br>heterogêneos --> A4
+    H5 -- interesses<br>heterogêneos --> A4
+    A4 <--> A1 & A2 & A3
+    M1 --> A1
+    A1 --> M2
+    M2 --> A2
+    A2 --> M3
+    M3 --> A3
+    A3 --> M4
+    A1 -- requer manutenção exclusiva --> E1
+    A4 -- consumível proprietário --> E2
+    A3 -- codificação especializada --> E3
+    E1 -- sedimentam --> E4
+    E2 -- sedimentam --> E4
+    E3 -- sedimentam --> E4
+    E4 -. fechamento:<br>unifica as práticas<br>dos grupos .-> H1 & H2 & H3 & H4 & H5
+
+    classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+    classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+    classDef inscricaoDestaque fill:#FBEFD0,stroke:#B5860A,stroke-width:4px,color:#5a4205;
+    classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+    classDef dobraDestaque fill:#E8E0F0,stroke:#6A4C93,stroke-width:4px,color:#3a2a52;
+
+    class H1,H2,H3,H4,H5 campo
+    class A1,A2,A3 inscricao
+    class A4 inscricaoDestaque
+    class M1,M2,M3,M4 inscricao
+    class E1,E2,E3 dobra
+    class E4 dobraDestaque
+
+    style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+    style ATORES fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style ARTEFATO fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style MEDIACOES fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style EFEITOS fill:transparent,stroke:#b8bec7,stroke-width:1px

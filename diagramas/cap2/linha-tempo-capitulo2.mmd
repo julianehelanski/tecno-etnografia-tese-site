@@ -1,0 +1,71 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    primaryColor: '#f8fafc'
+    primaryTextColor: '#374151'
+    primaryBorderColor: '#9ca3af'
+    lineColor: '#6b7280'
+    secondaryColor: '#e5e7eb'
+    tertiaryColor: '#f3f4f6'
+    taskBkgColor: '#ffffff'
+    taskBorderColor: '#94a3b8'
+    taskTextColor: '#374151'
+    doneTaskBkgColor: '#ffffff'
+    doneTaskBorderColor: '#7c3aed'
+    activeTaskBkgColor: '#ffffff'
+    activeTaskBorderColor: '#3b82f6'
+    critBkgColor: '#ffffff'
+    critBorderColor: '#dc2626'
+    gridColor: '#e5e7eb'
+    todayLineColor: '#6b7280'
+    sectionBkgColor: '#fafafa'
+    altSectionBkgColor: '#f5f5f5'
+---
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    todayMarker off
+
+    section  
+    Kuhn · estrutura das revoluções científicas · 1962            :milestone, b1a, 1962-01-01, 0d
+    Bloor · conhecimento e imaginário social · 1976               :done,      b1b, 1976-01-01, 365d
+    Latour e Woolgar · vida de laboratório · 1979                 :milestone, b3a, 1979-01-01, 0d
+    Collins · programa empírico relativista · 1983                :done,      b1c, 1983-01-01, 365d
+    Latour · give me a laboratory · 1983                          :done,      b3b, 1983-01-01, 365d
+    Pinch e Bijker · construção social dos artefatos · 1984       :milestone, b2a, 1984-01-01, 0d
+    Laymert Garcia dos Santos · geopolítica tecnológica · 1985    :done,      br1, 1985-01-01, 365d
+    MacKenzie e Wajcman · social shaping of technology · 1985     :done,      b2b, 1985-01-01, 365d
+    Callon · sociologia da tradução · 1986                        :done,      b3c, 1986-01-01, 365d
+    Winner · os artefatos têm política? · 1986                    :done,      b2c, 1986-01-01, 365d
+    Latour · ciência em ação · 1987                               :done,      b3d, 1987-01-01, 365d
+    Collins · sistemas especialistas e conhecimento · 1987        :milestone, ai1, 1987-01-01, 0d
+    Woolgar · conhecimento e reflexividade · 1988                 :done,      b1d, 1988-01-01, 365d
+    Haraway · saberes situados · 1988                             :done,      b4a, 1988-01-01, 365d
+    Woolgar · guinada para a tecnologia nos estudos · 1991        :done,      b2d, 1991-01-01, 365d
+    Pickering · ciência como prática · 1992                       :done,      b1e, 1992-01-01, 365d
+    Forsythe · observação participante em laboratórios de IA      :active,    ai2, 1986-01-01, 1997-09-30
+    Law · after ANT · 1999                                        :done,      b3e, 1999-01-01, 365d
+    Forsythe · publicação póstuma · 2001                          :milestone, ai3, 2001-01-01, 0d
+    Collins e Evans · terceira onda dos estudos · 2002            :done,      b4b, 2002-01-01, 365d
+    Latour · reagregando o social · 2005                          :done,      b3f, 2005-01-01, 365d
+    Barad · agential realism · 2007                               :done,      b4c, 2007-01-01, 365d
+    Coole e Frost · new materialisms · 2010                       :done,      b4d, 2010-01-01, 365d
+    Transformer · Attention is All You Need · 2017                :milestone, g1, 2017-06-12, 0d
+    Crawford e Joler · anatomia de um sistema de IA · 2018        :done,      gc1, 2018-01-01, 365d
+    Noble · algoritmos de opressão · 2018                         :done,      gc2, 2018-01-01, 365d
+    Benjamin · tecnologia e raça · 2019                           :done,      gc3, 2019-01-01, 365d
+    GPT-3 · OpenAI · 2020                                         :milestone, g2, 2020-06-11, 0d
+    Beiguelman · imagem digital e IA · 2021                       :done,      br2, 2021-01-01, 365d
+    Vicentin · aprofundamento da inteligência artificial · 2022   :done,      br5, 2022-01-01, 365d
+    ChatGPT · OpenAI · 2022                                       :milestone, g3, 2022-11-30, 0d
+    Pasquinelli · genealogia da IA · 2023                         :done,      gc4, 2023-01-01, 365d
+    Crawford e Joler · calculating empires · 2023                 :done,      gc5, 2023-01-01, 365d
+    Análise bibliométrica · SciELO, WoS, CAPES · 2023–2024        :done,      br3, 2023-06-01, 2024-03-31
+    Johnson e Lenhard · culturas da predição · 2024               :done,      gc6, 2024-01-01, 365d
+    Rifiotis, Máximo e Segata · etnografias do digital · 2024     :done,      br6, 2024-01-01, 365d
+    Fazito e Cordeiro · sociologia da IA no Brasil · 2026          :done,      br7, 2026-01-01, 365d
+    Legado metodológico de Forsythe em uso                        :done,      ai4, 2001-01-01, 2025-12-31
+    Crescimento das publicações de IA no Brasil após 2020         :active,    br4, 2020-01-01, 2025-12-31
+    Etnografia de um centro de IA · esta tese                     :crit,      br5t, 2022-03-01, 2026-06-30

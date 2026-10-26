@@ -1,0 +1,45 @@
+---
+config:
+  layout: elk
+---
+flowchart TB
+ subgraph SUB["PLANO DA SUBSTÂNCIA — do que a entidade é feita"]
+    direction TB
+        H["Híbrido<br>mistura natureza + cultura,<br>ainda guarda os polos que mistura"]
+  end
+ subgraph PROP["PLANO DA PROPRIEDADE — o que se atribui à entidade"]
+    direction TB
+        P["Pensar, escrever, criar<br>atributos reivindicados como humanos,<br>que a tese recusa tomar como dados"]
+        MC["Multiplicidade de claude<br>as competências não são posses,<br>e sim efeito da prática que o enacta"]
+  end
+ subgraph REL["PLANO DO EFEITO / RELAÇÃO — o que se faz aparecer no encontro"]
+    direction TB
+        QO["Quase-objeto / quase-máquina<br>só é o que é enquanto circula:<br>faz a passagem da substância à relação"]
+        EP["Existência parcial<br>nunca completa,<br>depende das associações que a constituem"]
+        CP["Conexão parcial<br>nomeia o plano relacional como tal"]
+        MEC["Agência distribuída + fazer-com<br>mecanismo interno do plano:<br>como, na relação, as entidades agem juntas"]
+  end
+    EIXO((("A RELAÇÃO<br>constitui")))
+    H ==>|o quase-objeto desloca<br>da substância para a relação| QO
+    P -.->|a tese recusa<br>a pergunta do atributo| REL
+    MC -.->|até a propriedade<br>é relacional| REL
+    QO --> EP
+    EP --> CP
+    CP --> MEC
+    REL ==>|tudo se faz na relação| EIXO
+    SUB -. o argumento se desloca .-> REL
+     H:::subbox
+     P:::propbox
+     MC:::propbox
+     QO:::relbox
+     EP:::relbox
+     CP:::relbox
+     MEC:::relbox
+     EIXO:::eixobox
+    classDef subbox fill:#dcfce7,stroke:#16a34a,color:#374151,rx:8
+    classDef propbox fill:#fef9c3,stroke:#ca8a04,color:#374151,rx:8
+    classDef relbox fill:#f3e8ff,stroke:#9333ea,color:#374151,rx:8
+    classDef eixobox fill:#ffedd5,stroke:#ea580c,color:#374151
+    style SUB fill:transparent,stroke:#16a34a,stroke-width:1px
+    style PROP fill:transparent,stroke:#ca8a04,stroke-width:1px
+    style REL fill:transparent,stroke:#9333ea,stroke-width:1px

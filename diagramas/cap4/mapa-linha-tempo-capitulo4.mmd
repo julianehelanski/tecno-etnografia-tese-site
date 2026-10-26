@@ -1,0 +1,95 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    primaryColor: '#f8fafc'
+    primaryTextColor: '#374151'
+    primaryBorderColor: '#9ca3af'
+    lineColor: '#6b7280'
+    secondaryColor: '#e5e7eb'
+    tertiaryColor: '#f3f4f6'
+    taskBkgColor: '#ffffff'
+    taskBorderColor: '#94a3b8'
+    taskTextColor: '#374151'
+    doneTaskBkgColor: '#ffffff'
+    doneTaskBorderColor: '#7c3aed'
+    activeTaskBkgColor: '#ffffff'
+    activeTaskBorderColor: '#3b82f6'
+    critBkgColor: '#ffffff'
+    critBorderColor: '#dc2626'
+    gridColor: '#e5e7eb'
+    todayLineColor: '#6b7280'
+    sectionBkgColor: '#fafafa'
+    altSectionBkgColor: '#f5f5f5'
+---
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    todayMarker off
+
+    section Covideiro · P1 · 2020
+    CEP-HCFMUSP aprova CAAE 30918120 · abr. 2020           :milestone, c4, 2020-04-24, 0d
+    Spira inicia no NLP2-IME-USP · mai. 2020               :milestone, c2, 2020-05-01, 0d
+    Spira precede o C4AI em cinco meses                    :crit,      c3, 2020-05-01, 2020-10-01
+    FAPESP 2020/06443-5 · projeto Spira pandemia           :active,    c5, 2020-05-01, 2022-12-31
+    Coleta P1 · Covideiro SP · 11 mai.–17 jun. 2020        :done,      c7, 2020-05-11, 2020-06-17
+    219 pacientes · SpO2 menor 92pct · Parecer 3.988.088   :done,      c8, 2020-05-11, 2020-06-17
+    95pct dos fonoaudiólogos des-inscrevem                 :crit,      c9, 2020-05-11, 2020-06-30
+    Coletores · alunos de medicina e médicos estrangeiros  :active,    c10, 2020-05-11, 2020-06-17
+    Adição de ruído de enfermaria aos controles            :done,      c12, 2020-06-01, 60d
+    NVIDIA doa GPU ao NLP2 · sem contrato                  :done,      c6, 2020-08-01, 90d
+    FAPESP 2020/16543-7 · experimentos Transformers        :active,    c13, 2020-08-01, 2022-12-31
+    Inauguração do C4AI-USP · out. 2020                    :milestone, c14, 2020-10-01, 0d
+
+    section NLP2-C4AI · publicações · 2021–2022
+    Spira incorporado ao NLP2-C4AI                         :active,    c15, 2020-10-01, 2022-06-01
+    Casanova et al. · ACL Findings · 91,66pct              :done,      p1, 2021-01-01, 120d
+    NVIDIA nos agradecimentos · IBM ausente                :done,      p2, 2021-01-01, 120d
+    Pré-treino em AudioSet-YouTube · CNN14                 :active,    p3, 2021-01-01, 2025-12-31
+    Gauy e Finger · STIL · 96,5pct transfer learning       :done,      p4, 2021-06-01, 90d
+    LNCC fornece servidores · única aparição               :done,      p5, 2021-06-01, 90d
+    speech-as-a-biomarker · item do NLP2 · rel. 2021–22    :active,    p6, 2021-01-01, 2022-06-01
+    Silva et al. · interpretabilidade                      :done,      p7, 2022-01-01, 120d
+    NVIDIA 2ª aparição · IBM ainda ausente · rel. 2022     :done,      p8, 2022-01-01, 120d
+
+    section Tensão IBM · P2 · 2022–2023
+    IBM vende unidades de pesquisa em saúde · jun. 2022    :milestone, t1, 2022-06-01, 0d
+    Pedido formal de realinhamento ao C4AI                 :crit,      t2, 2022-06-01, 30d
+    AI Health sem financiamento direto · rel. 2022         :crit,      t3, 2022-06-01, 2023-12-31
+    speech-as-a-biomarker ausente da descrição do NLP2     :crit,      t4, 2022-06-01, 30d
+    Spira sob duplo ancoramento NLP2 e FAPESP              :active,    t5, 2022-06-01, 2025-12-31
+    Coleta P2 · 4 hospitais de Marília · pós-pandemia      :done,      t6, 2022-06-01, 2023-06-30
+    CAAE 85388624 e Plataforma Brasil · 2ª aprovação ética :milestone, t7, 2022-06-01, 0d
+    P2 sem augmentation de ruído nos controles             :done,      t8, 2022-06-01, 2023-06-30
+    Larissa Berti · coautora P2 · CNPq 304961/2021-3       :active,    t9, 2022-06-01, 2025-12-31
+    FAPESP 2023/00488-5 · Spira-BM aprovado                :milestone, t10, 2022-12-01, 0d
+    Gauy et al. · AIME · P2 formalizado                    :done,      r1, 2023-01-01, 180d
+    Acurácia em P2 menor que 36pct                         :crit,      r2, 2023-01-01, 180d
+    AI Health descontinuado gradualmente · rel. 2023       :crit,      r3, 2023-01-01, 2023-12-31
+    Parecer 5.155.306 · 2º ciclo de revisão ética          :milestone, r7, 2023-01-01, 0d
+    Fim da emergência sanitária · OMS · 5 mai. 2023        :milestone, r5, 2023-05-05, 0d
+    Entrevista com Marcelo Finger · 6 jun. 2023            :milestone, r5b, 2023-06-06, 0d
+    Coleta escassa e lenta após mai. 2023                  :crit,      r6, 2023-05-05, 2025-12-31
+
+    section Spira-BM · encerramento IBM · 2024–2026
+    Início da observação participante · mar. 2022          :milestone, et1, 2022-03-01, 0d
+    Análise dos relatórios do C4AI · 2021–2025            :done,      et5, 2024-01-01, 180d
+    Gauy et al. · preprint estendido · mai. 2024           :done,      b2, 2024-05-01, 30d
+    IBM entra via C4AI · 1ª vez nos agradecimentos         :milestone, b3, 2024-05-01, 0d
+    AI Health formalmente descontinuado · rel. 2024        :crit,      b4, 2024-01-01, 2024-12-31
+    Recursos de AI Health e AgriBio ao NLP2 e ProLind      :crit,      b5, 2024-01-01, 2024-12-31
+    Coleta de asma grave · mais de 200 pacientes           :active,    b6, 2024-01-01, 2025-12-31
+    Coleta de IR de causas diversas iniciada               :active,    b7, 2024-06-01, 2025-12-31
+    6 hospitais · HC, InCor, HSPE, BP, SC e HU             :active,    b8, 2024-01-01, 2025-12-31
+    Larissa Berti subscritora · Unesp Marília              :active,    c11, 2020-05-01, 2025-12-31
+    Gauy et al. · Intelligence-Based Medicine · 99,9pct P1 :done,      e1, 2025-01-01, 90d
+    SpO2 por voz · Pearson menor 0,3                       :crit,      e2, 2025-01-01, 90d
+    Finger et al. · Spira-BM publicado · jun. 2025         :done,      e3, 2025-06-01, 30d
+    IBM ausente dos agradecimentos do Spira-BM             :crit,      e4, 2025-06-01, 30d
+    Anúncio da não renovação IBM-C4AI · nov. 2025          :milestone, e5, 2025-11-01, 0d
+    Encerramento da parceria IBM-C4AI · dez. 2025          :crit,      e7, 2025-12-01, 31d
+    Recursos da IBM ao NLP2 e a línguas indígenas          :crit,      e8, 2025-12-01, 31d
+    Spira-BM continua · FAPESP 2023/00488-5 autônomo       :active,    e9, 2025-12-01, 2026-12-31
+    Coleta de tabagismo prestes a iniciar                  :active,    e10, 2025-12-01, 2026-06-30
+    Larissa Berti na continuidade do Spira-BM              :active,    e11, 2025-01-01, 2026-12-31

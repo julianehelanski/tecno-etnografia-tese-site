@@ -1,0 +1,157 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+direction LR
+LA["<b>PLACA A</b><br>a rede que Fábio<br>e Cláudio construíram"]:::placaA
+LB["<b>PLACA B</b><br>a rede que construí<br>ao segui-los"]:::placaB
+LD["<b>DOBRAS</b><br>pontos em que as<br>duas redes se voltam<br>uma sobre a outra"]:::dobra
+LX["<b>ASSOCIAÇÕES</b><br>fios que ligo<br>entre as duas redes"]:::assoc
+LN["<b>NOTA</b><br>a dobra como figura<br>de pensamento que<br>não se desenha"]:::nota
+end
+subgraph PLACA_A["A rede que Fábio e Cláudio construíram"]
+direction TB
+  subgraph A_GENEA["Trajetória técnica e comercial da IBM, 1890 a 2025"]
+    direction LR
+    HOL["Herman Hollerith<br>tabulação eletromecânica<br>cartão perfurado proprietário"]:::placaA
+    CENSO["Censo EUA 1890<br>Censo Brasil 1920<br>cliente fundacional"]:::placaA
+    IBM["IBM, 1924<br>infraestrutura global<br>de processamento"]:::placaA
+    AIHN["IBM AI Horizons Network<br>2016, rede global de<br>pesquisa universitária"]:::placaA
+    WATSON["Watson, 2015<br>computação cognitiva<br>plataforma comercial de IA"]:::assoc
+    HOL --> CENSO --> IBM --> AIHN
+  end
+  subgraph A_ARRANJO["Arranjo C4AI · 2020 a 2025"]
+    direction LR
+    FAPESP[/"FAPESP<br>auxílio ao centro<br>(Centros de Pesquisa<br>em Engenharia)"/]:::placaA
+    USP[/"USP<br>instituição-sede e infraestrutura"/]:::placaA
+    IBM_B[/"IBM<br>três fontes: acordo-quadro 2016<br>(USD 250 mil/10 anos), Termo Aditivo<br>(R$ 845 mil/10 anos) e aporte<br>direto ao FUSP (~USD 400 mil/ano)"/]:::placaA
+    C4AI(["C4AI<br>centro de tradução entre<br>universidade, Estado e corporação"]):::placaA
+    FAPESP --> C4AI
+    USP --> C4AI
+    IBM_B --> C4AI
+  end
+  subgraph A_PORTA["Porta-vozes"]
+    direction LR
+    FABIO["Fábio Cozman<br>diretor C4AI<br>professor USP"]:::placaA
+    CLAUDIO["Cláudio Pinhanez<br>vice-diretor C4AI<br>cientista IBM Research"]:::placaA
+  end
+  subgraph A_RECRUT["<b>A reação inversa: recrutar fora, recrutar dentro</b><br>(sociograma e tecnograma, Latour)"]
+    direction TB
+    INVERSA["<b>A fronteira dentro/fora não é dada</b><br>é o resultado provisório de dois recrutamentos<br>simultâneos; a retirada da IBM em dez. 2025<br>desarticula os dois lados ao mesmo tempo"]:::placaA
+    subgraph SOCIOG["SOCIOGRAMA · recrutamento externo de interesses"]
+      direction LR
+      SG_DIN["Dinheiro<br>aporte corporativo IBM<br>sobre o financiamento<br>público da FAPESP"]:::placaA
+      SG_TRAB["Força de trabalho<br>professores titulares<br>e bolsistas<br>'o estudante é barato demais'"]:::placaA
+      SG_INTER["Interesses traduzidos<br>governo, agência de fomento,<br>universidade e mercado<br>alinhados no centro"]:::placaA
+    end
+    subgraph TECNOG["TECNOGRAMA · recrutamento interno de aliados"]
+      direction LR
+      TG_INFRA["Infraestrutura computacional<br>Arandu, depois JAIRU"]:::placaA
+      TG_DADOS["Datasets e modelos<br>Carolina, CORAA, SPIRA<br>publicações liberadas"]:::placaA
+      TG_ARGS["Argumentos que circulam<br>'criar demanda para IA no Brasil'<br>'disseminar ecossistemas'"]:::placaA
+      TG_MULT["Multiplicação institucional<br>'a gente incubou, literalmente'<br>oito centros catalisados"]:::placaA
+    end
+    INVERSA --> SOCIOG
+    INVERSA --> TECNOG
+  end
+  subgraph A_INSCR["Inscrições que circulam"]
+    direction LR
+    BLUE["bluetalks<br>fev 2023, Inovabra Habitat<br>Banco Bradesco"]:::placaA
+    RELAT["Relatórios C4AI<br>2021 a 2025"]:::placaA
+    PUBS["Publicações científicas<br>407 publicações (2020-2024)<br>8 grupos de pesquisa<br>NLP2 lidera com 144 (35,4%)"]:::placaA
+    LINK["LinkedIn do C4AI<br>anúncios, eventos,<br>Tech Hours"]:::placaA
+  end
+  subgraph A_MULT["Multiplicação institucional e encerramento"]
+    direction LR
+    OITO["'Oito centros' na fala de Cláudio;<br>os relatórios documentam cinco formações:<br>CIAGSaúde, CIAAM, INCT Combate à Fome,<br>INPol e acoplamento ao OBIA (MCTI/NIC.br)"]:::placaA
+    DISS["Fim do vínculo C4AI-IBM<br>IBM Research Brasil fechado (nov. 2025);<br>não renovação anunciada (dez. 2025)<br>e efetivada (início de 2026);<br>o C4AI segue apoiado pela FAPESP"]:::placaA
+  end
+  C4AI --> FABIO
+  C4AI --> CLAUDIO
+  A_GENEA --> C4AI
+  C4AI --> A_RECRUT
+  A_RECRUT --> A_INSCR
+  A_INSCR --> A_MULT
+  AIHN -. "rede global<br>contrai quando<br>o vínculo se desfaz" .-> DISS
+end
+DOBRA1["DOBRA 1 · bluetalks fev 2023<br>a pergunta da plateia a Cláudio<br>e eu na audiência<br>inscrição compartilhada"]:::dobra
+DOBRA2["DOBRA 2 · entrevistas set e out 2025<br>perguntas que formulei<br>respondidas pelos porta-vozes<br>transcrição como actante"]:::dobra
+DOBRA3["DOBRA 3 · OBIA no C4AI<br>aliança situada<br>eu como actante do programa<br>e observadora do arranjo"]:::dobra
+DOBRA4["DOBRA 4 · anúncio do fim do vínculo · dez 2025<br>o anúncio chega ao OBIA@C4AI<br>a etnografia inscreve a saída<br>no mesmo ato em que a acompanha"]:::dobra
+subgraph PLACA_B["A rede que construí ao segui-los"]
+direction TB
+  subgraph B_ATOR["Juliane como actante"]
+    direction LR
+    JUL["Juliane · pesquisadora-actante<br>IFCH Unicamp · USP<br>doutoranda em STS"]:::placaB
+    POS["Posicionalidade<br>aliada do OBIA desde 2022<br>acesso institucional"]:::placaB
+  end
+  subgraph B_CAMPO["Trabalho de campo · 2022 a 2025"]
+    direction LR
+    OBS["Observação participante<br>quase quatro anos<br>múltiplos sítios etnográficos"]:::placaB
+    CAD["Caderno de campo<br>o que, como, onde<br>e para quem foi dito"]:::placaB
+    ENT["Entrevistas<br>Fábio, set 2025<br>Cláudio, out 2025<br>cerca de 60 min cada"]:::placaB
+    DOCAN["Análise documental<br>Acordo de Cooperação, relatórios,<br>LinkedIn, cobertura de imprensa"]:::placaB
+  end
+  subgraph B_TEORIA["Leituras teóricas que mobilizei<br>ao fazer as associações"]
+    direction LR
+    TEO["As ferramentas teóricas e o que cada uma<br>tornou visível estão detalhadas na figura<br>do mapa analítico: teoria ator-rede,<br>trajetória histórica e estudos críticos de IA"]:::placaB
+  end
+  subgraph B_INSCR["Inscrições que produzi"]
+    direction LR
+    CAP3["Capítulo 3<br>a rede que Fábio<br>e Cláudio construíram"]:::placaB
+    CAP4["Capítulo 4<br>laboratório distribuído do Spira<br>dobra etnográfica análoga"]:::assoc
+    DIAG["Diagramas Mermaid<br>figuras que estabilizam<br>provisoriamente a rede"]:::placaB
+  end
+  JUL --> POS
+  POS --> B_CAMPO
+  B_CAMPO --> B_TEORIA
+  B_TEORIA --> B_INSCR
+end
+BLUE -.-> DOBRA1
+OBS  -.-> DOBRA1
+FABIO -.-> DOBRA2
+CLAUDIO -.-> DOBRA2
+ENT  -.-> DOBRA2
+C4AI -.-> DOBRA3
+JUL  -.-> DOBRA3
+DISS -.-> DOBRA4
+CAP3 -.-> DOBRA4
+AIHN -. "associação que traço:<br>da rede universitária<br>à plataforma cognitiva" .-> WATSON
+CAP4 -. "associação que traço:<br>o dataset que costura<br>este capítulo ao do Spira" .-> SPIRA
+SPIRA["SPIRA<br>dataset e sistema<br>detecção de insuficiência<br>respiratória por voz"]:::assoc
+NOTA["A dobra<br>o mapa inscreve as associações entre as duas redes;<br>onde elas se voltam uma sobre a outra dá-se a dobra,<br>figura de pensamento que não se desenha:<br>não descrevo a rede de fora,<br>a minha escrita a reativa e a estabiliza<br>ver Latour, Esperança de Pandora"]:::nota
+DOBRA1 --- NOTA
+DOBRA2 --- NOTA
+DOBRA3 --- NOTA
+DOBRA4 --- NOTA
+
+classDef placaA  fill:#E0F0EE,stroke:#0F7B6C,stroke-width:2px,color:#0a3b34;
+classDef placaB  fill:#FCE8DD,stroke:#C2410C,stroke-width:2px,color:#5a2408;
+classDef dobra   fill:#E8E0F0,stroke:#6A4C93,stroke-width:3px,color:#3a2a52;
+classDef assoc   fill:#ffffff,stroke:#A03A6B,stroke-width:2px,color:#5a1f3a,stroke-dasharray:4 3;
+classDef nota    fill:#F4F1EA,stroke:#9aa2ad,stroke-width:1px,color:#3a3a3a,stroke-dasharray:5 5;
+
+style PLACA_A fill:#f0f8f7,stroke:#0F7B6C,stroke-width:2px
+style PLACA_B fill:#fdf4ee,stroke:#C2410C,stroke-width:2px
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style A_GENEA fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style A_ARRANJO fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style A_PORTA fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style A_RECRUT fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style SOCIOG fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style TECNOG fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style A_INSCR fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style A_MULT fill:transparent,stroke:#9ec9c2,stroke-width:1px
+style B_ATOR fill:transparent,stroke:#e0b89c,stroke-width:1px
+style B_CAMPO fill:transparent,stroke:#e0b89c,stroke-width:1px
+style B_TEORIA fill:transparent,stroke:#e0b89c,stroke-width:1px
+style B_INSCR fill:transparent,stroke:#e0b89c,stroke-width:1px

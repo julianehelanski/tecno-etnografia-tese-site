@@ -1,0 +1,114 @@
+---
+config:
+  layout: dagre
+  theme: default
+---
+flowchart TB
+ subgraph P1["Passo 1 — desinteresse"]
+    direction LR
+        a1[" "]
+        A1(("A"))
+        b1[" "]
+        B1(("B"))
+  end
+ subgraph P2["Passo 2 — interesse (interrupção, desvio, aliciamento)"]
+    direction LR
+        B2(("B"))
+        A2(("A"))
+        b2[" "]
+  end
+ subgraph P3["Passo 3 — composição de um novo objetivo"]
+    direction LR
+        B3(("B"))
+        A3(("A"))
+        C3(("C"))
+        c3[" "]
+  end
+ subgraph P4["Passo 4 — ponto de passagem obrigatória"]
+    direction LR
+        C4(("C"))
+        A4(("A"))
+        B4(("B"))
+  end
+ subgraph P5["Passo 5 — alinhamento"]
+    direction LR
+        B5(("B"))
+        A5(("A"))
+        C5(("C"))
+  end
+ subgraph P6["Passo 6 — obscurecimento"]
+    direction LR
+        D6(("D"))
+        ABC6(("ABC"))
+  end
+ subgraph P7["Passo 7 — pontualização"]
+    direction LR
+        d7[" "]
+        D7(("D"))
+  end
+ subgraph M3["TERCEIRO SIGNIFICADO — Entrelaçamento de tempo e espaço (obscurecimento reversível)"]
+    direction TB
+        P1
+        P2
+        P3
+        P4
+        P5
+        P6
+        P7
+  end
+    A1 --> a1
+    B1 --> b1
+    A2 --> B2
+    B2 --> b2
+    A3 --> B3
+    B3 --> C3
+    C3 --> c3
+    A4 --> C4
+    B4 --> C4
+    A5 --- B5
+    B5 --- C5
+    ABC6 -. visto com .-> D6
+    D7 --> d7
+    P1 --> P2
+    P2 --> P3
+    P3 --> P4
+    P4 --> P5
+    P5 --> P6
+    P6 --> P7
+    P7 -. reabre na crise .-> P1
+
+     a1:::inv
+     A1:::agA
+     b1:::inv
+     B1:::agB
+     B2:::agB
+     A2:::agA
+     b2:::inv
+     B3:::agB
+     A3:::agA
+     C3:::agC
+     c3:::inv
+     C4:::agC
+     A4:::agA
+     B4:::agB
+     B5:::agB
+     A5:::agA
+     C5:::agC
+     D6:::agD
+     ABC6:::box
+     d7:::inv
+     D7:::agD
+    classDef agA fill:#ddeeff,stroke:#2563eb,color:#1e3a8a,font-weight:bold
+    classDef agB fill:#dcfce7,stroke:#16a34a,color:#14532d,font-weight:bold
+    classDef agC fill:#fef9c3,stroke:#ca8a04,color:#713f12,font-weight:bold
+    classDef agD fill:#ecdff7,stroke:#9333ea,color:#581c87,font-weight:bold
+    classDef box fill:#fdba74,stroke:#c2410c,color:#7c2d12,font-weight:bold
+    classDef inv fill:none,stroke:none,color:none
+    style P1 fill:#ffffff,stroke:#ffffff
+    style P2 fill:#ffffff,stroke:#ffffff
+    style P3 fill:#ffffff,stroke:#ffffff
+    style P4 fill:#ffffff,stroke:#ffffff
+    style P5 fill:#ffffff,stroke:#ffffff
+    style P6 stroke:#ffffff,fill:#ffffff
+    style P7 fill:#ffffff,stroke:#ffffff
+    style M3 fill:#ffffff,stroke:#ffffff
