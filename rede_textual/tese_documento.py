@@ -433,6 +433,21 @@ SEC_RE = re.compile(r'\\(section|subsection)\*?\s*\{')
 # Diagrama interativo (MermaidChart) embutido na legenda via \href{...}.
 MERMAID_RE = re.compile(r'https://mermaid\.ai/d/[0-9a-fA-F-]+')
 
+# Código-fonte (.mmd) de cada diagrama interativo: diagramas/links.tsv liga o
+# link da legenda ao arquivo em diagramas/ (vira o campo `mmd` em DOC.figuras).
+DIAGRAMAS_TSV = THIS_DIR.parent / "diagramas" / "links.tsv"
+
+
+def _diagramas_mmd() -> dict[str, str]:
+    if not DIAGRAMAS_TSV.exists():
+        return {}
+    out = {}
+    for ln in DIAGRAMAS_TSV.read_text(encoding="utf-8").splitlines():
+        if ln.strip() and not ln.startswith("#"):
+            link, path = ln.split("\t")
+            out[link.strip()] = path.strip()
+    return out
+
 # Pasta de figuras que o SITE de fato exibe (figuras/<slug>/...).
 SITE_FIGURAS = THIS_DIR.parent / "figuras"
 
@@ -614,6 +629,7 @@ def main() -> int:
     resumo, palavras = parse_resumo(args.source_root / "resumo.tex")
 
     sumario, figuras, tabelas = [], [], []
+    mmd = _diagramas_mmd()
     fign = tabn = 0
     for fname, num, title, resumo_cap, conclusao_cap in CHAPTERS:
         src = args.source_root / fname
@@ -634,6 +650,8 @@ def main() -> int:
             entry = {"n": fign, "cap": num or title, "t": c}
             if link:
                 entry["link"] = link
+                if link in mmd:
+                    entry["mmd"] = mmd[link]
             if img:
                 entry["img"] = img
             figuras.append(entry)

@@ -5,6 +5,7 @@ Esta pasta guarda o código-fonte (`.mmd`) dos diagramas que fiz no [MermaidChar
 ## Organização
 
 - `capN/`: um `.mmd` por diagrama, separados pelo capítulo da tese em que aparecem (`cap5/` reúne as Considerações finais, `ex_cap5.tex`).
+- `links.tsv`: liga o *link* interativo de cada legenda (`mermaid.ai/d/…`) ao `.mmd` correspondente. O gerador `rede_textual/tese_documento.py` lê esse arquivo e grava o campo `mmd` em `DOC.figuras`; assim a lista de ilustrações do site mostra, ao lado de "ver diagrama ↗", o *link* "código .mmd ↗". Ao acrescentar um diagrama, acrescente também a linha correspondente.
 - Quando o site já exibe o PNG renderizado a partir do mesmo código, o `.mmd` tem o nome desse PNG em [`figuras/`](../figuras). Nos outros casos, o `.mmd` tem o nome do PNG no repositório da tese (`tecno-etnografia-centro-ia`), sem o carimbo de data da exportação.
 - Em cinco casos o site ainda exibe uma *versão anterior* do diagrama: a estrutura é a mesma, mas o estilo e o conteúdo são mais antigos. Para não sugerir que o código atual gera aquela imagem, o `.mmd` não recebe o nome do PNG antigo; a tabela indica o PNG como "versão anterior no site".
 
