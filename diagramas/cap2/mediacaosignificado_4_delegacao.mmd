@@ -1,0 +1,31 @@
+---
+config:
+  layout: dagre
+  theme: default
+---
+flowchart LR
+ subgraph M4["QUARTO SIGNIFICADO — Delegação (transposição da fronteira entre signos e coisas)"]
+    direction LR
+        A1b["Agente 1<br>"]
+        INT4(("INTERRUPÇÃO"))
+        A2b["Agente 2<br>"]
+        ART["ARTICULAÇÃO<br>signo vira coisa"]
+        ME1["Significado um<br>dirija devagar"]
+        ME2["Significado dois<br>obstáculo de concreto"]
+  end
+    A1b --> INT4
+    A2b -. desvio .-> ART
+    INT4 -. desvio .-> ART
+    ART --> ME1 & ME2
+    M4 --> n1["translação"]
+
+     A1b:::cap4
+     INT4:::stop
+     A2b:::cap4
+     ART:::cap4
+     ME1:::objetivo
+     ME2:::objetivo
+    classDef cap4 fill:#ecdff7,stroke:#c8a8e8,color:#374151,rx:10
+    classDef objetivo fill:#fed7aa,stroke:#c2410c,color:#374151,rx:10
+    classDef stop fill:#fecaca,stroke:#dc2626,color:#7f1d1d,rx:20,font-weight:bold
+    style M4 fill:#ffffff,stroke:#ffffff

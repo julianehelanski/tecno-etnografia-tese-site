@@ -1,0 +1,79 @@
+---
+config:
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    primaryColor: '#f8fafc'
+    primaryTextColor: '#374151'
+    primaryBorderColor: '#9ca3af'
+    lineColor: '#6b7280'
+    secondaryColor: '#e5e7eb'
+    tertiaryColor: '#f3f4f6'
+    taskBkgColor: '#ffffff'
+    taskBorderColor: '#94a3b8'
+    taskTextColor: '#374151'
+    doneTaskBkgColor: '#ffffff'
+    doneTaskBorderColor: '#7c3aed'
+    activeTaskBkgColor: '#ffffff'
+    activeTaskBorderColor: '#3b82f6'
+    critBkgColor: '#ffffff'
+    critBorderColor: '#dc2626'
+    gridColor: '#e5e7eb'
+    todayLineColor: '#6b7280'
+    sectionBkgColor: '#fafafa'
+    altSectionBkgColor: '#f5f5f5'
+---
+gantt
+    dateFormat YYYY-MM-DD
+    axisFormat %Y
+    todayMarker off
+
+    section  
+    Acordo-quadro FAPESP-IBM · abr. 2016                    :milestone, e01, 2016-04-01, 0d
+    DGX-1 entregue à OpenAI · NVIDIA · dez. 2016            :milestone, t01, 2016-12-01, 0d
+    Transformer · Attention is All You Need · jun. 2017     :milestone, t02, 2017-06-12, 0d
+    Ingresso no doutorado · IFCH-Unicamp · mar. 2019        :milestone, e02, 2019-03-01, 0d
+    Pandemia de Covid-19 · OMS · mar. 2020–mai. 2023        :crit,      s01, 2020-03-11, 2023-05-05
+    Aprovação CEP-HCFMUSP · projeto Spira · abr. 2020       :milestone, r01, 2020-04-15, 0d
+    Spira · coleta de vozes em covideiro · mai. 2020        :milestone, e03, 2020-05-11, 0d
+    GPT-3 · OpenAI · jun. 2020                              :milestone, t03, 2020-06-11, 0d
+    Sessões de Design Thinking · C4AI · set. 2020           :milestone, e04, 2020-09-01, 0d
+    Fundação do C4AI · USP-FAPESP-IBM · out. 2020           :milestone, e05, 2020-10-13, 0d
+    Aceleração das publicações · SciELO e CAPES             :active,    b01, 2020-01-01, 2026-06-30
+    Estratégia Brasileira de IA · EBIA · abr. 2021          :milestone, r02, 2021-04-09, 0d
+    Spira · primeiro artigo ACL · 2021                      :milestone, e06, 2021-08-01, 0d
+    Aproximação ao campo do C4AI · out. 2021                :milestone, e07, 2021-10-01, 0d
+    Corpus Carolina · NLP2 · mar. 2022                      :milestone, e09, 2022-03-08, 0d
+    Início do trabalho de campo · 196 semanas               :active,    e08, 2022-03-01, 2025-12-15
+    IBM vende Watson Health · abr. 2022                     :milestone, e10, 2022-04-01, 0d
+    Inauguração presencial do C4AI · jun. 2022              :milestone, e11, 2022-06-01, 0d
+    Letramento técnico · MBA, especialização e cursos       :active,    e15, 2022-06-01, 2025-12-15
+    CHIPS Act · EUA · ago. 2022                             :milestone, r03, 2022-08-09, 0d
+    ChatGPT · OpenAI · nov. 2022                            :milestone, t04, 2022-11-30, 0d
+    Congresso 4S · México · dez. 2022                       :milestone, e12, 2022-12-07, 0d
+    Bluetalks · Inovabra Habitat · fev. 2023               :milestone, e13, 2023-02-15, 0d
+    LLaMA · Meta · fev. 2023                                :milestone, t05, 2023-02-24, 0d
+    GPT-4 · OpenAI · mar. 2023                              :milestone, t06, 2023-03-14, 0d
+    Sabiá · Maritaca AI · abr. 2023                         :milestone, t07, 2023-04-15, 0d
+    Entrevista com Marcelo Finger · jun. 2023               :milestone, e14, 2023-06-06, 0d
+    Ápice de publicações do C4AI · 313 · 2023               :active,    b02, 2023-01-01, 2023-12-31
+    AgriBio conquista INCT · 2023                           :milestone, e16, 2023-11-01, 0d
+    AMD MI300X · chiplet heterogêneo · dez. 2023            :milestone, t08, 2023-12-06, 0d
+    Qualificação aprovada · fev. 2024                       :milestone, e17, 2024-02-20, 0d
+    NVIDIA Blackwell · GTC · mar. 2024                      :milestone, t09, 2024-03-18, 0d
+    Claude 3.5 Sonnet · Anthropic · jun. 2024               :milestone, t10, 2024-06-20, 0d
+    Rascunho integral da tese · jun.–dez. 2024              :done,      e18, 2024-06-01, 2024-12-15
+    Plano Brasileiro de IA · PBIA · jul. 2024               :milestone, r05, 2024-07-30, 0d
+    Sabiá-3 · Maritaca AI · out. 2024                       :milestone, t11, 2024-10-01, 0d
+    Nobel de Física · Hopfield e Hinton · out. 2024         :milestone, t12, 2024-10-08, 0d
+    Escrita da tese no fazer-com claude · 2025–2026         :done,      e19, 2025-01-15, 2026-05-01
+    Comunicação interna da IBM · não renovação · ago. 2025  :crit,      e20, 2025-08-15, 0d
+    Entrevista com Fábio Cozman · set. 2025                 :milestone, e21, 2025-09-04, 0d
+    Entrevista com Cláudio Pinhanez · out. 2025             :milestone, e22, 2025-10-02, 0d
+    Fechamento do IBM Research Brasil · nov. 2025           :crit,      e23, 2025-11-01, 0d
+    Declínio bibliométrico após a saída da IBM · 2025–2026  :active,    b03, 2025-01-01, 2026-06-30
+    Encerramento da parceria C4AI-IBM · dez. 2025           :crit,      e24, 2025-12-01, 0d
+    Congresso DASGRI · Londres · jan. 2026                  :milestone, e25, 2026-01-15, 0d
+    Portaria CNPq 2.664 · mar. 2026                         :milestone, r06, 2026-03-06, 0d
+    Depósito da tese · mai. 2026                            :milestone, e26, 2026-05-01, 0d
+    Defesa prevista · jun. 2026                             :milestone, e27, 2026-06-15, 0d

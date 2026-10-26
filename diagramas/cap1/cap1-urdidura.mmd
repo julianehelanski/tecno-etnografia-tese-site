@@ -1,0 +1,285 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>EIXO</b><br>título, pergunta<br>e cabeçalhos de seção"]:::eixo
+    L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]:::teoria
+    L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]:::campo
+    L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>bibliometria, gráficos,<br>diagramas"]:::inscricao
+    L5["<b>DOBRA</b><br>argumento-síntese<br>e considerações finais"]:::dobra
+    L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5
+end
+
+subgraph titulo["<b>TEXTO-MAPA DO CAPÍTULO 1</b>"]
+    direction TB
+    TIT["<b>Texto-mapa do Capítulo 1</b><br><br>Cortes, existências parciais<br>e compostagens<br><br>Diagrama produzido com Claude<br>(Anthropic) e MermaidChart<br>como inscrição<br>tecnocientífica recursiva"]
+end
+
+subgraph pergunta["<b>PERGUNTA QUE ABRE O CAPÍTULO</b>"]
+    direction TB
+    RQ(("<b>Onde está o laboratório<br>dos pesquisadores de IA<br>do C4AI?</b><br><br>Como descrever uma rede<br>que se ramifica<br>indefinidamente?"))
+end
+
+subgraph base["<b>FUNDAMENTOS ETNOGRÁFICOS</b>"]
+    direction LR
+    KOFES["Suely Kofes<br>ensaio o método<br>enquanto experimento"]
+    LATOUR["Bruno Latour<br>sigo os actantes<br>pelas cadeias de tradução"]
+    LAW_BASE["John Law<br>method assemblage:<br>presença, ausência manifesta<br>e otherness"]
+end
+
+subgraph cortes["<b>1. CORTANDO REDES: cinco vocabulários, quatro cortes</b>"]
+    direction TB
+
+    subgraph vocs["Cinco vocabulários do corte"]
+        direction LR
+        V1["Strathern<br>cortar a rede"]
+        V2["Barad<br>cortes agenciais"]
+        V3["Haraway<br>crazy quilt<br>+ difração"]
+        V4["Costa<br>manchar / fazer vazar"]
+        V5["Law<br>crafting / bundling /<br>gathering + otherness"]
+    end
+
+    subgraph quatro["Quatro cortes, quatro capítulos"]
+        direction TB
+
+        subgraph c1cut["Cap. 1, corte reflexivo"]
+            direction TB
+            C1P["<b>Presença</b><br>Escolhas narrativas<br>e metodológicas<br>do próprio capítulo"]
+            C1A["<b>Ausência manifesta</b><br>Capítulos etnográficos<br>como horizonte<br>ainda não atravessado"]
+            C1O["<b>Otherness</b><br>Outras etnografias<br>possíveis do C4AI<br>(esta tese não fará)"]
+        end
+
+        subgraph c2cut["Cap. 2, corte teórico"]
+            direction TB
+            C2P["<b>Presença</b><br>Recrutamento de aliados:<br>STS, ANT, antropologia<br>e sociologia da IA,<br>genealogias críticas,<br>campo brasileiro"]
+            C2A["<b>Ausência manifesta</b><br>Produção internacional<br>em ciência da computação,<br>Simondon ampliado,<br>ética e governança de IA"]
+            C2O["<b>Otherness</b><br>Campo internacional<br>dos estudos sociais de IA<br>em extensão completa"]
+        end
+
+        subgraph c3cut["Cap. 3, corte pela extensão"]
+            direction TB
+            C3P["<b>Presença</b><br>Rede longa 1890-2025:<br>genealogia IBM,<br>políticas científicas,<br>Bluetalks, Design Thinking,<br>acordos FAPESP-IBM"]
+            C3A["<b>Ausência manifesta</b><br>Práticas técnicas situadas<br>dos demais grupos<br>de pesquisa do C4AI"]
+            C3O["<b>Otherness</b><br>248 pesquisadores,<br>negociações internas,<br>vida cotidiana<br>dos labs distribuídos"]
+        end
+
+        subgraph c4cut["Cap. 4, corte pela densidade"]
+            direction TB
+            C4P["<b>Presença</b><br>Narrativa de Marcelo:<br>Spira, Corpus Carolina,<br>contingências, impasses,<br>versão não estabilizada"]
+            C4A["<b>Ausência manifesta</b><br>Observação direta<br>do código sendo escrito;<br>práticas dos demais grupos;<br>construção institucional<br>(que volta no Cap. 3)"]
+            C4O["<b>Otherness</b><br>Pacientes que gravaram<br>voz no covideiro:<br>corpos, dores, mortes"]
+        end
+    end
+
+    subgraph enact["Cortes como enactments (Mol/Law)"]
+        direction TB
+        ENACT["Os quatro capítulos<br>performam o C4AI<br>como quatro objetos<br>etnográficos que se<br>atravessam sem<br>se subsumir<br><br>Política ontológica:<br>quais realidades<br>fortalecer"]
+    end
+end
+
+subgraph existencias["<b>2. EXISTÊNCIAS PARCIAIS: compor com IA generativa</b>"]
+    direction TB
+
+    subgraph latour_mov["Deslocamento interno na obra de Latour"]
+        direction LR
+        SIM["Simetria<br>generalizada<br>(Ciência em Ação)"]
+        HIB["Híbridos<br>e quase-objetos<br>(Jamais Fomos Modernos,<br>Aramis, Pandora)"]
+        EXIS["Existências parciais<br>(diálogo com Powers,<br>1998)"]
+        SIM -->|deslocamento| HIB
+        HIB -->|radicalização| EXIS
+    end
+
+    subgraph tresfig["Três figurações teóricas"]
+        direction LR
+        QM["<b>Quase-máquinas</b><br>Sistemas de IA<br>como entidades abertas,<br>parcialmente conectadas,<br>sem cordão umbilical<br>cortado"]
+        AD["<b>Agência distribuída</b><br>Faire-faire latouriano<br>+ simpoiese haraweana<br>= fazer-com<br>(nada se faz sozinho)"]
+        ML["<b>Multiplicidade ontológica</b><br>Claude-em-treinamento,<br>em deployment,<br>em auditoria, em uso<br>(Law / Mol)"]
+    end
+
+    subgraph parent["Por que fazer parentesco com este problema?"]
+        direction TB
+        PAR["Ficar com o problema<br>(Haraway)<br><br>Experimentação antropológica:<br>etnógrafa que estuda<br>construção de IA<br>compõe sua tese<br>com IA"]
+        FIG["Sequência de capturas de tela:<br>composição com Claude<br>como dado etnográfico<br>(Figuras 1.7-1.9)"]
+        PAR -.->|amostra empírica| FIG
+    end
+
+    subgraph instr["Instrumentos de inscrição (quase-máquinas)"]
+        direction LR
+        CLAUDE["Claude (Anthropic)<br>Interlocutor teórico<br>+ assistente de escrita"]
+        MERMAID["MermaidChart<br>Inscrições visuais<br>interativas das redes"]
+        PYTHON["Python / Anaconda<br>Análise bibliométrica"]
+        OUTROS["NotebookLM, Read AI,<br>LaTeX/biblatex,<br>Library Genesis,<br>cadernos de campo"]
+    end
+
+    subgraph tecno["Tecnoetnografia: a tese como inscrição"]
+        direction TB
+        TEC["Análise de rede textual<br>do próprio Cap. 1<br><br>Grafo de co-ocorrências<br>+ comunidades<br>(algoritmo de Louvain)<br><br>Medir a própria tese<br>pelos instrumentos<br>com que me comprometo<br>a medir o C4AI"]
+    end
+
+    subgraph cosmo["Cosmotécnica (Yuk Hui)"]
+        direction TB
+        COSMO["Composição entre<br>antropóloga brasileira<br>e modelo treinado<br>predominantemente<br>em dados anglófonos:<br>gesto cosmotécnico<br>particular,<br>não generalizável"]
+    end
+end
+
+subgraph compost["<b>3. COMPOSTAGENS: transformações recíprocas</b>"]
+    direction TB
+
+    COMP_INTRO["<b>Quatro fermentações</b><br><br>Cada compostagem põe a fermentar dois materiais que o desenho da pesquisa mantinha separados<br><br>Vocabulário haraweano: húmus / sympoiese / compostar-decompor / compostista"]
+
+    subgraph quatrocomp["Quatro compostagens"]
+        direction LR
+
+        subgraph cp1["Compostando o método"]
+            direction TB
+            CP1A["Regra latouriana<br>de estudar ciência<br>em construção"]
+            CP1B["+ Dispersão da<br>pesquisa em IA<br>(sem laboratório<br>centralizado)"]
+            CP1C["= Acessar a ciência<br>antes da estabilização,<br>pela narrativa<br>retrospectiva"]
+            CP1A --> CP1C
+            CP1B --> CP1C
+        end
+
+        subgraph cp2["Compostando a teoria"]
+            direction TB
+            CP2A["Simetria<br>metodológica<br>como ponto<br>de partida"]
+            CP2B["+ Especificidade<br>da IA generativa<br>(modelos que<br>surpreendem)"]
+            CP2C["= Existências parciais<br>como descrição<br>do que o campo<br>apresentava"]
+            CP2A --> CP2C
+            CP2B --> CP2C
+        end
+
+        subgraph cp3["Compostando o letramento"]
+            direction TB
+            CP3A["Formação em<br>ciências sociais<br>(STS, antropologia)"]
+            CP3B["+ Letramento técnico<br>exigido pelo campo<br>(probabilidade,<br>aprendizado<br>de máquina)"]
+            CP3C["= Assimetria<br>interdisciplinar<br>como achado<br>etnográfico"]
+            CP3A --> CP3C
+            CP3B --> CP3C
+        end
+
+        subgraph cp4["Compostando a política"]
+            direction TB
+            CP4A["Separação prévia<br>entre ciência<br>e política"]
+            CP4B["+ Evidência empírica<br>de que captação<br>de recursos<br>é decisão epistêmica"]
+            CP4C["= Ciência como<br>captação de recursos:<br>tecnociência<br>como exigência<br>empírica"]
+            CP4A --> CP4C
+            CP4B --> CP4C
+        end
+    end
+end
+
+subgraph conclusoes["<b>4. CONCLUSÕES PARCIAIS: o capítulo como composição</b>"]
+    direction TB
+    SINTESE["Três gestos analíticos:<br>(1) nomear cortes<br>(2) descrever a composição com IA generativa<br>(3) figurar transformações recíprocas"]
+    RECURS["Reflexividade como gesto recursivo:<br>aplicar à própria escrita o tratamento<br>que aplico aos pesquisadores descritos"]
+    PONTE["Ponte para o Cap. 2:<br>localizar aliados conceituais<br>num campo brasileiro<br>em formação"]
+    SINTESE --> RECURS
+    RECURS --> PONTE
+end
+
+LEGENDA ~~~ titulo
+TIT -.->|abre-se em| RQ
+
+RQ -->|exige| KOFES
+RQ -->|exige| LATOUR
+RQ -->|exige| LAW_BASE
+
+KOFES -.->|orienta| cortes
+LATOUR -.->|orienta| cortes
+LAW_BASE -.->|orienta| cortes
+
+vocs ==>|nomeiam o gesto de| quatro
+
+C1P -.->|delimita| C1A
+C1A -.->|delimita| C1O
+C2P -.->|delimita| C2A
+C2A -.->|delimita| C2O
+C3P -.->|delimita| C3A
+C3A -.->|delimita| C3O
+C4P -.->|delimita| C4A
+C4A -.->|delimita| C4O
+
+quatro ==>|leem-se como| ENACT
+
+cortes ==>|abrem| existencias
+
+EXIS -.->|sustenta| QM
+EXIS -.->|sustenta| AD
+EXIS -.->|sustenta| ML
+
+QM -.->|justifica| instr
+AD -.->|justifica| instr
+ML -.->|justifica| instr
+
+instr -->|composição com| PAR
+PAR -->|recursividade| TEC
+TEC -->|situa-se em| COSMO
+
+existencias ==>|desdobra-se em| compost
+
+cp1 -.->|preparada por| KOFES
+cp1 -.->|preparada por| LATOUR
+cp2 -.->|preparada por| LATOUR
+cp2 -.->|preparada por| LAW_BASE
+cp3 -.->|atravessada por| instr
+cp4 -.->|atravessada por| LAW_BASE
+
+cp1 ==> conclusoes
+cp2 ==> conclusoes
+cp3 ==> conclusoes
+cp4 ==> conclusoes
+
+ENACT -.->|fundamenta| SINTESE
+COMP_INTRO -.->|sustenta| SINTESE
+
+%% ===== PADRÃO DE ESTILO DA TESE — 5 classes semânticas =====
+classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#22303a;
+classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#14304a;
+classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+
+class TIT,RQ,COMP_INTRO eixo
+class KOFES,LATOUR,LAW_BASE,V1,V2,V3,V4,V5,SIM,HIB,EXIS,QM,AD,ML,COSMO teoria
+class FIG campo
+class CLAUDE,MERMAID,PYTHON,OUTROS,TEC inscricao
+class C1P,C1A,C1O,C2P,C2A,C2O,C3P,C3A,C3O,C4P,C4A,C4O,ENACT,PAR,CP1A,CP1B,CP1C,CP2A,CP2B,CP2C,CP3A,CP3B,CP3C,CP4A,CP4B,CP4C,SINTESE,RECURS,PONTE dobra
+
+%% ===== Caixas (subgraphs): borda neutra uniforme =====
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style titulo fill:transparent,stroke:#b8bec7,stroke-width:1px
+style pergunta fill:transparent,stroke:#b8bec7,stroke-width:1px
+style base fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cortes fill:transparent,stroke:#b8bec7,stroke-width:1px
+style vocs fill:transparent,stroke:#b8bec7,stroke-width:1px
+style quatro fill:transparent,stroke:#b8bec7,stroke-width:1px
+style c1cut fill:transparent,stroke:#b8bec7,stroke-width:1px
+style c2cut fill:transparent,stroke:#b8bec7,stroke-width:1px
+style c3cut fill:transparent,stroke:#b8bec7,stroke-width:1px
+style c4cut fill:transparent,stroke:#b8bec7,stroke-width:1px
+style enact fill:transparent,stroke:#b8bec7,stroke-width:1px
+style existencias fill:transparent,stroke:#b8bec7,stroke-width:1px
+style latour_mov fill:transparent,stroke:#b8bec7,stroke-width:1px
+style tresfig fill:transparent,stroke:#b8bec7,stroke-width:1px
+style parent fill:transparent,stroke:#b8bec7,stroke-width:1px
+style instr fill:transparent,stroke:#b8bec7,stroke-width:1px
+style tecno fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cosmo fill:transparent,stroke:#b8bec7,stroke-width:1px
+style compost fill:transparent,stroke:#b8bec7,stroke-width:1px
+style quatrocomp fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cp1 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cp2 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cp3 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style cp4 fill:transparent,stroke:#b8bec7,stroke-width:1px
+style conclusoes fill:transparent,stroke:#b8bec7,stroke-width:1px

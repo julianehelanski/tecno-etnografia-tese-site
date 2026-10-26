@@ -1,0 +1,172 @@
+---
+config:
+  layout: dagre
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: ''
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>EIXO</b><br>título, pergunta<br>e cabeçalhos de seção"]:::eixo
+    L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]:::teoria
+    L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]:::campo
+    L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>bibliometria, gráficos,<br>diagramas"]:::inscricao
+    L5["<b>DOBRA</b><br>argumento-síntese<br>e considerações finais"]:::dobra
+    L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5
+end
+
+subgraph titulo["<b>MAPA DO CAPÍTULO 4</b>"]
+    direction TB
+    TIT["<b>A rede que Marcelo construiu</b><br><br>seguir a cadeia de translação<br>do Spira, do covideiro<br>ao objeto fracional<br><br>inscrição produzida com Claude<br>(Anthropic) e MermaidChart<br>como dado etnográfico do<br>fazer-com (cap. 1)"]
+end
+
+subgraph pergunta["<b>PERGUNTA QUE ABRE O CAPÍTULO</b>"]
+    direction TB
+    RQ(("<b>O que circula na cadeia<br>de translação do Spira,<br>do covideiro ao<br>objeto fracional?</b><br><br>Quando a voz vira fato<br>e quando permanece<br>questão (matter of concern)?"))
+end
+
+subgraph base["<b>FUNDAMENTOS TEÓRICO-METODOLÓGICOS</b>"]
+    direction LR
+    F_LATOUR["<b>Latour</b><br>cadeia de translação,<br>inscrição, móvel imutável,<br>referência circulante,<br>matters of fact / of concern"]
+    F_MOLLAW["<b>Mol e Law</b><br>enactment, multiplicidade,<br>topologia rede/região/fluido,<br>fracionalidade, otherness"]
+    F_AKRICH["<b>Akrich e Callon</b><br>programa / antiprograma,<br>des-crição, interessamento,<br>re-inscrição"]
+end
+
+subgraph SEC1["<b>SEÇÃO 1 · SEGUINDO MARCELO</b>"]
+    direction TB
+    subgraph S1A["<b>O momento etnográfico</b>"]
+        direction TB
+        DOBRA_R["Topologias, dobras e pontos de entrada:<br>Latour (rede plana e dobrada,<br>translação ≠ difusão) e<br>Mol/Law (rede, região, fluido;<br>'mais que um, menos que muitos')"]
+        SITIOS["Seguindo Marcelo:<br>entrevista, artigos e relatórios<br>(entrevista por Google Meet, ~90 min, jun. 2023;<br>artigos científicos; relatórios C4AI);<br>três sítios na cadeia de translação"]
+        FRAC["<b>Spira como OBJETO FRACIONAL</b><br>tentativa de translação<br>inter-topológica:<br>fazer o fluido virar rede"]
+        DOBRA_R --> SITIOS --> FRAC
+    end
+    subgraph S1B["<b>Com quais referenciais o segui</b>"]
+        direction TB
+        S2_MAPA["Mapa dos referenciais (cinco grupos):<br>TAR; ontologia das práticas;<br>novos materialismos (Coole/Frost, Barad);<br>imagem, inscrição e sentido<br>(Barthes, Samain, Bateson e Mead, MacKenzie, Wagner);<br>referenciais de segundo plano"]
+        S2_VOC["Quatro vocabulários em espiral:<br>(a) sócio-semiótico (Akrich);<br>(b) referência circulante / sublata (Latour);<br>(c) agência dos textos (Latour e Bastide, Law);<br>(d) multiplicidade ontológica (Mol)"]
+        S2_FRIC["Fricções sustentadas sem resolver:<br>Latour (actantes pré-existentes) × Barad (intra-ação);<br>Mol (rede sem centro) × Callon (tradutor delibera)"]
+        S2_MAPA --> S2_VOC --> S2_FRIC
+    end
+    S1A --> S1B
+end
+
+subgraph SEC2["<b>SEÇÃO 2 · O SPIRA</b>"]
+    direction TB
+    subgraph S2A["<b>O projeto, o covideiro e os resultados</b>"]
+        direction TB
+        S1_SIT["Situando a rede:<br>Marcelo Finger (NLP2 / C4AI / IME-USP);<br>hinterland — Fapesp, IBM, Nvidia, LNCC;<br>SARS-CoV-2 como actante"]
+        S1_MET["Metodologia e coleta:<br>protocolo CAAE 30918120;<br>oxímetro (SpO₂ abaixo de 92%);<br>enunciados indutores de pausa;<br>P1 (Covid-19, SP) e P2 (IR diversas, Marília)"]
+        S1_COV["O covideiro:<br>enfermarias de Covid, 'dado sempre sujo';<br>coletores (alunos de medicina,<br>médicos estrangeiros);<br>'perdi 95% dos fonoaudiólogos';<br>Larissa subscritora"]
+        S1_RES["Resultados:<br>96,5% em P1 (CNN6/10/14 + Audio-MAE);<br>colapso para menos de 36% em P2"]
+        S1_LIM["Limitações:<br>'P2 is not harder, it is only different';<br>a IR não estabiliza como matter of fact,<br>permanece matter of concern"]
+        S1_VISAO["Visão de Marcelo para a IA:<br>'barca no Rio Tapajós'; celular como commodity;<br>'complementar as pessoas, não substituir';<br>'quem decide é a sociedade'"]
+        S1_SIT --> S1_MET --> S1_COV --> S1_RES --> S1_LIM --> S1_VISAO
+    end
+    subgraph S2B["<b>De onde vêm os dados</b>"]
+        direction TB
+        S3_SUB["datum × sublata (Latour):<br>o dado não é dado, é realizado"]
+        S3_DATA["Dataset: 3 hospitais de SP;<br>coleta 11 mai.–17 jun. 2020 (38 dias);<br>219 pacientes / 213 controles; CC BY-SA 4.0"]
+        S3_ANON["Anonimização desigual:<br>controles em UUID;<br>pacientes em arquivos WhatsApp<br>(PTT-20200511-WA0018.wav)"]
+        S3_TRI["Composição tripartite:<br>pacientes Covid + controles fabricados<br>(ruído adicionado) + hinterland AudioSet/YouTube;<br>ausência de Datasheets (Gebru)"]
+        S3_SUB --> S3_DATA --> S3_ANON --> S3_TRI
+    end
+    subgraph S2C["<b>A configuração do covideiro (des-crição)</b>"]
+        direction TB
+        S4_INSCR["A inscrição do covideiro:<br>sítio de inscrição (Latour);<br>o .wav como móvel imutável;<br>SARS-CoV-2 actante (ACE2 / Spike);<br>cadeia histológica (Mol: cada estação, um objeto)"]
+        S4_DESCR["A des-crição da configuração:<br>des-inscrição dos fonoaudiólogos;<br>subscrição de Larissa; re-inscrição<br>(Fechador Prussiano = ruído no treino);<br>em P2 o antiprograma 'dissolveu-se por redesenho'"]
+        S4_INSCR --> S4_DESCR
+    end
+    S2A --> S2B --> S2C
+end
+
+subgraph SEC3["<b>SEÇÃO 3 · AS INSCRIÇÕES TECNOCIENTÍFICAS DO SPIRA</b>"]
+    direction TB
+    subgraph S3A["<b>O artigo como actante</b>"]
+        direction TB
+        S5_FUNIL["Law: o artigo como funil de interesses;<br>citação como interessement;<br>texto como 'arma secreta';<br>periódico de linguística computacional<br>(ACL Findings 2021)"]
+        S5_OBS["Instalando o observador:<br>o modelo treinado (CNN14 / Audio-MAE)<br>que desce ao interior do sinal;<br>'não nasceu do covideiro, veio do YouTube';<br>AudioSet (Google) e Audio-MAE (Meta); transfer learning"]
+        S5_CORTE["Corte deslocado (Strathern):<br>Google e Meta não herdam nada do covideiro;<br>abre o produto, fecha a produção<br>(paralelo com a IBM, cap. 3)"]
+        S5_LAB["Cadeia × labirinto:<br>o artigo é cadeia para quem produz<br>e labirinto para quem contesta;<br>des-crição = travessia inversa;<br>ordálio interno vencido, externo (P2) perdido"]
+        S5_BM["Spira-BM chega pela cadeia textual,<br>não pela entrevista:<br>6 hospitais, 3 linhas clínicas; mais fiel a Mol;<br>limite: sem a contraface fluida do campo"]
+        S5_FUNIL --> S5_OBS --> S5_CORTE --> S5_LAB --> S5_BM
+    end
+    subgraph S3B["<b>Da voz ao espectrograma e as três insuficiências</b>"]
+        direction TB
+        S6_FEITA["Do que a imagem é feita:<br>onda → sinal → espectrograma mel;<br>código Python (librosa), n_mels=128;<br>STFT / Fourier; escala mel (psicoacústica)"]
+        S6_APAGA["O que a imagem carrega e apaga:<br>'silêncio eloquente' (Samain);<br>geno-song apagado, studium/punctum (Barthes);<br>'a voz que sobreviveu não sabe que sobreviveu'"]
+        S6_REDE["O que a rede neural escuta e vê:<br>matriz 128×n; CNN14 (80M parâmetros);<br>Grad-CAM (ativação nas pausas respiratórias);<br>a colorização não entra na rede"]
+        S6_IR["Múltiplas insuficiências respiratórias:<br>IR fluida (escuta clínica) / IR de rede (96,5%,<br>móvel imutável) / IR fracional (P2, menos de 36%);<br>Mol: enactments irredutíveis"]
+        S6_FEITA --> S6_APAGA --> S6_REDE --> S6_IR
+    end
+    S3A --> S3B
+end
+
+subgraph SEC4["<b>SEÇÃO 4 · A REDE DO COVIDEIRO (conclusão)</b>"]
+    direction TB
+    subgraph S4A["<b>Os três movimentos e a costura com o cap. 3</b>"]
+        direction TB
+        S7_MOV["Os três movimentos da cadeia de translação:<br>(1) translação inter-topológica;<br>(2) circunscrição revelada (a janela da crise; 95% → menos de 36%);<br>(3) estabilização parcial ('o imutável revelou-se mutável')"]
+        S7_COST["A mesma rede, outro corte:<br>dissolução IBM-C4AI em dez. 2025;<br>o Spira nasceu fora do guarda-chuva IBM,<br>mas a 2ª fase depende dele;<br>dupla ancoragem (NLP2 + Fapesp)"]
+        S7_LARISSA["Larissa Berti pós-defesa:<br>de subscritora (P1) a coautora (P2)<br>e protagonista do Spira-BM;<br>habita o fluido e a rede; entrada mais<br>produtiva da agenda pós-defesa"]
+        S7_MOV --> S7_COST --> S7_LARISSA
+    end
+    subgraph S4B["<b>Subseções finais · localização do dataset e rede textual</b>"]
+        direction TB
+        S8_LOC["Localização do dataset:<br>o percurso pelo qual localizei os arquivos;<br>parte da cadeia de translações que segui"]
+        S8_GER["Geração dos espectrogramas:<br>produção das imagens que ilustram o capítulo,<br>com Claude (Anthropic) e código Python;<br>a inscrição torna explícito o fazer-com"]
+        S8_REDE["Análise de rede textual do capítulo:<br>o texto dado a ler por métodos computacionais;<br>recursividade da tecnoetnografia (cap. 1)"]
+        S8_LOC --> S8_GER --> S8_REDE
+    end
+    S4A --> S4B
+end
+
+LEGENDA ~~~ titulo
+TIT -.->|abre-se em| RQ
+RQ -->|exige| base
+RQ ==>|investigada seguindo a cadeia| SEC1
+base -.->|orientam toda a análise| S1B
+SEC1 ==> SEC2
+SEC2 ==> SEC3
+SEC3 ==> SEC4
+S1_MET -.->|P1 vs P2| S4_DESCR
+S1_LIM -.->|matter of concern reaparece em| S6_IR
+S4_DESCR -.->|o texto age sobre os limites| S5_LAB
+S5_CORTE -.->|paralelo com a IBM| S7_COST
+S7_LARISSA -.->|ponto de entrada pós-defesa| SITIOS
+
+classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#22303a;
+classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#14304a;
+classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+
+class TIT,RQ eixo
+class F_LATOUR,F_MOLLAW,F_AKRICH,DOBRA_R,S2_MAPA,S2_VOC,S3_SUB,S4_INSCR,S5_FUNIL teoria
+class SITIOS,S1_SIT,S1_COV,S1_VISAO,S7_LARISSA campo
+class S1_MET,S1_RES,S3_DATA,S3_ANON,S5_OBS,S6_FEITA,S6_REDE,S8_LOC,S8_GER,S8_REDE inscricao
+class FRAC,S1_LIM,S2_FRIC,S3_TRI,S4_DESCR,S5_CORTE,S5_LAB,S5_BM,S6_APAGA,S6_IR,S7_MOV,S7_COST dobra
+
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style titulo fill:transparent,stroke:#b8bec7,stroke-width:1px
+style pergunta fill:transparent,stroke:#b8bec7,stroke-width:1px
+style base fill:transparent,stroke:#b8bec7,stroke-width:1px
+style SEC1 fill:transparent,stroke:#37474F,stroke-width:2px
+style SEC2 fill:transparent,stroke:#37474F,stroke-width:2px
+style SEC3 fill:transparent,stroke:#37474F,stroke-width:2px
+style SEC4 fill:transparent,stroke:#37474F,stroke-width:2px
+style S1A fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S1B fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S2A fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S2B fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S2C fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S3A fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S3B fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S4A fill:transparent,stroke:#b8bec7,stroke-width:1px
+style S4B fill:transparent,stroke:#b8bec7,stroke-width:1px

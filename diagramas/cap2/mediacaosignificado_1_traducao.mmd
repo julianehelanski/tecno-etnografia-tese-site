@@ -1,0 +1,33 @@
+---
+config:
+  layout: dagre
+  theme: default
+---
+flowchart LR
+ subgraph M1["PRIMEIRO SIGNIFICADO — Interferência"]
+    direction LR
+        A1["Agente 1"]
+        INT1(("INTERRUPÇÃO"))
+        A2["Agente 2"]
+        COMP1["Agente 1 + Agente 2<br>composto cidadão-arma"]
+        G1["Objetivo 1<br>retorno ao objetivo original"]
+        G3["Objetivo 3<br>objetivo composto"]
+        G2["Objetivo 2<br>deriva para o não-humano"]
+  end
+    A1 --> INT1
+    A2 -. desvio .-> COMP1
+    INT1 -. desvio .-> COMP1
+    COMP1 --> G1 & G3 & G2
+    M1 --> n1["Translação"]
+
+     A1:::cap1
+     INT1:::stop
+     A2:::cap1
+     COMP1:::cap1
+     G1:::objetivo
+     G3:::objetivo
+     G2:::objetivo
+    classDef cap1 fill:#ddeeff,stroke:#a8c8f0,color:#374151,rx:10
+    classDef objetivo fill:#fed7aa,stroke:#c2410c,color:#374151,rx:10
+    classDef stop fill:#fecaca,stroke:#dc2626,color:#7f1d1d,rx:20,font-weight:bold
+    style M1 fill:#ffffff,stroke:#ffffff

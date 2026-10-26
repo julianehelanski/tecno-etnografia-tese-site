@@ -1,0 +1,99 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>EIXO</b><br>pergunta de partida<br>e ponto de chegada"]:::eixo
+    L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]:::teoria
+    L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]:::campo
+    L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>caderno, transcrições,<br>evidências"]:::inscricao
+    L5["<b>DOBRA</b><br>triangulação, registros<br>e argumento-síntese"]:::dobra
+    L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5
+end
+
+INICIO["Ponto de partida:<br>arranjos público-privados de IA"]:::eixo
+
+subgraph ATORES["Seguir os atores"]
+direction TB
+FABIO["Fábio Cozman<br>diretor do C4AI, professor USP<br>que acompanhei em múltiplos contextos"]:::campo
+CLAUDIO["Cláudio Pinhanez<br>vice-diretor C4AI, IBM Research Brasil<br>que acompanhei em múltiplos contextos"]:::campo
+CONTEXTOS["Contextos que rastreei:<br>seminários acadêmicos · bluetalks<br>eventos de aniversário<br>Tech Hours · LinkedIn · interações informais"]:::campo
+end
+
+subgraph METODOS["Métodos de coleta"]
+direction TB
+OBS["Observação participante<br>março 2022 a dezembro 2025<br>quase quatro anos de seguimento contínuo"]:::campo
+ENT["Entrevistas semiestruturadas<br>após mais de três anos de observação<br>Fábio, ~60 min (set. 2025) · Cláudio, ~60 min (out. 2025)"]:::campo
+DOC["Análise documental<br>Acordo de Cooperação FAPESP-IBM (2016), Termo Aditivo<br>Relatórios C4AI (2021-2025)<br>LinkedIn, gravações públicas, cobertura de imprensa"]:::campo
+end
+
+subgraph CAMPO["Dados de campo gerados"]
+direction TB
+CADERNO["Caderno de campo<br>o que, como, onde e para quem foi dito<br>o que não foi dito"]:::inscricao
+TRANSCR["Transcrições de entrevistas<br>o que disseram sobre a autonomia do centro<br>posto ao lado do que observei nos documentos"]:::inscricao
+EVID["Evidências documentais<br>as cláusulas formais<br>postas ao lado da prática cotidiana"]:::inscricao
+end
+
+subgraph TRIANG["Cruzamento e validação"]
+direction TB
+CRUZ["Verificação cruzada:<br>observações com documentos<br>entrevistas com relatórios"]:::dobra
+REFL["Reflexividade:<br>posicionalidade e inserção<br>como aliada do OBIA"]:::dobra
+MOV["Processo seguido em movimento:<br>funcionamento · consolidação · encerramento<br>ciclo institucional completo"]:::dobra
+end
+
+subgraph ACHADOS["Correlações que o seguir dos atores tornou visíveis"]
+direction TB
+F1["A IBM aportou cerca de US$ 400 mil por ano<br>(R$ 845 mil em dez anos, no Termo Aditivo),<br>articulado por Cláudio como criar demanda<br>e disseminar ecossistemas dentro da USP"]:::dobra
+F2["Cláudio descreveu a incubação de oito centros<br>de pesquisa a partir do C4AI"]:::dobra
+F3["A IBM fechou o IBM Research Brasil em nov. 2025;<br>a não renovação do convênio C4AI-IBM tornou-se<br>pública em dez. 2025 e efetivou-se no início de 2026,<br>sem consulta às partes públicas"]:::dobra
+end
+
+subgraph ANALISE["Quadros analíticos"]
+direction TB
+ANT["Teoria ator-rede<br>translação, ponto de passagem obrigatório<br>irreversibilidade, caixa-preta"]:::teoria
+FOU["Governamentalidade<br>Foucault: estatística, biopolítica<br>Hollerith como dispositivo"]:::teoria
+SCOT["SCOT e momentum<br>Bijker, Pinch, Hughes:<br>grupos sociais relevantes, fechamento"]:::teoria
+end
+
+INICIO --> ATORES
+ATORES --> METODOS
+FABIO --> OBS
+CLAUDIO --> OBS
+CONTEXTOS --> OBS
+OBS --> CADERNO
+ENT --> TRANSCR
+DOC --> EVID
+CADERNO --> TRIANG
+TRANSCR --> TRIANG
+EVID --> TRIANG
+CRUZ --> ACHADOS
+REFL --> ACHADOS
+MOV --> ACHADOS
+F1 --> ANALISE
+F2 --> ANALISE
+F3 --> ANALISE
+ANALISE --> RESULT["Ponto de chegada:<br>a IBM cultivou ecossistemas dentro da USP<br>e desfez o vínculo em decisão que chegou<br>já tomada às partes públicas,<br>o que leio como exercício de tecnopoder"]:::eixo
+
+classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#22303a;
+classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#14304a;
+classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style ATORES fill:transparent,stroke:#b8bec7,stroke-width:1px
+style METODOS fill:transparent,stroke:#b8bec7,stroke-width:1px
+style CAMPO fill:transparent,stroke:#b8bec7,stroke-width:1px
+style TRIANG fill:transparent,stroke:#b8bec7,stroke-width:1px
+style ACHADOS fill:transparent,stroke:#b8bec7,stroke-width:1px
+style ANALISE fill:transparent,stroke:#b8bec7,stroke-width:1px

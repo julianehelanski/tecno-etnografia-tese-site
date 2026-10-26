@@ -1,0 +1,108 @@
+---
+config:
+  layout: elk
+---
+flowchart TB
+ subgraph CLASSICO["MEDIADOR TÉCNICO CLÁSSICO — transforma o que transmite, e é auditável"]
+    direction LR
+        EC["mesma entrada<br>repetida"]
+        MC["mediador<br>transforma o que transmite"]
+        SC1["mesma resposta"]
+        SC2["mesma resposta"]
+        AUDC["pode-se reabrir a caixa<br>e encontrar regras e peças legíveis,<br>cada uma com sua contribuição"]
+  end
+ subgraph INSUMOS["insumos que compõem cada modelo"]
+    direction LR
+        D1["dados de<br>treinamento"]
+        D2["trabalho de<br>anotação"]
+        D3["corpus e<br>curadoria"]
+        D4["parâmetros<br>aprendidos"]
+        D5["infraestrutura<br>e GPUs"]
+  end
+ subgraph MODELOS["vários modelos de IA encadeados"]
+    direction LR
+        M1["reconhecimento<br>de fala e visão"]
+        M2["modelos de<br>busca e embedding"]
+        M3["modelo<br>generativo"]
+        M4["classificadores<br>e filtros de moderação"]
+  end
+ subgraph COMP["uma cadeia imensa de mediadores compõe o sistema"]
+    direction TB
+        INSUMOS
+        MODELOS
+  end
+ subgraph CASOMIN["CASO MEDIDO — o mais controlado possível"]
+    direction TB
+        PERG["a mesma pergunta,<br>feita pelo mesmo usuário,<br>repetida várias vezes"]
+        SORTEIO(("a cada termo gerado<br>há um sorteio:<br>a resposta não é fixa"))
+        R1["1ª vez → uma resposta"]
+        R2["2ª vez → resposta diferente"]
+        R3["3ª vez → outra resposta ainda"]
+  end
+ subgraph IA["MEDIADOR-IA — não determinístico e opaco"]
+    direction TB
+        COMP
+        CASOMIN
+        NAODET["NÃO DETERMINISMO<br>não é defeito a corrigir,<br>e sim propriedade do mecanismo:<br>mesmo no caso mínimo<br>a resposta já muda a cada vez<br>(consistência de apenas cerca<br>de metade dos casos nos modelos pequenos)"]
+        ABRE["E SE SOLTARMOS AS VARIÁVEIS?<br>usuários diferentes,<br>perguntas diferentes,<br>formulações diferentes:<br>a variação só aumenta"]
+        OPACO["NÃO EXPLICABILIDADE<br>os engenheiros conhecem a arquitetura,<br>os dados e cada cálculo do modelo,<br>mas não conseguem rastrear<br>por que ESTA resposta saiu:<br>não há regra legível a reabrir,<br>só bilhões de parâmetros.<br>A opacidade persiste mesmo com a caixa aberta"]
+  end
+    EC --> MC
+    MC ==> SC1 & SC2
+    MC -. reabre .-> AUDC
+    D1 --> D2
+    D2 --> D3
+    D3 --> D4
+    D4 --> D5
+    M1 --> M2
+    M2 --> M3
+    M3 --> M4
+    INSUMOS ==> MODELOS
+    PERG --> SORTEIO
+    SORTEIO -.-> R1 & R2 & R3
+    COMP ==> CASOMIN
+    R1 --> NAODET
+    R2 --> NAODET
+    R3 --> NAODET
+    NAODET ==> ABRE
+    SORTEIO -. inerente .-> OPACO
+    CLASSICO -. o que a IA acrescenta .-> IA
+     EC:::ent
+     MC:::med
+     SC1:::estavel
+     SC2:::estavel
+     AUDC:::auditavel
+     D1:::comp
+     D2:::comp
+     D3:::comp
+     D4:::comp
+     D5:::comp
+     M1:::modelo
+     M2:::modelo
+     M3:::modelo
+     M4:::modelo
+     PERG:::ent
+     SORTEIO:::sorteio
+     R1:::instavel
+     R2:::instavel
+     R3:::instavel
+     NAODET:::naodetbox
+     ABRE:::abrebox
+     OPACO:::opaco
+    classDef ent fill:#f1f5f9,stroke:#64748b,color:#374151,rx:8
+    classDef med fill:#dbeafe,stroke:#3b82f6,color:#374151,rx:10
+    classDef estavel fill:#dcfce7,stroke:#16a34a,color:#374151,rx:8
+    classDef comp fill:#f3e8ff,stroke:#9333ea,color:#374151,rx:8
+    classDef modelo fill:#ede4fb,stroke:#9333ea,color:#374151,rx:8
+    classDef instavel fill:#ffedd5,stroke:#c2410c,color:#374151,rx:8
+    classDef auditavel fill:#fef9c3,stroke:#ca8a04,color:#374151,rx:10
+    classDef sorteio fill:#ffedd5,stroke:#c2410c,color:#374151
+    classDef naodetbox fill:#fee2e2,stroke:#dc2626,color:#374151,rx:10
+    classDef abrebox fill:#fecaca,stroke:#dc2626,color:#374151,rx:10
+    classDef opaco fill:#f1f5f9,stroke:#64748b,color:#374151,rx:10
+    style INSUMOS fill:transparent,stroke:#9333ea,stroke-width:1px
+    style MODELOS fill:transparent,stroke:#9333ea,stroke-width:1px
+    style COMP fill:transparent,stroke:#9333ea,stroke-width:1px
+    style CASOMIN fill:transparent,stroke:#c2410c,stroke-width:1px
+    style CLASSICO fill:transparent,stroke:#16a34a,stroke-width:1px
+    style IA fill:transparent,stroke:#c2410c,stroke-width:1px

@@ -1,0 +1,150 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+
+subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+    L1["<b>EIXO</b><br>título, pergunta<br>e cabeçalhos de seção"]:::eixo
+    L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]:::teoria
+    L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]:::campo
+    L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>bibliometria, gráficos,<br>diagramas"]:::inscricao
+    L5["<b>DOBRA</b><br>argumento-síntese<br>e considerações finais"]:::dobra
+    L1 ~~~ L2 ~~~ L3 ~~~ L4 ~~~ L5
+end
+
+subgraph titulo["<b>TEXTO-MAPA DO CAPÍTULO 2</b>"]
+    direction TB
+    TIT["<b>Texto-mapa do Capítulo 2</b><br><br>Figurações, alianças<br>e o campo da IA<br><br>Diagrama produzido com Claude<br>(Anthropic) e MermaidChart<br>como inscrição<br>tecnocientífica recursiva"]
+end
+
+subgraph base["<b>FUNDAMENTOS — o que sustenta o capítulo</b>"]
+    direction LR
+    U1["<b>Haraway</b><br>as figurações<br>fazem mundos"]
+    U2["<b>Latour</b><br>humanos e não humanos<br>tratados juntos"]
+    U3["<b>tecno-etnografia</b><br>herdada do cap. 1:<br>a revisão como<br>prática tecnocientífica"]
+end
+
+subgraph LEX["<b>1. CONTANDO COM FIGURAÇÕES: análise lexicométrica de seis obras de Latour</b>"]
+    direction TB
+
+    L0["meço, com o Claude e o Claude Code,<br>quanto Latour usa o vocabulário militar<br>ao longo de seis obras, e mostro que ele<br>revê alguns termos sem rever esse vocabulário<br><br>análise, não contagem:<br>o número é ponto de partida<br>do trabalho interpretativo"]
+
+    subgraph etapas["Três etapas, três objetos"]
+        direction LR
+        E1["<b>Etapa 1</b> — três livros<br>Laboratory Life (1986),<br>Science in Action (1987),<br>Pandora's Hope (1999)<br><br>salto do campo militar:<br>3,50 → 25,95 → 12,19<br>por dez mil palavras"]
+        E2["<b>Etapa 2</b> — dois artigos<br>metateóricos<br>Clarifications (1996),<br>On Recalling ANT (1999)<br><br>queda do militar,<br>dominância de topologia<br>e textil; validação<br>amostral semântica"]
+        E3["<b>Etapa 3</b><br>An Inquiry into Modes<br>of Existence (2013)<br><br>reentrada moderada do militar,<br>agora cosmopolítico-diplomático<br>(129 ocorrências, desambiguação<br>declarada como pendência)"]
+        E1 --> E2 --> E3
+    end
+
+    COST["<b>Costurando figurações:</b><br>que mundos elas produzem?<br><br>a figuração militar-industrial é situada;<br>o vocabulário têxtil-topológico,<br>que reconheço como figuração feminista (Haraway),<br>é figuração que o próprio Latour compõe<br>nos seus momentos autorreflexivos"]
+
+    OUTRAS["<b>Outras figurações possíveis:</b><br>têxtil, compostagem,<br>parentesco, pensar-com<br><br>Stengers e Haraway:<br>outra forma de lidar<br>com os aliados"]
+
+    L0 --> etapas
+    etapas --> COST
+    COST --> OUTRAS
+end
+
+subgraph CT["<b>2. ESTUDOS DA CIÊNCIA, TECNOLOGIA E DO DIGITAL</b>"]
+    direction TB
+    CT1["genealogia sociológica<br>dos STS e dos estudos do digital"]
+    CT2["tradição antropológica da técnica:<br>Mauss e Lévi-Strauss<br>→ Simondon → Hui"]
+    CT3["não-centramento no digital<br>(Pink, Horst, Postill)<br>como recorte do objeto"]
+    CT1 -.- CT2
+    CT2 -.- CT3
+end
+
+subgraph MED["<b>3. ESTUDOS SOBRE A IA E A MEDIAÇÃO TÉCNICA</b>"]
+    direction TB
+    M1["<b>Antropologia da IA</b><br>Diana Forsythe:<br>o que os engenheiros<br>fazem com o conhecimento"]
+    M2["<b>Sociologia dos sistemas<br>especialistas</b><br>Harry Collins:<br>conhecimento tácito<br>e o que as máquinas não capturam"]
+    M3["<b>Mediação técnica</b><br>os quatro significados<br>(Latour, Pandora's Hope)<br>+ o diferencial da IA generativa:<br>muda a resposta a cada vez<br>e não se deixa explicar"]
+    M1 --> M2 --> M3
+end
+
+subgraph POD["<b>4. TECNOCIÊNCIA E PODER: ficções do Antropoceno</b>"]
+    direction TB
+    P1["<b>do que a IA é feita</b><br>dados, trabalho de anotação,<br>parâmetros, infraestrutura<br>(Pasquinelli: usa o trabalho<br>e o saber de muita gente)"]
+    P2["<b>história do poder técnico</b><br>Johnson e Lenhard:<br>prever com computadores<br><br>Crawford e Joler:<br>a desigualdade entre países<br>que sustenta a IA"]
+    P3["<b>postura de descrição</b><br>nem só denúncia que vê extração,<br>nem só celebração que vê solução"]
+    P1 -.- P2
+    P2 -.- P3
+end
+
+subgraph BIB["<b>5. OS ESTUDOS SOBRE IA NAS CIÊNCIAS HUMANAS E SOCIAIS</b>"]
+    direction TB
+    B0["mapeamento bibliométrico<br>com o Claude e o Claude Code<br>sobre três bases"]
+    B1["<b>Capes</b><br>base principal:<br>um campo inscreve-se primeiro<br>na pós-graduação"]
+    B2["<b>SciELO</b><br>o periódico nacional"]
+    B3["<b>OpenAlex</b><br>o recorte internacional"]
+    BACH["<b>achado:</b> emergência tardia<br>e tematicamente deslocada;<br>marginalidade convergente da<br>pós-graduação ao periódico<br>e do nacional ao internacional;<br>defasagem do vocabulário,<br>não ausência de pensamento"]
+    B0 --> B1
+    B0 --> B2
+    B0 --> B3
+    B1 --> BACH
+    B2 --> BACH
+    B3 --> BACH
+end
+
+subgraph FECHO["<b>6. ARREMATE: síntese do capítulo</b>"]
+    direction TB
+    F1["<b>a tensão entre alistar (Latour)<br>e aliar (Stengers)</b><br>que deixo em aberto"]
+    F2["<b>o que levo aos próximos capítulos</b><br>(1) a figuração como objeto<br>(2) a tensão alistar/aliar<br>(3) a minha posição situada"]
+    F1 --> F2
+end
+
+CAPS(["<b>caps. 3 e 4</b><br>a rede longa do C4AI<br>e a rede densa do Spira"])
+
+LEGENDA ~~~ titulo
+
+U1 ==>|sustenta| LEX
+U2 ==>|sustenta| LEX
+U3 ==>|sustenta| LEX
+
+LEX -->|recolho leituras entre as duas linhas| CT
+CT --> MED
+MED --> POD
+POD -->|da literatura ao campo| BIB
+
+OUTRAS -.->|abre a alternativa de| FECHO
+M3 -.->|descreve o Claude como actante para| FECHO
+BACH -.->|situa a pesquisa para| FECHO
+
+LEX ==> FECHO
+BIB ==> FECHO
+
+FECHO ==>|alistar/aliar redistribui-se no campo| CAPS
+
+%% ===== PADRÃO DE ESTILO DA TESE — 5 classes semânticas =====
+classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#22303a;
+classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#14304a;
+classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1e3a1e;
+classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#5a4205;
+classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#3a2a52;
+
+class TIT eixo
+class U1,U2,U3,OUTRAS,CT1,CT2,CT3,M1,M2,M3,P1,P2,P3 teoria
+class L0,E1,E2,E3,B0,B1,B2,B3 inscricao
+class COST,BACH,F1,F2,CAPS dobra
+
+%% ===== Caixas (subgraphs): borda neutra uniforme =====
+style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+style titulo fill:transparent,stroke:#b8bec7,stroke-width:1px
+style base fill:transparent,stroke:#b8bec7,stroke-width:1px
+style LEX fill:transparent,stroke:#b8bec7,stroke-width:1px
+style etapas fill:transparent,stroke:#b8bec7,stroke-width:1px
+style CT fill:transparent,stroke:#b8bec7,stroke-width:1px
+style MED fill:transparent,stroke:#b8bec7,stroke-width:1px
+style POD fill:transparent,stroke:#b8bec7,stroke-width:1px
+style BIB fill:transparent,stroke:#b8bec7,stroke-width:1px
+style FECHO fill:transparent,stroke:#b8bec7,stroke-width:1px

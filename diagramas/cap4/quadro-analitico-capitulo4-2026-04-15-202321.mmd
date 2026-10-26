@@ -1,0 +1,100 @@
+---
+config:
+  layout: elk
+  look: classic
+  theme: base
+  themeVariables:
+    fontFamily: "Helvetica Neue, Arial, sans-serif"
+    fontSize: 15px
+    lineColor: '#6b7280'
+    primaryTextColor: '#1a1a1a'
+---
+flowchart TB
+ subgraph LEGENDA["<b>LEGENDA &nbsp;·&nbsp; o que cada cor indica</b>"]
+    direction LR
+        L1["<b>EIXO</b><br>título, pergunta<br>e cabeçalhos de seção"]
+        L2["<b>TEORIA</b><br>autores, conceitos<br>e aparato analítico"]
+        L3["<b>CAMPO</b><br>material empírico:<br>observação, entrevistas,<br>documentos"]
+        L4["<b>INSCRIÇÃO</b><br>dados produzidos:<br>bibliometria, gráficos,<br>diagramas"]
+        L5["<b>DOBRA</b><br>argumento-síntese<br>e considerações finais"]
+  end
+ subgraph G1["GRUPO I — Teoria Ator-Rede<br><i>seguir as associações entre pessoas e coisas</i>"]
+    direction LR
+        LAT["<b>Latour</b><br>Como a voz vira gráfico e viaja:<br>o aparelho que inscreve, o registro que circula<br>sem se deformar, a cadeia que liga o covideiro<br>ao artigo, e o que deixa de ser questionado"]
+        CAL["<b>Callon e Law</b><br>Como se monta uma rede:<br>convencer aliados a entrar, falar em nome deles,<br>e transformar o problema de cada um<br>no problema do projeto"]
+        AKR["<b>Akrich</b><br>O que o dispositivo pressupõe do mundo,<br>o que o mundo lhe opõe,<br>os limites que nascem desse confronto<br>e as correções que ele incorpora"]
+  end
+ subgraph G2["GRUPO II — Ontologia das práticas<br><i>o objeto não preexiste ao que se faz com ele</i>"]
+    direction LR
+        LAW["<b>Law e Mol</b><br>Todo método traz consigo um mundo:<br>o que ele torna visível e o que deixa de fora,<br>e como um objeto pode ser estável como rede<br>ou instável e adaptável como fluido"]
+        MOL["<b>Mol</b><br>A doença não preexiste às práticas:<br>cada prática faz existir uma versão dela.<br>Seguir as práticas, e não as ideias,<br>mostra que o objeto é múltiplo"]
+  end
+ subgraph G3["GRUPO III — Novos Materialismos<br><i>a matéria age, sem intenção nem comando</i>"]
+    direction LR
+        CF["<b>Coole e Frost</b><br>A matéria não é passiva:<br>ela se organiza e produz efeitos<br>sem que ninguém a comande"]
+        BAR["<b>Barad</b><br>O que se mede e o aparelho que mede<br>não existem separados de antemão:<br>a separação entre os dois<br>é produzida pela própria medição"]
+  end
+ subgraph G5["GRUPO IV — A imagem na escrita da tese<br><i>quando o espectrograma do Spira passa a pensar comigo</i>"]
+        SEC["<b>Imagem, percepção e sentido</b><br>Barthes: a imagem guarda o que esteve ali.<br>Samain, Bateson e Mead, Bruno: imagens pensam,<br>e pensam mais quando postas lado a lado.<br>Roy Wagner: o que se perde quando<br>a experiência vira código"]
+  end
+ subgraph ARG["CONTRIBUIÇÕES AO ARGUMENTO"]
+    direction TB
+        A1["A voz percorre a cadeia<br>do covideiro ao artigo,<br>preservando a forma<br>ao custo da localidade"]
+        A2["Celular, aplicativo e protocolo<br>trazem novos participantes para a rede<br>e desviam a voz do percurso previsto"]
+        A3["Vozes gravadas em hospitais diferentes,<br>em celulares diferentes,<br>tornam-se comparáveis<br>num mesmo tipo de imagem"]
+        A4["A insuficiência respiratória do covideiro,<br>a do artigo e a dos dois protocolos<br>são versões distintas que coexistem,<br>sem que uma substitua a outra"]
+        A5a["A cóclea se organiza sozinha:<br>a matéria decompõe o som<br>sem nenhum engenheiro"]
+        A5b["Microfone, conversor e filtro<br>produzem o sinal junto com a voz:<br>separar o som do aparelho<br>é efeito da própria medição"]
+        A7["O espectrograma entra na escrita da tese:<br>imagem que o algoritmo percorre sem ser tocado,<br>e que guarda a ausência do corpo<br>que respirou diante do microfone"]
+        A8["Uma inovação não se espalha<br>por suas virtudes: cada aliado<br>a transforma ao adotá-la;<br>a coleta pandêmica não se repete"]
+        A9["Dois modos de recusa:<br>a resistência aberta dos fonoaudiólogos<br>e a incompatibilidade silenciosa<br>que aparece sem que ninguém recuse"]
+  end
+    L1 ~~~ L2
+    L2 ~~~ L3
+    L3 ~~~ L4
+    L4 ~~~ L5
+    LAT --> A1 & A8
+    CAL --> A2 & A8
+    AKR --> A2 & A9 & A8
+    LAW --> A3
+    MOL --> A4
+    CF --> A5a
+    BAR --> A5b
+    SEC --> A7
+    A4 -. "o caso confirma o argumento de Mol" .-> MOL
+    LAT -. "para Latour as coisas já existem antes de se associar;<br>para Barad, emergem da relação" .-> BAR
+    LAT -. "para Latour há um só referente ao fim da cadeia;<br>para Mol, há versões que coexistem" .-> MOL
+
+     L1:::eixo
+     L2:::teoria
+     L3:::campo
+     L4:::inscricao
+     L5:::dobra
+     LAT:::teoria
+     CAL:::teoria
+     AKR:::teoria
+     LAW:::teoria
+     MOL:::teoria
+     CF:::teoria
+     BAR:::teoria
+     SEC:::teoria
+     A1:::dobra
+     A2:::dobra
+     A3:::dobra
+     A4:::dobra
+     A5a:::dobra
+     A5b:::dobra
+     A7:::dobra
+     A8:::dobra
+     A9:::dobra
+    classDef eixo      fill:#EEF1F4,stroke:#37474F,stroke-width:3px,color:#1a1a1a
+    classDef teoria    fill:#DCE7F5,stroke:#2E5A87,stroke-width:2px,color:#1a1a1a
+    classDef campo     fill:#DDEEDD,stroke:#3F7A3F,stroke-width:2px,color:#1a1a1a
+    classDef inscricao fill:#FBEFD0,stroke:#B5860A,stroke-width:2px,color:#1a1a1a
+    classDef dobra     fill:#E8E0F0,stroke:#6A4C93,stroke-width:2px,color:#1a1a1a
+    style LEGENDA fill:#fbfbfc,stroke:#9aa2ad,stroke-width:1px
+    style G1 fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style G2 fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style G3 fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style G5 fill:transparent,stroke:#b8bec7,stroke-width:1px
+    style ARG fill:transparent,stroke:#b8bec7,stroke-width:1px
