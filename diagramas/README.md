@@ -4,8 +4,7 @@ Esta pasta guarda o código-fonte (`.mmd`) dos diagramas que fiz no [MermaidChar
 
 ## Organização
 
-- `capN/`: um `.mmd` por diagrama, separados pelo capítulo da tese em que aparecem.
-- `outros/`: diagramas das minhas pastas no MermaidChart que a tese não usa.
+- `capN/`: um `.mmd` por diagrama, separados pelo capítulo da tese em que aparecem (`cap5/` reúne as Considerações finais, `ex_cap5.tex`).
 - Quando o site já exibe o PNG renderizado a partir do mesmo código, o `.mmd` tem o nome desse PNG em [`figuras/`](../figuras). Nos outros casos, o `.mmd` tem o nome do PNG no repositório da tese (`tecno-etnografia-centro-ia`), sem o carimbo de data da exportação.
 - Em cinco casos o site ainda exibe uma *versão anterior* do diagrama: a estrutura é a mesma, mas o estilo e o conteúdo são mais antigos. Para não sugerir que o código atual gera aquela imagem, o `.mmd` não recebe o nome do PNG antigo; a tabela indica o PNG como "versão anterior no site".
 
@@ -37,14 +36,9 @@ Os números de figura saem da contagem das legendas (`\caption`) em `ex_cap1.tex
 | 4.5 | Cap. 4 | Mapa da linha do tempo do capítulo 4 (2020–2026) | [`mapa-linha-tempo-capitulo4.mmd`](cap4/mapa-linha-tempo-capitulo4.mmd) | tese: `figuras/cap.4/diagramas-mermaid/mapa-linha-tempo-capitulo4.png` | [abrir](https://mermaid.ai/d/49007d9e-941f-4172-889a-a3257c8a14ac) |
 | 4.6 | Cap. 4 | Mapa analítico do capítulo (posicionamento analítico) | [`quadro-analitico-capitulo4-2026-04-15-202321.mmd`](cap4/quadro-analitico-capitulo4-2026-04-15-202321.mmd) | [`figuras/quadro-analitico-capitulo4-2026-04-15-202321.png`](../figuras/quadro-analitico-capitulo4-2026-04-15-202321.png) | [abrir](https://mermaid.ai/d/7aec6c39-38e8-4dce-904f-06b74374d4bf) |
 | 4.7 | Cap. 4 | Mapa do argumento (procedimento analítico) | [`cap4-argumento.mmd`](cap4/cap4-argumento.mmd) | [`figuras/cap4-argumento.png`](../figuras/cap4-argumento.png) | [abrir](https://mermaid.ai/d/dbdaf709-a83d-4c21-bde0-fed7b4f04c12) |
+| 4.26 | Considerações finais | Síntese das reflexões da tese | [`diagrama_sintese_tese.mmd`](cap5/diagrama_sintese_tese.mmd) | tese: `figuras/cap.4/diagramas-mermaid/diagrama_sintese_tese.png` | [abrir](https://mermaid.ai/d/47234d6a-8a7b-468f-9559-28ded7c400cf) |
 
-**Ainda falta exportar:** o diagrama da Figura 4.26, *Síntese das reflexões da tese* (Considerações finais; PNG na tese: `figuras/cap.4/diagramas-mermaid/diagrama_sintese_tese.png`; [versão interativa](https://mermaid.ai/d/47234d6a-8a7b-468f-9559-28ded7c400cf)). As Considerações finais são um `\chapter*`, que não reinicia o contador de figuras, por isso a figura continua a numeração do capítulo 4.
-
-### Fora da tese
-
-| Arquivo | Observação |
-|---|---|
-| [`sessao-tematica-09-rba-2026.mmd`](outros/sessao-tematica-09-rba-2026.mmd) | Diagrama "Sessão Temática 09, RBA 2026" (do algoritmo à IA generativa; o mediador técnico clássico diante da IA generativa). Não aparece na tese. |
+As Considerações finais são um `\chapter*`, que não reinicia o contador de figuras; por isso a Figura 4.26 continua a numeração do capítulo 4.
 
 ## Relação com `figuras/mapas/` e `figuras/linha-do-tempo/`
 
